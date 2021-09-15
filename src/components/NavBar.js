@@ -1,75 +1,40 @@
 import React from "react";
+import * as ReactBootStrap from "react-bootstrap";
+
 function NavBar() {
   const NavBar = (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="/#">
-          Navbar
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="/#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown link
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<ReactBootStrap.Navbar bg="light" expand="lg">
+  <ReactBootStrap.Navbar.Brand href="#">Navbar scroll</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="navbarScroll" />
+  <ReactBootStrap.Navbar.Collapse id="navbarScroll">
+    <ReactBootStrap.Nav
+      className="mr-auto my-2 my-lg-0"
+      style={{ maxHeight: '100px' }}
+      navbarScroll
+    >
+      <ReactBootStrap.Nav.Link href="#action1">Home</ReactBootStrap.Nav.Link>
+      <ReactBootStrap.Nav.Link href="#action2">Link</ReactBootStrap.Nav.Link>
+      <ReactBootStrap.NavDropdown title="Link" id="navbarScrollingDropdown">
+        <ReactBootStrap.NavDropdown.Item href="#action3">Action</ReactBootStrap.NavDropdown.Item>
+        <ReactBootStrap.NavDropdown.Item href="#action4">Another action</ReactBootStrap.NavDropdown.Item>
+        <ReactBootStrap.NavDropdown.Divider />
+        <ReactBootStrap.NavDropdown.Item href="#action5">Something else here</ReactBootStrap.NavDropdown.Item>
+      </ReactBootStrap.NavDropdown>
+      <ReactBootStrap.Nav.Link href="#" disabled>
+        Link
+      </ReactBootStrap.Nav.Link>
+    </ReactBootStrap.Nav>
+    <ReactBootStrap.Form className="d-flex">
+      <ReactBootStrap.FormControl
+        type="search"
+        placeholder="Search"
+        className="me-2"
+        aria-label="Search"
+      />
+      <ReactBootStrap.Button variant="outline-success">Search</ReactBootStrap.Button>
+    </ReactBootStrap.Form>
+  </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
   );
   return <>{NavBar}</>;
 }

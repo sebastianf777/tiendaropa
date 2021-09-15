@@ -1,0 +1,8 @@
+.navbar-collapse {
+    flex-grow: 0 ;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg{
+    justify-content: space-evenly;
+}}
