@@ -1,0 +1,19 @@
+header{
+    background-color: pink;
+}
+
+.navbar-collapse {
+    flex-grow: 0 ;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg{
+    justify-content: space-evenly;
+}}
+
+.BadgeC{
+    position: relative;
+    top: -10px;
+    left: 3px;
+    font-size: .7em;
+}

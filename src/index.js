@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Header from './Header';
+import Section from './Section';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Section />
   </React.StrictMode>,
   document.getElementById('root')
 );

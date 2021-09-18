@@ -5,7 +5,7 @@ import Cart from "./CartWidget";
 const Nav = () => {
   
   return (
-  <ReactBootStrap.Navbar className="mx-3" bg="light" expand="lg">
+  <ReactBootStrap.Navbar className="mx-3" bg="none" expand="lg">
   <ReactBootStrap.Navbar.Brand href="#">MyM Calzados</ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">

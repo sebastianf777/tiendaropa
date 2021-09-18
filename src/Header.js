@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./App.css";
 import Nav from "./components/NavBar.js";
+import "./css/Header.css"
 
 
-function App() {
+
+function Header() {
   return (
     <div>
       <header>
@@ -13,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Header;
