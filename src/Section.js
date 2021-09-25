@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Greeting from "./components/ItemListContainer.js";
+import Cards from "./components/ItemListContainer.js";
 import "./css/Section.css"
 
 
@@ -8,7 +8,8 @@ function Section() {
   return (
     <div>
       <section>
-        <Greeting name="Carla" lastName="Conte" />
+        {/* <Greeting name="Carla" lastName="Conte" /> */}
+        {<Cards />}
       </section>
     </div>
   );
