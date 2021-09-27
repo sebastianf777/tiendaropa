@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Cards from "./components/ItemListContainer.js";
+import ItemListContainer from "./components/ItemListContainer.js";
 import "./css/Section.css"
 
 
@@ -9,7 +9,7 @@ function Section() {
     <div>
       <section>
         {/* <Greeting name="Carla" lastName="Conte" /> */}
-        {<Cards />}
+        {<ItemListContainer />}
       </section>
     </div>
   );

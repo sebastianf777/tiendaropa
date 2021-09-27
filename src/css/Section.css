@@ -2,3 +2,18 @@
     margin: 20px;
     border-radius: 10px;
 }
+
+.agregarC{
+    background-color: salmon;
+    border-radius: 20px;
+    width: 10opx;
+    margin: 10px;
+}
+.agregaC:hover{
+    background-color: red;
+}
+
+.plusMinus{
+    border-radius: 30px;
+    
+}
