@@ -8,8 +8,7 @@ function Section() {
   return (
     <div>
       <section>
-        {/* <Greeting name="Carla" lastName="Conte" /> */}
-        {<ItemListContainer />}
+        <ItemListContainer />
       </section>
     </div>
   );

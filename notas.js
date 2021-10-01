@@ -84,3 +84,6 @@ return <h1> Bienvenido: {name} {lastName} <h1/>;
 cuando queres agregar valores a un componente ya creado, se pone los proprs en el ()
 y para llamar cosas hechas del componente usar "useState(props.name), usteState(props.lastName)"
 */
+
+// clase apis//////////////////////////////////
+///////////////////////////////////////////
