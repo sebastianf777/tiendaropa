@@ -11,7 +11,7 @@ const Nav = () => {
       
         
   <ReactBootStrap.Navbar className="mx-3" bg="none" expand="lg">
-  <ReactBootStrap.Navbar.Brand><Link to="/" exact className="nav-link">MyM Calzados</Link></ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Brand><Link to="/" className="nav-link">MyM Calzados</Link></ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
     <ReactBootStrap.Nav
@@ -27,7 +27,7 @@ const Nav = () => {
       />
       <ReactBootStrap.Button className="me-5" variant="outline-success">Search</ReactBootStrap.Button>
     </ReactBootStrap.Form>
-      <Link to="#action1"  className="nav-link" >Liquidación</Link>
+      <Link to="/action1"  className="nav-link" >Liquidación</Link>
       <Link to="#action2"  className="nav-link" >Indumentaria</Link>
       <Link to="#action3"  className="nav-link" >Calzados</Link>
       <ReactBootStrap.NavDropdown title="Imagen" id="collasible-nav-dropdown">

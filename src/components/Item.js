@@ -2,38 +2,19 @@
 import ItemDetailContainer from "./ItemDetailContainer";
 import img1 from "../assets/img/img1.png";
 import { Card } from "react-bootstrap";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
-import ItemBigDetail from "./ItemBigDetail";
+import {Link} from "react-router-dom"
 
 const Item = () => {
-
+ 
 
   return (
-    <BrowserRouter>
     <div className="Card">
-      <Link to={`/ItemBigDetail`}>
-      <Card.Img className = "imgs" variant="top" src={img1} />
-      </Link>
+      <Link to = "/item/:id"><Card.Img className = "imgs" variant="top" src={img1} /></Link>
+
       <ItemDetailContainer/>
     </div>
-
-    
-<Switch>
-  <Route exact path="/">
-    <h2>no se</h2>
-    </Route>
-  <Route exact={`/:itemId`}>
-    <>
-      <ItemBigDetail/>
-    </>
-  </Route>
-</Switch>
-    
-</BrowserRouter>
   );
-  
 };
-
 export default Item;
 
 
