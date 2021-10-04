@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
     
   const [switchToggled, setSwitch] = useState(false);
   const [itemDetail, setItemsDetail] = useState([]);
-
   const toggleSwitch = () => {
     switchToggled ? setSwitch(false) : setSwitch(true);
   }
@@ -42,18 +41,10 @@ const ItemDetailContainer = () => {
         Detalle del producto
       </Button>
       <div className={switchToggled ? "Toggled" : "NotToggled"}>
-        {/* {data.productData.map((item, index) => {
-          return ( */}
+
             <ItemDetail itemDetail={itemDetail}
-            //   img={item.img}
-            //   title={item.title}
-            //   id={item.id}
-            //   price={item.price}
-            //   key={index}
-            //   stock={item.stock}
+
             />
-          {/* );
-        })} */}
       </div>
       <ItemCount/>
     </>
