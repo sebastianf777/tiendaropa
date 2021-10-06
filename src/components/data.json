@@ -1,8 +1,41 @@
 [{
-    "id": 1,
-    "title": "Producto1",
-    "price": "1500$",
-    "pictureUrl": "",
-    "stock": "10",
-    "categoria": "1"
-  }]
+  "id": 1,
+  "nombre": "Producto uno",
+  "precio": 1600,
+  "imagen": "https://via.placeholder.com/150",
+  "stock": 10,
+  "categoria": "1"
+},
+{
+  "id": 2,
+  "nombre": "Producto Dos",
+  "precio": 1600,
+  "imagen": "https://via.placeholder.com/150",
+  "stock": 10,
+  "categoria": "1"
+},
+{
+  "id": 3,
+  "nombre": "Producto Tres",
+  "precio": 200,
+  "imagen": "https://via.placeholder.com/150",
+  "stock": 10,
+  "categoria": "2"
+},
+{
+  "id": 4,
+  "nombre": "Producto Cuatro",
+  "precio": 500,
+  "imagen": "https://via.placeholder.com/150",
+  "stock": 10,
+  "categoria": "2"
+},
+{
+  "id": 5,
+  "nombre": "Producto Cinco",
+  "precio": 1600,
+  "imagen": "https://via.placeholder.com/150",
+  "stock": 10,
+  "categoria": "3"
+}
+]

@@ -24,7 +24,7 @@ const Nav = () => {
             <Link to={`/category/3`} className="nav-link">
               Calzados
             </Link>
-            <Link to={`/category/7`}>
+            <Link to={`/category/4`} className="nav-link">
               <Cart />
             </Link>
           </ReactBootStrap.Nav>
