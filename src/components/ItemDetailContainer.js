@@ -10,20 +10,21 @@ function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id: idProduct } = useParams();
 
-  const getItems = () => {
-    return new Promise((resolve, reject) => {
-      const buscarProducto = data.find(
-        (item) => item.id === parseInt(idProduct)
-      );
-      setTimeout(() => {
-        resolve(buscarProducto);
-        reject("error al traer productos");
-      }, 3000);
-    });
-  };
+  
 
   useEffect(() => {
     setProducto({});
+    const getItems = () => {
+      return new Promise((resolve, reject) => {
+        const buscarProducto = data.find(
+          (item) => item.id === parseInt(idProduct)
+        );
+        setTimeout(() => {
+          resolve(buscarProducto);
+          reject("error al traer productos");
+        }, 3000);
+      });
+    };
     getItems()
       .then((res) => setProducto(res))
       .catch((acaHayError) => console.log(acaHayError));

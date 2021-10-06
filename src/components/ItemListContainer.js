@@ -15,25 +15,26 @@ function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const { id: idCategory } = useParams();
 
-  const getItems = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (idCategory) {
-          const filtroCategory = data.filter(
-            (item) => item.categoria === idCategory
-          );
-          resolve(filtroCategory);
-        } else {
-          resolve(data);
-        }
-
-        reject("error al traer productos");
-      }, 3000);
-    });
-  };
+  
 
   useEffect(() => {
     setProductos([]);
+    const getItems = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (idCategory) {
+            const filtroCategory = data.filter(
+              (item) => item.categoria === idCategory
+            );
+            resolve(filtroCategory);
+          } else {
+            resolve(data);
+          }
+  
+          reject("error al traer productos");
+        }, 3000);
+      });
+    };
     getItems()
       .then((res) => setProductos(res))
       .catch((acaHayError) => console.log(acaHayError));
