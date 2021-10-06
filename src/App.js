@@ -1,9 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/Section.css";
 import Nav from "./components/NavBar.js";
-import "./css/Header.css";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";

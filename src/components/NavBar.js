@@ -2,6 +2,7 @@ import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Cart from "./CartWidget";
 import { Link } from "react-router-dom";
+import "../css/Nav.css";
 
 const Nav = () => {
   return (

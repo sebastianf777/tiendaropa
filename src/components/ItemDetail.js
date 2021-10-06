@@ -1,16 +1,16 @@
 import React from "react";
+import "../css/ItemDetail.css";
 
 const ItemDetail = ({ producto }) => {
   return (
-    <div className="card" style={{ width: "15rem", margin: "10px" }}>
+    <div className="card">
       <img
         src={producto.imagen}
-        className="card-img-top"
         alt={producto.nombre}
       />
 
       <div className="card-body">
-        <h5 className="card-title"> {producto.nombre} hola</h5>
+        <h5 className="card-title"> {producto.nombre}</h5>
         <p className="card-text"> {producto.precio} </p>
       </div>
     </div>
