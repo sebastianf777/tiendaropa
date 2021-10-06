@@ -1,20 +1,54 @@
 // import img1 from "../assets/img/img1.png";
-import ItemDetailContainer from "./ItemDetailContainer";
-import img1 from "../assets/img/img1.png";
-import { Card } from "react-bootstrap";
+// import ItemDetailContainer from "./ItemDetailContainer";
+// import img1 from "../assets/img/img1.png";
+// import { Card } from "react-bootstrap";
+import React from "react";
+
 import {Link} from "react-router-dom"
+// import ItemBigDetail from "./ItemBigDetail";
 
-const Item = () => {
+
+function Item({ product }) {
  
-
   return (
-    <div className="Card">
-      <Link to = "/item/:id"><Card.Img className = "imgs" variant="top" src={img1} /></Link>
+    <div className="card" style={{ width: "15rem", margin: "10px" }}>
+      <img src={product.imagen}  alt={product.nombre} />
 
-      <ItemDetailContainer/>
+      <div >
+        <h5 > {product.nombre} </h5>
+        <p > {product.precio} </p>
+        <Link to={`/item/${product.id}`}>
+          detalle
+        </Link>
+      </div>
     </div>
   );
-};
+}
+
+
+
+
+//   return (
+//     <Router>
+
+//     <div className="Card">
+//       <Link to = "/item/:id"><Card.Img className = "imgs" variant="top" src={img1} /></Link>
+
+//     </div>
+
+//     <Switch>
+
+//     <Route exact path="/item/:id">
+//     <ItemDetailContainer/>
+
+//     </Route>
+
+//     </Switch>
+
+//     </Router>
+
+//   );
+// };
 export default Item;
 
 

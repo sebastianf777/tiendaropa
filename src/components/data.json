@@ -1,7 +1,8 @@
-{
+[{
     "id": 1,
     "title": "Producto1",
     "price": "1500$",
     "pictureUrl": "",
-    "stock": "10"
-  }
+    "stock": "10",
+    "categoria": "1"
+  }]
