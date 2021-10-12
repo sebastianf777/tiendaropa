@@ -22,7 +22,7 @@ function ItemDetailContainer() {
         setTimeout(() => {
           resolve(buscarProducto);
           reject("error al traer productos");
-        }, 3000);
+        }, 1000);
       });
     };
     getItems()

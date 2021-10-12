@@ -1,31 +1,21 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { Card, Button, ButtonGroup } from "react-bootstrap";
 
-const ItemCount = () => {
+const ItemCount = (producto) => {
 
-    const [stock, setStock] = useState(10);
-    const [count, setCount] = useState(0);
+  const { stock, onAdd, initial } = producto.props;
 
-    // useEffect(() => {
-      
-        
-    //     setTimeout(() => {
-            
-    //         Promise.resolve(data)
-    //         .then((response) => {
-                
-    //           setItemsDetail(response);
-    //          });
-    //        }, 2000);
-      
- 
-    //  }, []);
-    const stockFinal = () =>
-      stock > 0 ? setStock(stock - count) : console.log("ya no hay mas");
+  const [stockActual, setStockActual] = useState(stock);
+  const [count, setCount] = useState(initial);
+
+    // const stockFinal = () =>
+    //   {stockActual >= count ? setStockActual(onAdd(stockActual - count)) : alert("ya no hay mas");
+
+    // }
     const suma = () =>
       count < stock ? setCount(count + 1) : console.log("ya no hay stock");
     const resta = () =>
-      count !== 0 ? setCount(count - 1) : console.log("0 es el límite");
+      count > initial ? setCount(count - 1) : console.log("0 es el límite");
   
   return (
     <div>
@@ -41,10 +31,16 @@ const ItemCount = () => {
         </Button>
       </ButtonGroup>
       <ButtonGroup aria-label="Basic example">
-        <Button className="agregarC" variant="success" onClick={stockFinal}>
+        <Button className="agregarC" variant="success" onClick={() => {
+          stockActual >= count &&
+            setStockActual(onAdd(stockActual, count));
+          count > stockActual &&
+            alert("No queda más stock, no se puede agregar al carrito!");
+        }}>
           Agregar al carrito
         </Button>
       </ButtonGroup>
+      <Card.Text>Cantidad disponible {stockActual}</Card.Text>
     </div>
   );
 };

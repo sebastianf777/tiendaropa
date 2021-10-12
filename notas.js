@@ -87,3 +87,8 @@ y para llamar cosas hechas del componente usar "useState(props.name), usteState(
 
 // clase apis//////////////////////////////////
 ///////////////////////////////////////////
+
+
+//clase CONTEXT
+//una posible solucion es hacer variables/funciones globales
+//el contexto solo pueden usarlo los hijos, el padre hace de proveedor con context
