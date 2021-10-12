@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import { Card, Button, ButtonGroup } from "react-bootstrap";
 
-const ItemCount = (producto) => {
+const ItemCount = (props) => {
 
-  const { stock, onAdd, initial } = producto.props;
+  const { stock, onAdd, initial } = props.props;
 
-  const [stockActual, setStockActual] = useState(stock);
   const [count, setCount] = useState(initial);
+  const [stockActual, setStockActual] = useState(stock);
+
 
     // const stockFinal = () =>
     //   {stockActual >= count ? setStockActual(onAdd(stockActual - count)) : alert("ya no hay mas");
@@ -40,6 +41,7 @@ const ItemCount = (producto) => {
           Agregar al carrito
         </Button>
       </ButtonGroup>
+
       <Card.Text>Cantidad disponible {stockActual}</Card.Text>
     </div>
   );

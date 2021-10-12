@@ -4,6 +4,7 @@ import ItemCount from "./ItemCount"
 
 
 const ItemDetail = ({ producto }) => {
+  
  const {stock, precio, imagen, nombre, id } = producto;
 // const {id, stock, price} = producto;
 const productCount ={
