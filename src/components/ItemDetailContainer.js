@@ -10,13 +10,14 @@ function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id } = useParams();
 
-  const getProducts = new Promise((res, rej) => {
-    setTimeout(function () {
-      res(data);
-    }, 2000);
-  });
-
+  
   useEffect(() => {
+    const getProducts = new Promise((res, rej) => {
+      setTimeout(function () {
+        res(data);
+      }, 2000);
+    });
+  
 getProducts
 .then((res) => {
   res.forEach((item) => {
@@ -26,20 +27,7 @@ getProducts
   });
 })
 .catch((err) => alert(err))
-    // const getItems = () => {
-    //   return new Promise((resolve, reject) => {
-    //     const buscarProducto = data.find(
-    //       (item) => item.id === parseInt(idProduct)
-    //     );
-    //     setTimeout(() => {
-    //       resolve(buscarProducto);
-    //       reject("error al traer productos");
-    //     }, 1000);
-    //   });
-    // };
-    // getItems()
-    //   .then((res) => setProducto(res))
-    //   .catch((acaHayError) => console.log(acaHayError));
+
   }, []);
 
   return <ItemDetail producto={producto} />;

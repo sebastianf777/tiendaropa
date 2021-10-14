@@ -11,7 +11,7 @@ useEffect(() => {
   
     setTimeout(() => {
       (setStockFinal(stock))
-    }, 2000);
+    }, 1000);
 
 }, [stock])
 
@@ -38,7 +38,7 @@ const StockFinalF = () =>{
         </Button>
       </ButtonGroup>
       <ButtonGroup aria-label="Basic example">
-        <Button className="agregarC" variant="success" onClick={() => {{onAdd(count)}StockFinalF()}} >
+        <Button className="agregarC" variant="success" onClick={() => {onAdd(count); StockFinalF()}} >
           Agregar al carrito
         </Button>
       </ButtonGroup>

@@ -4,6 +4,8 @@ import Nav from "./components/NavBar.js";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";
+import { CartProvider } from "./components/CartContext";
+import { Cart } from "./components/Cart";
 // import { BrowserRouter, Switch, Route, useRouteMatch } from "react-router-dom";
 // , useRouteMatch
 // import ItemBigDetail from "./components/ItemBigDetail.js";
@@ -16,6 +18,7 @@ const App = () => {
     
       <div>
     <Router>
+    <CartProvider>
         <Nav/>
         <Switch>
         <Route exact path="/">
@@ -24,10 +27,14 @@ const App = () => {
         <Route exact path="/category/:id">
           <ItemListContainer />
         </Route>
+        <Route path="/cart">
+              <Cart />
+            </Route>
         <Route exact path="/item/:id">
           <ItemDetailContainer />
         </Route>
       </Switch>
+      </CartProvider>
     </Router>
       </div>
 

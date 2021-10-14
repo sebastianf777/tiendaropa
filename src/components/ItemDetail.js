@@ -2,17 +2,25 @@ import React from "react";
 import "../css/ItemDetail.css";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({ producto }) => {
   // const {id, stock, price} = producto;
   const [isActive, setActive] = useState("false");
   const [finishButton, setFinishButton] = useState(false);
+  const { addProduct } = useContext(CartContext);
+
   const [qty, setQty] = useState(0);
+
+  const goToPayment = () => {
+    addProduct(producto.id, producto.nombre, producto.precio, qty);
+  };
 
   const handleToggle = () => {
     setActive(!isActive);
   };
+
   const onAdd = (qty) => {
     setQty(qty);
     handleToggle();
@@ -39,10 +47,10 @@ const ItemDetail = ({ producto }) => {
           to="/cart"
           className="button2"
           onClick={() => {
-            setQty(0);
+            goToPayment();
           }}
         >
-          Go to payment
+          Go to payment! 
         </Link>
       ) : null}
       <Link
