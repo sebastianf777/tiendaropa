@@ -25,3 +25,4 @@ yarn-error.log*
 /notas.txt
 /enrutamiento
 /components/data.json
+/components/notasdeclase.js

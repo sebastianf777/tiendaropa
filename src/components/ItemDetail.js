@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/ItemDetail.css";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
@@ -6,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 
 const ItemDetail = ({ producto }) => {
-  // const {id, stock, price} = producto;
+
   const [isActive, setActive] = useState("false");
   const [finishButton, setFinishButton] = useState(false);
   const { addProduct } = useContext(CartContext);
@@ -41,27 +40,40 @@ const ItemDetail = ({ producto }) => {
         <p className="card-text"> {producto.precio} </p>
         <div className={isActive ? null : "toggle"}>
           <ItemCount onAdd={onAdd} initial={1} stock={producto.stock} />
-        </div>
+          </div>
         {finishButton ? (
+        <div>
+          <Link
+            to="/cart"
+            className="buttonClose"
+            onClick={() => {
+              goToPayment();
+            }}
+          >
+            Terminar la compra!
+          </Link>
+          <Link
+            to="/"
+            className="buttonClose"
+            onClick={() => {
+              goToPayment();
+            }}
+          >
+            Seguir Comprando
+          </Link>
+        </div>
+      ) : (
         <Link
-          to="/cart"
-          className="button2"
+          className="buttonClose"
+          to="/"
           onClick={() => {
-            goToPayment();
+            setQty(0);
           }}
         >
-          Go to payment! 
+          Go Back!
         </Link>
-      ) : null}
-      <Link
-        className="buttonClose"
-        to="/"
-        onClick={() => {
-          setQty(0);
-        }}
-      >
-        Go Back!
-      </Link>
+       
+      )}
       </div>
     </div>
   );
@@ -69,21 +81,4 @@ const ItemDetail = ({ producto }) => {
 
 export default ItemDetail;
 
-// import { Card } from "react-bootstrap";
-
-// const ItemDetail = ({itemDetail}) => {
-
-// return (
-//     <div>
-//       <Card style={{ width: "100%" }}>
-//         <Card.Body>
-//           <Card.Title>{itemDetail.title}</Card.Title>
-//           <Card.Text>Id: {itemDetail.id}</Card.Text>
-//           <Card.Text>Precio {itemDetail.price}</Card.Text>
-//         </Card.Body>
-//         </Card>
-//     </div>
-//   );
-// }
-
-// export default ItemDetail;
+// IDEAS: agregar boton cancelar
