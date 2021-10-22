@@ -1,11 +1,8 @@
-// import * as firebase from "firebase/app";
-// import firebase from 'firebase/compat/app';
+import firebase from "firebase/app";
+import "@firebase/firestore";
 
-import { getFirestore } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
-// // const app = firebase.initializeApp({
-    const firebaseConfig = {
+
+const app = firebase.initializeApp({
     apiKey: "AIzaSyDQHDYR6lqutdpWEPzKibzLmR7bEQ0CVG0",
   
     authDomain: "tiendaropa-sebastianfontana.firebaseapp.com",
@@ -20,7 +17,8 @@ import { initializeApp } from "firebase/app";
   
     measurementId: "G-8D3ZSHR09B"
   
-  };
+});
+
 // export function getFirebase() {
 //     return app;
 // }
@@ -28,9 +26,6 @@ import { initializeApp } from "firebase/app";
 //     return firebase.firestore(app);
 // }
 
-const app = initializeApp(firebaseConfig);
+export const getFirebase = () => app;
 
-// export const auth = getAuth(app);
-const db = getFirestore(app);
-
-export default db;
+export const getFirestore = () => firebase.firestore(app);
