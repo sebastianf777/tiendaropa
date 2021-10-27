@@ -13,7 +13,7 @@ const ItemDetail = ({ producto }) => {
   const [qty, setQty] = useState(0);
 
   const goToPayment = () => {
-    addProduct(producto.id, producto.nombre, producto.precio, qty);
+    addProduct(producto.id, producto.nombre, producto.precio, producto.imagen, qty);
   };
 
   const handleToggle = () => {

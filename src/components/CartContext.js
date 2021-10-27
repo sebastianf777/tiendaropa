@@ -5,7 +5,7 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   //const [totalPrice, setTotalPrice] = useState(0);
-  const addProduct = (id, nombre, precio, qty) => {
+  const addProduct = (id, nombre, precio,imagen, qty) => {
     const existingIndex = cart.findIndex((item) => item.id === id);
 
 
@@ -22,6 +22,7 @@ export function CartProvider({ children }) {
           id: id,
           name: nombre,
           price: precio,
+          image: imagen,
           qty: qty,
         },
       ]);

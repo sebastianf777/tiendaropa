@@ -17,3 +17,10 @@ header{
     left: 3px;
     font-size: .7em;
 }
+
+.nav-link{
+    color: purple;
+}
+.nav-link:hover, .nav-link:focus{
+    color: indianred;
+}

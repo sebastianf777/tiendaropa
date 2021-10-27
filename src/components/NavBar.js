@@ -10,7 +10,7 @@ const Nav = () => {
       <ReactBootStrap.Navbar className="mx-3" bg="none" expand="lg">
         <ReactBootStrap.Navbar.Brand>
           <Link to="/" className="nav-link">
-            MyM Calzados
+            Yohanna Calzados
           </Link>
         </ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />

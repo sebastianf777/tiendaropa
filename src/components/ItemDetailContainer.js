@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-// import {data} from "./data";
-// import db from "../firebase/";
 import { getFirestore } from "../firebase/";
 
-import Loader from "./loader/loader";
+import Loader from "./loader/Loader";
 function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id } = useParams();
@@ -27,7 +25,7 @@ function ItemDetailContainer() {
       })
       .catch((err) => alert(err))
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [id]);
   return (
     <div className="itemDetailWrapper">
       {isLoading ? <Loader /> : <ItemDetail producto={producto} />}

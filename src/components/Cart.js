@@ -6,7 +6,8 @@ import UserForm from "./UserForm";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { getFirestore } from "../firebase/";
-import Loader from "./loader/loader";
+import Loader from "./loader/Loader";
+import "../css/Cart.css";
 
 export const Cart = () => {
   const { cart, removeProduct } = useContext(CartContext);
@@ -39,50 +40,67 @@ export const Cart = () => {
       });
   };
 
-  
-
   return (
     <div className="cartView">
       <div className="cartItemsWrapper">
         {cart.length ? (
           <>
-          {cart.map((producto) => (
-            <div key={producto.id} className="x2">
-              <h2>{producto.name}</h2>
-              <h4>Qty: {producto.qty}</h4>
-              <h4>${calculatePrice(producto.price, producto.qty)}</h4>
-              <img
-                className="x3"
-                src={trashIcon}
-                alt="#"
-                width="20px"
-                onClick={() => {
-                  removeProduct(producto);
-                }}
-              />
-            </div>
-          ))}
-          <button
-              className="button3"
+            {cart.map((producto) => (
+              <div key={producto.id} className="card carrito">
+                <div className="itemCarrito">
+                  <div>
+                    <img
+                      className="imgItemCarrito"
+                      src={producto.image}
+                      alt={producto.name}
+                    />
+                  </div>
+                  <div className="cardInfo">
+                    <h2>{producto.name}</h2>
+                    <h4>Cantidad: {producto.qty}</h4>
+                    <h4>${calculatePrice(producto.price, producto.qty)}</h4>
+                  </div>
+                </div>
+                <div className="trashContainer">
+                  <img
+                    className="trashIcon"
+                    src={trashIcon}
+                    alt="#"
+                    width="20px"
+                    onClick={() => {
+                      removeProduct(producto);
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+            <button
+              className="botonFinalizarLaCompra"
               disabled={!(user.name && user.email && cart.length)}
               onClick={() => crearOrden()}
             >
               Finalizar Compra
             </button>
-            </>
+            <div>
+              <UserForm user={user} setUser={setUser} />
+              {order.id ? (
+                <div>Tu número de orden es: {order.id}</div>
+              ) : (
+                <div className="loaderCart">
+                  <Loader  />
+                </div>
+              )}
+              <strong>Total de la compra: ${calculoTotal.toFixed(2)}</strong>
+            </div>
+          </>
         ) : (
-          <div>
+          <div className="cartView">
             <h1>No hay items en el carrito</h1>
-            <Link to="/" className="buttonClose">
-              Ir a comprar algo :)!
+            <Link to="/">
+              <button className="botonIrAComprar">Regresar al catálogo</button>
             </Link>
           </div>
         )}
-      </div>
-      <div>
-      <UserForm user={user} setUser={setUser} />
-        {order.id ? <div>Tu número de orden es: {order.id}</div> : <Loader />}
-        <strong>Total de la compra: ${calculoTotal.toFixed(2)}</strong>
       </div>
     </div>
   );

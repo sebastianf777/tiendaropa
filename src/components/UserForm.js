@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 const UserForm = ({ user, setUser }) => {
   const [nombre, setNombre] = useState("");
   const [mail1, setMail1] = useState("");
@@ -11,12 +10,15 @@ const UserForm = ({ user, setUser }) => {
   const handleMail2 = (e) => setMail2(e.target.value);
 
   const EmailVerif = (mail1, mail2, nombre) => {
-    if (mail1 === mail2) {
+   
+    if (mail1 === "" || nombre === "") {
+      alert("Por favor llene todos los campos");
+    } else if (mail1 === mail2) {
       setUser({
-        name: nombre,
-        email: mail1,
-      });
-    } else {
+         name: nombre,
+         email: mail1,
+        });
+       } else {
       alert("Los Emails deben coincidir");
     }
   };
@@ -47,7 +49,7 @@ const UserForm = ({ user, setUser }) => {
             value={mail2}
           />
           <button
-            className="login"
+            className="botonIngresar"
             onClick={() => {
               EmailVerif(mail1, mail2, nombre);
             }}

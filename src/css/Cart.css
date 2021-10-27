@@ -1,0 +1,94 @@
+.cartView, .orderContainer{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.cartView h1, .cartView a{
+    margin: 10px auto;
+}
+.cartItemsWrapper{
+    margin: 10px;
+    
+}
+.carrito{
+
+    border-radius: 10px;
+    min-width: 60vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.itemCarrito{
+    display: flex;
+    flex-direction: row;
+}
+
+.imgItemCarrito{
+    width: auto;
+}
+
+
+.cardInfo{
+
+    margin: 10px 50px 10px 30px;
+}
+
+/* .trashContainer{
+    width: 30px;
+    height: 30px ;
+} */
+.trashIcon{
+    top: 0%;
+    right: 0%;
+    position: absolute; 
+    margin: 10px;
+}
+
+.botonIrAComprar, .botonFinalizarLaCompra, .botonIngresar{
+    border-radius: 5px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+.botonFinalizarLaCompra{
+margin: 0 auto;
+width: 150px;
+}
+
+/* FLEX CENTER */
+.cartItemsWrapper, .orderContainer{
+display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.orderContainer h3, .userName{
+    margin: 20px auto;
+}
+
+.userForm{
+display: flex;
+justify-content: center;
+flex-direction: column;
+max-width: max-content;
+margin: 0 auto;
+}
+
+.userForm input{
+    margin-bottom: 10px;
+}
+
+.loaderCart .lds-roller{
+    position: relative;
+    left: 47%;
+    
+}
+/* .orderContainer{
+    
+} */
