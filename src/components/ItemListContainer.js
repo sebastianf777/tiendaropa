@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
 import Loader from "./loader/Loader";
-
+import FadeIn from 'react-fade-in';
+import { useParams } from "react-router-dom";
 
   const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [getIsEmpty, setGetIsEmpty] = useState(false);
+    const { id } = useParams();
 
     useEffect(() => {
       setIsLoading(true);
@@ -30,7 +32,7 @@ import Loader from "./loader/Loader";
         })
         .catch((err) => alert(err))
         .finally(() => setIsLoading(false));
-    }, []);
+    }, [id]);
 
   return (
     <>
@@ -39,7 +41,9 @@ import Loader from "./loader/Loader";
       ) : getIsEmpty ? (
         <h2>NO HAY PRODUCTOS</h2>
       ) : (
-        <ItemList productos={productos} />
+        <div>
+          <ItemList productos={productos} />
+        </div>
       )}
     </>
   );

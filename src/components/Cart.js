@@ -8,15 +8,17 @@ import "firebase/firestore";
 import { getFirestore } from "../firebase/";
 import Loader from "./loader/Loader";
 import "../css/Cart.css";
+import CheckoutComponent from "./CheckoutComponent";
+import FadeIn from "react-fade-in";
 
 export const Cart = () => {
-  const { cart, removeProduct } = useContext(CartContext);
+  const { cart, removeProduct, calculoTotal } = useContext(CartContext);
   const [order, setOrder] = useState({});
   const [user, setUser] = useState({
     name: null,
     email: null,
   });
-  const calculoTotal = cart.reduce((a, c) => a + c.price * c.qty, 0);
+
   const calculatePrice = (precio, qty) => {
     return precio * qty;
   };
@@ -41,67 +43,83 @@ export const Cart = () => {
   };
 
   return (
-    <div className="cartView">
-      <div className="cartItemsWrapper">
-        {cart.length ? (
-          <>
-            {cart.map((producto) => (
-              <div key={producto.id} className="card carrito">
-                <div className="itemCarrito">
-                  <div>
-                    <img
-                      className="imgItemCarrito"
-                      src={producto.image}
-                      alt={producto.name}
-                    />
-                  </div>
-                  <div className="cardInfo">
-                    <h2>{producto.name}</h2>
-                    <h4>Cantidad: {producto.qty}</h4>
-                    <h4>${calculatePrice(producto.price, producto.qty)}</h4>
-                  </div>
+    <>
+        <FadeIn>
+   
+        <div className="cartView">
+          
+            {cart.length ? (
+              <>
+                <div className="itemsYTotal">
+                  {cart.map((producto) => (
+                    <div key={producto.id} className="card carrito">
+                      <div className="itemCarrito">
+                        <div>
+                          <img
+                            className="imgItemCarrito"
+                            src={producto.image}
+                            alt={producto.name}
+                          />
+                        </div>
+                        <div className="cardInfo">
+                          <h2>{producto.name}</h2>
+                          <h4>Cantidad: {producto.qty}</h4>
+                          <h4>
+                            ${calculatePrice(producto.price, producto.qty)}
+                          </h4>
+                        </div>
+                      </div>
+                      <div className="trashContainer">
+                        <img
+                          className="trashIcon"
+                          src={trashIcon}
+                          alt="#"
+                          width="20px"
+                          onClick={() => {
+                            removeProduct(producto);
+                          }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                  
+                  <CheckoutComponent />
+                  
                 </div>
-                <div className="trashContainer">
-                  <img
-                    className="trashIcon"
-                    src={trashIcon}
-                    alt="#"
-                    width="20px"
-                    onClick={() => {
-                      removeProduct(producto);
-                    }}
-                  />
+                <div>
+                  <button
+                    className="botonFinalizarLaCompra"
+                    disabled={!(user.name && user.email && cart.length)}
+                    onClick={() => crearOrden()}
+                  >
+                    Finalizar Compra
+                  </button>
+
+                  <UserForm user={user} setUser={setUser} />
+                  {order.id ? (
+                    <div>Tu número de orden es: {order.id}</div>
+                  ) : (
+                    <div className="loaderCart">
+                      <Loader />
+                    </div>
+                  )}
+                  
                 </div>
+              </>
+            ) : (
+              <div className="cartView">
+                <h1>No hay items en el carrito</h1>
+                <Link to="/">
+                  <button className="botonIrAComprar">
+                    Regresar al catálogo
+                  </button>
+                </Link>
               </div>
-            ))}
-            <button
-              className="botonFinalizarLaCompra"
-              disabled={!(user.name && user.email && cart.length)}
-              onClick={() => crearOrden()}
-            >
-              Finalizar Compra
-            </button>
-            <div>
-              <UserForm user={user} setUser={setUser} />
-              {order.id ? (
-                <div>Tu número de orden es: {order.id}</div>
-              ) : (
-                <div className="loaderCart">
-                  <Loader  />
-                </div>
-              )}
-              <strong>Total de la compra: ${calculoTotal.toFixed(2)}</strong>
-            </div>
-          </>
-        ) : (
-          <div className="cartView">
-            <h1>No hay items en el carrito</h1>
-            <Link to="/">
-              <button className="botonIrAComprar">Regresar al catálogo</button>
-            </Link>
-          </div>
-        )}
-      </div>
-    </div>
+            )}
+          
+        </div>
+        </FadeIn>
+
+    </>
   );
 };

@@ -1,0 +1,203 @@
+$rosa: #eb00b0;
+$violetaOscuro: #3a0130;
+
+.emptyTitle {
+    font-size: 30px;
+    color: $violetaOscuro;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.container_carrito {
+    display: flex;
+    justify-content: space-between;
+    width: 64em;
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.cartProducts_container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    
+    .cart_product {
+        background: white;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px solid #d0d0d0;
+        @media (max-width: 768px) {
+            width: 100%;
+            align-items: flex-start;
+            margin: 0 10px;
+        }
+
+        .img_container {
+            max-width: 150px;
+            img {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                max-width: 100px;
+            }
+        }
+    
+        .cart_product_info {
+            width: 20em;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            margin: 0 15px;
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 20px 0;
+                margin: 0 5px;
+            }
+            
+            .product_tittle {
+                font-size: 15px;
+                font-weight: 700;
+                color: $violetaOscuro;
+                margin: 0;
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+            
+            .price_quantity {
+                margin-top: 15px;
+                @media (max-width: 768px) {
+                    margin: 3px 0;
+                }
+                .product_price {
+                    font-size: 17px;
+                    color: $rosa;
+                    font-weight: 700;
+                    margin-left: 80px;
+                    @media (max-width: 768px) {
+                        margin-left: 50px;
+                    }
+                }
+                .product_quantity {
+                    color: gray;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .removeBtn_container {
+            margin-top: 10px;
+            margin-right: 10px;
+            @media (max-width: 768px){
+                margin: 0;
+            }
+            .button {
+                margin: 0;
+                @media (max-width: 768px){
+                    margin: 3px;
+                }
+            }
+        }
+    }
+}
+
+.checkout_container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 5px;
+    width: 26em;
+    height: 20em;
+    border: 1px solid #d0d0d0;
+    // @media (max-width: 768px) {
+    //     width: auto;
+    //     height: auto;
+    //     margin: 0 10px;
+    // }
+
+    ul {
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            .checkout_quantity {
+                font-size: 17px;
+                font-weight: 700;
+            }
+            .checkout_totalPrice {
+                font-size: 18px;
+                font-weight: 700;
+                color: $rosa;
+            }
+            .checkout_variants {
+                font-size: 15px;
+                color: gray;
+            }
+        }
+    }
+
+    .terms_conditions {
+        color: gray;
+        font-size: 11px;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .ui.button {
+        background: $rosa;
+        color: white;
+        font-size: 16px;
+        width: 15em;
+        margin: auto;
+        display: block;
+       
+    }
+} 
+
+.checkoutBtns_container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px){
+        padding: 10px;
+    }
+
+    .seguirComprando_btn {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        background-color: transparent;
+        color: $rosa;
+        border: 2px solid $rosa;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            color: white;
+            background-color: $rosa;                                                                                  
+        }
+    }
+    .vaciar {
+        color: red;
+        border: 2px solid red;
+        width: 80%;
+        margin-right: 10px;
+        &:hover {
+            background-color: red;
+        }
+    }
+}

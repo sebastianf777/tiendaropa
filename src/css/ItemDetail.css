@@ -2,14 +2,6 @@
     display: none
 }
 
-/* .NotToggled{
-    display: block;
-} */
-
-.card{
-    width: 30rem;
-    margin: 10px auto;
-}
 .toggle{
     display: none;
 }

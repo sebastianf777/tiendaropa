@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
-import { Card, Button, ButtonGroup } from "react-bootstrap";
-
+// import { Card, Button, ButtonGroup } from "react-bootstrap";
+// import { Button } from 'semantic-ui-react';
 const ItemCount = ({stock, initial, onAdd}) => {
 
 
@@ -26,23 +26,30 @@ const StockFinalF = () =>{
   
   return (
     <div>
-      <ButtonGroup aria-label="Basic example">
-        <Button className="plusMinus" variant="outline-dark" onClick={resta}>
+      {/* <ButtonGroup aria-label="Basic example"> */}
+        {/* <Button className="plusMinus" variant="outline-dark" onClick={resta}> */}
+        <button onClick={resta}>
           -
-        </Button>
-        <Button variant="outline-dark">
-          <Card.Text>{count}</Card.Text>
-        </Button>
-        <Button className="plusMinus" variant="outline-dark" onClick={suma}>
+        </button>
+        <button >
+          {/* <Card.Text> */}
+            {count}
+            {/* </Card.Text> */}
+        </button>
+        <button className="plusMinus" onClick={suma}>
           +
-        </Button>
-      </ButtonGroup>
-      <ButtonGroup aria-label="Basic example">
-        <Button className="agregarC" variant="success" onClick={() => {onAdd(count); StockFinalF()}} >
+        </button>
+      {/* </ButtonGroup> */}
+      {/* <ButtonGroup aria-label="Basic example"> */}
+        {/* <Button className="agregarC" variant="success" onClick={() => {onAdd(count); StockFinalF()}} > */}
+        <button onClick={() => {onAdd(count); StockFinalF()}}>
           Agregar al carrito
-        </Button>
-      </ButtonGroup>
-      <Card.Text>Disponibles: {stockFinal}</Card.Text>
+          </button>
+        {/* </Button> */}
+      {/* </ButtonGroup> */}
+      {/* <Card.Text> */}
+        Disponibles: {stockFinal}
+        {/* </Card.Text> */}
      
     </div>
   );

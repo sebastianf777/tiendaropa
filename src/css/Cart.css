@@ -1,16 +1,18 @@
 .cartView, .orderContainer{
-    margin: 20px;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     
 }
-
+.cartView{
+    margin: 100px 20px;
+}
 .cartView h1, .cartView a{
     margin: 10px auto;
 }
 .cartItemsWrapper{
-    margin: 10px;
+    margin: 10px auto;
     
 }
 .carrito{
@@ -22,6 +24,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin: 10px;
+    height: 150px;
+
 }
 
 .itemCarrito{
@@ -61,13 +65,15 @@ margin: 0 auto;
 width: 150px;
 }
 
-/* FLEX CENTER */
+
 .cartItemsWrapper, .orderContainer{
 display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
+.orderContainer{
+    margin: 20px;
+}
 .orderContainer h3, .userName{
     margin: 20px auto;
 }
@@ -88,6 +94,12 @@ margin: 0 auto;
     position: relative;
     left: 47%;
     
+}
+
+.itemsYTotal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 /* .orderContainer{
     

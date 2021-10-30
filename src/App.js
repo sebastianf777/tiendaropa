@@ -1,8 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-// import React, { useEffect, useState } from "react";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
-// import db from "./firebase";
-// import { doc, collection, query, where, onSnapshot } from "firebase/firestore";
 
 import Nav from "./components/NavBar.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -11,7 +8,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import { CartProvider } from "./components/CartContext";
 import { Cart } from "./components/Cart";
 import Categorias from "./components/Categorias";
-
+import 'semantic-ui-css/semantic.min.css'
 
 const App = () => {
 

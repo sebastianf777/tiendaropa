@@ -1,0 +1,83 @@
+$rosa: #eb00b0;
+
+.itemCard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px 15px 5px ;
+    border: 1px solid ghostwhite;
+    border-radius: 5px;
+    width: 26em;
+    height: 40em;
+    transition: box-shadow .3s;
+    &:hover {
+        box-shadow: 1px 1px 4px -1px rgba(0,0,0,0.20);
+    }
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+    .imgProducto{
+width: 20em;
+height: 20em;
+object-fit: cover;
+margin: 10px;
+    }
+
+    .discountContainer {
+        display: flex;
+        justify-content: flex-start;
+
+        .productVariants {
+            margin-right: 7px;
+            margin-bottom: 0;
+            padding: 4px 6px;
+            font-size: 11px;
+            color: white;
+            background-color: $rosa;
+            border-radius: 4px;
+        }   
+    }
+    .productBrand{
+        font-weight: 500;
+        margin: 5px 0 0 0;
+
+    }
+
+    .productName {
+        color: #2C3330;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 5px 0 5px 0;
+    }
+    .productPrice {
+        color: $rosa;
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .productLastPrice {
+        color: gray;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: line-through;
+        margin: 5px 0 0 0;
+
+    }
+    .stockActual {
+        color: #2C3330;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .btn_irItemDetail{
+        margin-top: 10px;
+
+        .ui.button {
+            color: white;
+            background: $rosa;
+            width: 9em;
+        }
+    }
+}
