@@ -6,7 +6,7 @@ $rosa: #eb00b0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
     padding: 5px 15px 5px ;
     border: 1px solid ghostwhite;
     border-radius: 5px;
@@ -14,7 +14,7 @@ $rosa: #eb00b0;
     height: 40em;
     transition: box-shadow .3s;
     &:hover {
-        box-shadow: 1px 1px 4px -1px rgba(0,0,0,0.20);
+        box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.50);
     }
     @media (max-width: 768px) {
         margin: 0;
@@ -22,7 +22,7 @@ $rosa: #eb00b0;
     .imgProducto{
 width: 20em;
 height: 20em;
-object-fit: cover;
+object-fit: contain;
 margin: 10px;
     }
 
