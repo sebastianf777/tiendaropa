@@ -1,57 +1,92 @@
 $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
 
+
+.discountColectionContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .itemContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 80px 0 30px 0;
+
     @media (max-width: 768px) {
         flex-direction: column;
         width: 100%;
     }
 
     .imagesContainer {
-        width: 33em;
+        display: flex;
+        justify-content: center;
+        // width: 33em;
         @media (max-width: 768px) {
             width: 100%;
         }
 
         img {
-            max-width: 450px;
-        object-fit: cover;
+            //     max-width: 550px;
+            //     height: 400px;
+            // object-fit: cover;
+            width: 480px;
+            height: 460px;
+            object-fit: contain;
+            
 
             @media (max-width: 768px) {
                 max-width: 100%;
             }
         }
     }
-    .detailsContainer{
+
+    .detailsContainer {
         width: 30em;
         margin-left: 30px;
+        
+
         @media (max-width: 768px) {
             width: 100%;
             margin: 0;
             padding: 20px;
         }
 
-        .productName {
+        .productBrand {
             color: $violetaOscuro;
             font-size: 21px;
             font-weight: 400;
+            margin: 20px 0 0;
+            display: flex;
+    justify-content: center;
         }
+
+        .productName {
+            color: $violetaOscuro;
+            font-size: 15px;
+            font-weight: 300;
+            margin: 10px 0;
+            display: flex;
+    justify-content: center;
+        }
+
         .productVariants {
-            margin: 10px 15px 20px 0;
+            margin: 10px 15px 10px 0;
             padding: 4px 6px;
             font-size: 11px;
             color: white;
             background-color: $rosa;
             border-radius: 4px;
-        } 
+            display: flex;
+    justify-content: center;
+        }
+
         .colorSize_container {
             display: flex;
-            margin-top: 15px;
-            .selects_container{
+    justify-content: center;
+            margin-top: 10px;
+
+            .selects_container {
                 display: flex;
                 align-items: center;
                 margin-right: 20px;
@@ -67,23 +102,38 @@ $violetaOscuro: #3a0130;
                 }
             }
         }
-            
-        .preciosContainer {
-            .productPrice {
-                color: $rosa;
-                font-weight: 700;
-                font-size: 17px;
-                margin-bottom: 5px;
-            }
-            .productLastPrice {
-                color: gray;
-                font-size: 15px;
-                font-weight: 700;
-                text-decoration: line-through;
+
+        .precioDescriptionContainer {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 10px;
+
+            .preciosContainer {
+
+                .productPrice {
+                    color: $rosa;
+                    font-weight: 700;
+                    font-size: 30px;
+                    margin-bottom: 5px;
+                }
+
+                .productLastPrice {
+                    color: gray;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-decoration: line-through;
+                }
             }
         }
-        .envioContainer {
-            .calcularEnvioBtn {
+
+        .description {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .descriptionBtn {
                 color: gray;
                 border: 1px solid gray;
                 border-radius: 4px;
@@ -92,54 +142,56 @@ $violetaOscuro: #3a0130;
                 transition: .2s;
                 cursor: pointer;
                 margin-bottom: 7px;
+
                 &:hover {
                     background-color: $rosa;
                     color: white;
                     border: 1px solid $rosa;
                 }
             }
-            .devolucion {
+
+            .stock {
                 font-size: 12px;
                 color: gray;
                 text-decoration: underline;
                 cursor: pointer;
             }
         }
-        .descriptionBtn {
-            font-size: 14px;
-            color: gray;
-            text-decoration: underline;
-            cursor: pointer;
-            transition: .2s;
-            &:hover{
-                color: $rosa;
-            }
-        }
+
+
         .irACartBtn {
             display: flex;
             align-items: center;
             border-radius: 4px;
-            padding: 7px 20px;
+            padding: 7px 15px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            margin-right: 10px;
             background-color: $rosa;
             color: white;
-            font-weight: 400;
+            font-weight: 500;
             transition: .2s;
+            width: 180px;
+
             &:hover {
                 transform: scale(1.01);
-                box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.34);
+                box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.34);
             }
+
             img {
-                max-width: 45px;
+                width: 30px;
                 filter: brightness(6);
-                margin-left: 10px;
+                margin-left: 15px;
                 margin-bottom: 5px;
             }
         }
     }
-} 
+}
+
 .descriptionContainer {
     width: 75em;
     margin: 40px auto;
+
     @media (max-width: 768px) {
         width: 100%;
         display: flex;
@@ -153,6 +205,7 @@ $violetaOscuro: #3a0130;
         color: $violetaOscuro;
         font-weight: 300;
     }
+
     p {
         font-size: 13px;
         color: $violetaOscuro;
@@ -162,12 +215,15 @@ $violetaOscuro: #3a0130;
     .descriptionArticles_container {
         display: flex;
         justify-content: space-between;
+
         @media (max-width: 768px) {
             flex-direction: column;
             width: 100%;
         }
+
         article {
             width: 30%;
+
             @media (max-width: 768px) {
                 width: 100%;
             }
@@ -177,21 +233,25 @@ $violetaOscuro: #3a0130;
                 color: $violetaOscuro;
                 font-weight: 500;
             }
+
             h3 {
                 font-size: 12px;
                 color: gray;
                 margin-left: 1px;
             }
+
             p {
                 color: gray;
                 font-size: 14px;
                 margin: 10px 0;
             }
+
             ul {
                 font-family: 'Montserrat', sans-serif;
                 color: gray;
                 font-size: 14px;
                 margin-top: 20px;
+
                 li {
                     margin: 5px 0;
                 }

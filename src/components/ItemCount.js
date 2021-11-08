@@ -1,56 +1,48 @@
-import {useState, useEffect} from "react";
-// import { Card, Button, ButtonGroup } from "react-bootstrap";
-// import { Button } from 'semantic-ui-react';
-const ItemCount = ({stock, initial, onAdd}) => {
+import { useState } from "react";
+import imgCart from "../svg/cartSvg.svg";
+import "../scss/ItemCount.scss";
 
-
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
-const [stockFinal, setStockFinal] = useState(stock);
+  // const [stockFinal, setStockFinal] = useState(stock);
 
-useEffect(() => {
-  
-    setTimeout(() => {
-      (setStockFinal(stock))
-    }, 1000);
+  // useEffect(() => {
+  //   // setTimeout(() => {
+  //   //   setStockFinal(stock);
+  //   // }, 1000);
+  // }, [stock]);
 
-}, [stock])
+  const suma = () =>
+    count < stock ? setCount(count + 1) : console.log("ya no hay stock");
+  const resta = () =>
+    count > initial ? setCount(count - 1) : console.log("0 es el límite");
 
-const StockFinalF = () =>{
-  (setStockFinal(stock - count))
-}
-
-    const suma = () =>
-      count < stock ? setCount(count + 1) : console.log("ya no hay stock");
-    const resta = () =>
-      count > initial ? setCount(count - 1) : console.log("0 es el límite");
-  
   return (
-    <div>
-      {/* <ButtonGroup aria-label="Basic example"> */}
-        {/* <Button className="plusMinus" variant="outline-dark" onClick={resta}> */}
-        <button onClick={resta}>
+    <div className="buttonsCountContainer">
+    
+      <div className="countButtons">
+        <button className="stockBtn" onClick={resta}>
           -
         </button>
-        <button >
-          {/* <Card.Text> */}
-            {count}
-            {/* </Card.Text> */}
-        </button>
-        <button className="plusMinus" onClick={suma}>
+        <div className="stockBtn">
+          {count}
+        </div>
+        <button className="stockBtn" onClick={suma}>
           +
         </button>
-      {/* </ButtonGroup> */}
-      {/* <ButtonGroup aria-label="Basic example"> */}
-        {/* <Button className="agregarC" variant="success" onClick={() => {onAdd(count); StockFinalF()}} > */}
-        <button onClick={() => {onAdd(count); StockFinalF()}}>
+      </div>
+
+      <div>
+        <button
+          className="onAddBtn"
+          onClick={() => {
+            onAdd(count);
+          }}
+        >
           Agregar al carrito
-          </button>
-        {/* </Button> */}
-      {/* </ButtonGroup> */}
-      {/* <Card.Text> */}
-        Disponibles: {stockFinal}
-        {/* </Card.Text> */}
-     
+          <img className="itemCountImg" src={imgCart} alt="" />
+        </button>
+      </div>
     </div>
   );
 };

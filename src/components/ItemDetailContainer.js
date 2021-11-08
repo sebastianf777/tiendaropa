@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { getFirestore } from "../firebase/";
+import Footer from "./Footer";
 
 import Loader from "./loader/Loader";
 function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
-
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,7 +28,16 @@ function ItemDetailContainer() {
   }, [id]);
   return (
     <div className="itemDetailWrapper">
-      {isLoading ? <Loader /> : <ItemDetail producto={producto} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <ItemDetail producto={producto} />
+          <>
+            <Footer />
+          </>
+        </>
+      )}
     </div>
   );
 }

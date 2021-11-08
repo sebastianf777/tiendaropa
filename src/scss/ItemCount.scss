@@ -1,0 +1,85 @@
+$rosa: #eb00b0;
+
+
+.buttonCountCartContainer {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+
+    .countButtons {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid $rosa;
+        border-radius: 4px;
+        margin: 0 0 10px;
+    }
+
+
+    .buttonsCountContainer {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 5px;
+        flex-direction: column;
+
+        .stockBtn {
+            width: 33%;
+            padding: 5px 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            background: white;
+            color: $rosa;
+            // border: 1px solid $rosa;
+            // border-radius: 4px;
+            cursor: pointer;
+            transition: .2s;
+            text-align: center;
+
+            &:hover {
+                color: white;
+                background: $rosa;
+            }
+        }
+
+        p {
+            color: gray;
+            font-weight: 700;
+        }
+
+    }
+}
+
+.onAddBtn {
+    background: white;
+    border: 1px solid $rosa;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 15px;
+    font-size: 17px;
+    color: $rosa;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+
+    .itemCountImg {
+        width: 30px;
+
+        margin-left: 10px;
+        margin-bottom: 5px;
+
+    }
+
+    &:hover {
+        color: white;
+        background: $rosa;
+    }
+
+    &:hover img {
+        filter: brightness(11) grayscale(1) contrast(5);
+    }
+}
