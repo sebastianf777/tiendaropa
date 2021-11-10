@@ -1,7 +1,7 @@
 
 import CartIcono from "../svg/cartSvg.svg";
 // import Badge from "react-bootstrap/Badge";
-import "../css/CartWidget.css";
+import "../scss/CartWidget.scss";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 

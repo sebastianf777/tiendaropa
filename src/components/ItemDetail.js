@@ -139,10 +139,12 @@ const ItemDetail = ({ producto }) => {
       </div>
       <Divider />
       <div className="descriptionContainer" id="descriptionContainer">
-        <h1>Descripcion</h1>
-        <p> REFERENCIA {producto.referencia}</p>
+        
         <div className="descriptionArticles_container">
+          
           <article>
+          <h1>Descripcion</h1>
+        <p>CÓDIGO: {producto.referencia}</p>
           <h2>Información del producto:</h2>
             
           {producto.descripcion &&

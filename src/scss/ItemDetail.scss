@@ -190,7 +190,9 @@ $violetaOscuro: #3a0130;
 
 .descriptionContainer {
     width: 75em;
-    margin: 40px 20px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -232,6 +234,7 @@ $violetaOscuro: #3a0130;
                 font-size: 20px;
                 color: $violetaOscuro;
                 font-weight: 500;
+                margin-top: 20px;
             }
 
             h3 {

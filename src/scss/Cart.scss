@@ -1,9 +1,9 @@
 $rosa: #eb00b0;
-$violetaOscuro: #3a0130;
+$violetaOscura: #3a0130;
 
 .emptyTitle {
     font-size: 30px;
-    color: $violetaOscuro;
+    color: $violetaOscura;
     font-weight: 500;
     margin-bottom: 50px;
     @media (max-width: 768px) {
@@ -13,19 +13,22 @@ $violetaOscuro: #3a0130;
     }
 }
 
-.container_carrito {
+.cartAndCheckout{
     display: flex;
     justify-content: center;
+    margin:7em 0 ;
+
+    .containerCarrito {
+    display: flex;
+    justify-content: space-between;
     width: 64em;
     @media (max-width: 768px) {
         width: 100%;
         flex-direction: column;
-    align-items: center;
-
     }
 }
-
-.cartProducts_container {
+}
+.cartProductsContainer {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
@@ -36,17 +39,14 @@ $violetaOscuro: #3a0130;
         justify-content: center;
         border-radius: 5px;
         border: 1px solid #d0d0d0;
-        height: 12em;
-        margin: 0 20px;
         @media (max-width: 768px) {
-            max-width: 30em;
+            width: 100%;
             align-items: flex-start;
-            margin: 0 20px;
+            margin: 0 10px;
         }
 
         .img_container {
-            margin: 10px;
-            max-width: 100px;
+            max-width: 150px;
             img {
                 width: 100%;
             }
@@ -56,21 +56,21 @@ $violetaOscuro: #3a0130;
         }
     
         .cart_product_info {
-            width: 18em;
+            width: 20em;
             display: flex;
             flex-direction: column;
             padding-top: 20px;
-            margin: 0;
+            margin: 0 15px;
             @media (max-width: 768px) {
                 width: 100%;
                 padding: 20px 0;
-                margin: 0 10px 0 0;
+                margin: 0 5px;
             }
             
             .product_tittle {
                 font-size: 15px;
                 font-weight: 700;
-                color: $violetaOscuro;
+                color: $violetaOscura;
                 margin: 0;
                 @media (max-width: 768px) {
                     font-size: 13px;
@@ -100,7 +100,7 @@ $violetaOscuro: #3a0130;
             }
         }
 
-        .removeBtn_container {
+        .removeBtnContainer {
             margin-top: 10px;
             margin-right: 10px;
             @media (max-width: 768px){
@@ -123,11 +123,11 @@ $violetaOscuro: #3a0130;
     width: 26em;
     height: 20em;
     border: 1px solid #d0d0d0;
-    // @media (max-width: 768px) {
-    //     width: auto;
-    //     height: auto;
-    //     margin: 0 10px;
-    // }
+    @media (max-width: 768px) {
+        width: auto;
+        height: auto;
+        margin: 0 10px;
+    }
 
     ul {
         
@@ -167,7 +167,6 @@ $violetaOscuro: #3a0130;
         width: 15em;
         margin: auto;
         display: block;
-       
     }
 } 
 
@@ -193,7 +192,7 @@ $violetaOscuro: #3a0130;
         transition: .2s;
         &:hover {
             color: white;
-            background-color: $rosa;                                                                                  
+            background-color: $rosa;
         }
     }
     .vaciar {
@@ -205,4 +204,108 @@ $violetaOscuro: #3a0130;
             background-color: red;
         }
     }
+}
+
+.cartView, .orderContainer{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.cartView{
+    margin: 100px 20px;
+}
+.cartView h1, .cartView a{
+    margin: 10px auto;
+}
+.cartItemsWrapper{
+    margin: 10px auto;
+    
+}
+.carrito{
+
+    border-radius: 10px;
+    min-width: 60vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+    height: 150px;
+
+}
+
+.itemCarrito{
+    display: flex;
+    flex-direction: row;
+}
+
+.imgItemCarrito{
+    width: auto;
+}
+
+
+.cardInfo{
+
+    margin: 10px 50px 10px 30px;
+}
+
+/* .trashContainer{
+    width: 30px;
+    height: 30px ;
+} */
+.trashIcon{
+    top: 0%;
+    right: 0%;
+    position: absolute; 
+    margin: 10px;
+}
+
+.botonIrAComprar, .botonFinalizarLaCompra, .botonIngresar{
+    border-radius: 5px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+.botonFinalizarLaCompra{
+margin: 0 auto;
+width: 150px;
+}
+
+
+.cartItemsWrapper, .orderContainer{
+display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.orderContainer{
+    margin: 0 20px;
+}
+.orderContainer h3, .userName{
+    margin: 20px auto;
+}
+
+.userForm{
+display: flex;
+justify-content: center;
+flex-direction: column;
+max-width: max-content;
+margin: 0 auto;
+}
+
+.userForm input{
+    margin-bottom: 10px;
+}
+
+.loaderCart .lds-roller{
+    position: relative;
+    left: 47%;
+    
+}
+
+.itemsYTotal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

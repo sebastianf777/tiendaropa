@@ -1,0 +1,53 @@
+$rosa: #eb00b0;
+$violetaOscuro: #3a0130;
+
+.desaparece{
+    display: none;
+}
+
+.pago_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+        font-weight: 500;
+        color: $rosa;
+        margin-bottom: 30px;
+    }
+    .formPago_container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 50px;
+        @media (max-width: 768px) {
+            margin: 0 20px;
+            margin-bottom: 50px;
+        }
+        .medioPago_container{
+            margin-bottom: 20px;
+            label {
+                .icon {
+                    margin-right: 10px;
+                    font-size: 19px;
+                }
+                font-family: 'Montserrat', sans-serif;
+                color: $violetaOscuro;
+                font-size: 15px;
+                font-weight: 600;
+                margin-left: 10px;
+            }
+        }
+        .button{
+            margin-top: 20px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            background-color: $rosa;
+            font-weight: 500;
+            font-size: 17px;
+        }
+    }
+}

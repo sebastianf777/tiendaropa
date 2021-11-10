@@ -35,7 +35,7 @@ const CheckoutComponent = () => {
 
                     <p className='terms_conditions'>Acepto sin reservas las condiciones generales</p>
 
-                    <Link to={"/"}>
+                    <Link to={"/checkout/finish"}>
                         <Button animated='fade' >
                             <Button.Content visible>Proceder al pago <Icon name='dollar'/></Button.Content>
                             <Button.Content hidden>Siguiente paso <Icon name='arrow right'/></Button.Content>
