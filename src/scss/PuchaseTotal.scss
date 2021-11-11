@@ -1,21 +1,10 @@
-$verdeLacoste: #00532c;
-$negroLacoste: #2C3330;
+$rosa: #eb00b0;
+$negroLacoste: #3a0130;
 
 .purcharseData {
     @media (max-width: 768px) {
             padding: 0 20px;
             margin-bottom: 2em;
-    }
-
-    .pucharseData_title {
-        font-size: 13px;
-        margin: 0 0 10px 0;
-        font-weight: 700;
-    }
-
-    .pucharseData_text{
-        font-size: 12px;
-        margin: 0;
     }
 
     h3 {
@@ -24,7 +13,7 @@ $negroLacoste: #2C3330;
     }
     h2 {
         font-weight: 400;
-        color: $verdeLacoste;
+        color: $rosa;
         margin-bottom: 35px;
         @media (max-width: 768px) {
             margin-bottom: 15px;
@@ -35,7 +24,7 @@ $negroLacoste: #2C3330;
         margin-top: 20px;
     }
 
-    .priceTotal_container {
+    .priceTotalContainer {
         border: 1px solid #d0d0d0;
         padding: 20px 20px;
         width: 22em;
@@ -50,7 +39,7 @@ $negroLacoste: #2C3330;
     button.ui.green.button {
         margin-right: 0;
         color: white;
-        background-color: $verdeLacoste;
+        background-color: $rosa;
     }
 
 }

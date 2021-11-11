@@ -1,4 +1,3 @@
-
 import CartIcono from "../svg/cartSvg.svg";
 // import Badge from "react-bootstrap/Badge";
 import "../scss/CartWidget.scss";
@@ -8,18 +7,12 @@ import { CartContext } from "./CartContext";
 const Cart = () => {
   const { cart } = useContext(CartContext);
   return (
-    <div>
+    <>
+      <img src={CartIcono} alt="Icono de carrito" width="25" />
 
-      
-        <div className="cart">
-          <img src={CartIcono} alt="Icono de carrito" width="25" />
-          {/* <Badge pill bg="danger" className="BadgeC"> */}
-          {cart.length ? <p className="x4">{cart.length}</p> : null}
-          {/* </Badge> */}
-      
-        </div>
+      {cart.length ? <p className="badgeC">{cart.length}</p> : null}
 
-    </div>
+    </>
   );
 };
 

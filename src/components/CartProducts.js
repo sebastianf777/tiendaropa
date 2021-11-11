@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
-
 import { Button } from "semantic-ui-react";
 
 const CartProducts = () => {
@@ -12,18 +11,19 @@ const CartProducts = () => {
         {cart.map((producto) => {
           return (
             <>
+           
               <div key={producto.id} className="cartProductsContainer">
                 <div className="cartProduct">
                   <div className="imgContainer">
-                    <img src={producto.image} />
+                    <img src={producto.image} alt={producto.image} />
                   </div>
                   <div className="cartProductInfo">
-                    <h2 className="product_tittle">{producto.name}</h2>
-                    <div className="price_quantity">
-                      <span className="product_quantity">
+                    <h2 className="productTittle">{producto.name}</h2>
+                    <div className="priceQuantity">
+                      <span className="productQuantity">
                         Selecciono: {producto.qty}
                       </span>
-                      <span className="product_price">
+                      <span className="productPrice">
                         ${" "}
                         {calculatePrice(
                           producto.price,

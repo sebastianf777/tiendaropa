@@ -5,7 +5,7 @@ $violetaOscuro: #3a0130;
     display: none;
 }
 
-.pago_container {
+.pagoContainer {
     display: flex;
     justify-content: center;
     margin-top: 7em;
@@ -19,7 +19,14 @@ $violetaOscuro: #3a0130;
         color: $rosa;
         margin-bottom: 30px;
     }
-    .formPago_container {
+    #crearOrden{
+ button{
+     margin: 10px auto;
+ }
+    }
+ 
+
+    .formPagoContainer {
         display: flex;
         flex-direction: column;
         margin: 0 50px;
@@ -27,7 +34,7 @@ $violetaOscuro: #3a0130;
             margin: 0 20px;
             margin-bottom: 50px;
         }
-        .medioPago_container{
+        .medioPagoContainer{
             margin-bottom: 20px;
             label {
                 .icon {

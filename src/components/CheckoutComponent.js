@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
- import "../scss/PagoYCheckOut.scss";
+//  import "../scss/PagoYCheckOut.scss";
 import { CartContext } from "./CartContext";
 import { Button, Icon } from 'semantic-ui-react';
 import {Link} from "react-router-dom";
@@ -21,21 +21,21 @@ const CheckoutComponent = () => {
     return (
         <>  
             <section style={{marginBottom:'3em'}}>
-                <div className='checkout_container'>
+                <div className='checkoutContainer'>
                     
-                    <div className='totalPrice_container'>
+                    <div className='totalPriceContainer'>
                         <ul>
                             <li>
-                                <span className='checkout_quantity'>PRODUCTOS: {cantidad}</span>
-                                <span className='checkout_totalPrice' style={{color:'#2C3330'}}> $ {calculoTotal.toLocaleString("en-US")} </span>
+                                <span className='checkoutQuantity'>PRODUCTOS: {cantidad}</span>
+                                <span className='checkoutTotalPrice' style={{color:'#2C3330'}}> $ {calculoTotal.toLocaleString("en-US")} </span>
                             </li>
                             <li>
-                                <span className='checkout_variants'>Envio</span>
-                                <span className='checkout_variants'> $ 799,00 </span>
+                                <span className='checkoutVariants'>Envio</span>
+                                <span className='checkoutVariants'> $ 799,00 </span>
                             </li>
                             <li>
-                                <span className='checkout_variants'>Promocion</span>
-                                <span className='checkout_variants'> - $ 799,00 </span>
+                                <span className='checkoutVariants'>Promocion</span>
+                                <span className='checkoutVariants'> - $ 799,00 </span>
                             </li>
                             <li>
                                 <span className='checkout_quantity'>TOTAL</span>
@@ -44,10 +44,10 @@ const CheckoutComponent = () => {
                         </ul>
                     </div>
 
-                    <p className='terms_conditions'>Acepto sin reservas las condiciones generales</p>
+                    <p className='termsConditions'>Acepto sin reservas las condiciones generales</p>
 
                     <Link to={"/checkout/finish"}>
-                        <Button animated='fade' >
+                        <Button animated='fade' id="checkoutButton" >
                             <Button.Content visible>Proceder al pago <Icon name='dollar'/></Button.Content>
                             <Button.Content hidden>Siguiente paso <Icon name='arrow right'/></Button.Content>
                         </Button>
@@ -55,9 +55,9 @@ const CheckoutComponent = () => {
 
                 </div>
 
-                <div className='checkoutBtns_container'>
-                    <button className='seguirComprando_btn vaciar' onClick={() => {clearCart()}}>Vaciar carrito <Icon name='trash alternate outline'/></button>
-                    <Link to="/" className='seguirComprando_btn'><Icon name='arrow left'/> Seguir comprando</Link>
+                <div className='checkoutBtnsContainer'>
+                    <button className='seguirComprandoBtn vaciar' onClick={() => {clearCart()}}>Vaciar carrito <Icon name='trash alternate outline'/></button>
+                    <Link to="/" className='seguirComprandoBtn'><Icon name='arrow left'/> Seguir comprando</Link>
                 </div>
             </section>
 

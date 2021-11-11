@@ -10,7 +10,6 @@ const Categorias = () => {
   const [productos, setProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [getIsEmpty, setGetIsEmpty] = useState(false);
-
   const { categoryId } = useParams();
 
   // Traingo datos desde Firebase

@@ -20,7 +20,7 @@ const PurchaseTotal = () => {
         <>  
             <section className='purcharseData'>
                 <h2>Su compra: </h2>
-                <div className='priceTotal_container'>
+                <div className='priceTotalContainer'>
                     <div>
 
                         <div style={{display:'flex', justifyContent:'space-between', marginBottom:'10px'}}>

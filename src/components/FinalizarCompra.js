@@ -8,51 +8,25 @@ import UserForm from "./UserForm";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { Icon, Button } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 import FadeIn from "react-fade-in";
 import "../scss/FinalizarCompra.scss";
 
 const FinalizarCompra = () => {
   const { cart } = useContext(CartContext);
-  // const [ordenDiv, setOrdenDiv] = useState([])
-
+  const reducer = (previousValue, currentValue) => previousValue + currentValue;
   const [calculoTotal, setCalculoTotal] = useState([])
-
-    const reducer = (previousValue, currentValue) => previousValue + currentValue;
-    // useEffect(() => {
-    //   if (cart.length) {
-    //     const prices = cart.map((item) => item.price * item.qty);
-    //     console.log(prices.reduce(reducer));
-    //     setCalculoTotal(prices.reduce(reducer));
-    //   }
-    // }, [cart]);
   const [desaparece, setDesaparece] = useState([]);
   const [order, setOrder] = useState({});
   const [user, setUser] = useState({
     name: null,
     email: null,
   });
-  //   const crearOrdenDiv = document.getElementById("crearOrden")
-
-  //  const ordenCreada = () =>{
-  //     const element = (order.id ? (
-  //         <div>Tu número de orden es: {order.id}</div>
-  //       ) : (
-  //         <div className="loaderCart">
-  //           <Loader />
-  //         </div>
-  //       ))
-  //       ReactDOM.render(element, crearOrdenDiv)
-  //  }
-  // const desaparece =
 
   useEffect(() => {
     if (cart.length) {
       const prices = cart.map((item) => item.price * item.qty);
       console.log(prices.reduce(reducer));
       setCalculoTotal(prices.reduce(reducer));
-
-
     }
     setDesaparece("desaparece");
   }, [cart]);
@@ -76,22 +50,15 @@ const FinalizarCompra = () => {
         console.log("Error creating order", error);
       });
     setDesaparece("");
-    //  ordenCreada()
+
   };
 
   return (
     <>
       <FadeIn>
-        <section className="pago_container">
+        <section className="pagoContainer">
           <div id="crearOrden">
             <UserForm user={user} setUser={setUser} />
-            {/* {order.id ? (
-    <div>Tu número de orden es: {order.id}</div>
-   ) : (
-     <div className="loaderCart">
-       <Loader />
-     </div>
-  )} */}
             {order.id ? (
               <div>Tu número de orden es: {order.id}</div>
             ) : (
@@ -99,17 +66,7 @@ const FinalizarCompra = () => {
                 <Loader />
               </div>
             )}
-            {/* <Link to={"/clientform"}>
-              <Button animated="fade">
-                <Button.Content visible>
-                  Proceder al envio <Icon name="dolly" />
-                </Button.Content>
-                <Button.Content hidden>
-                  Siguiente paso <Icon name="arrow right" />
-                </Button.Content>
-              </Button>
-            </Link> */}
-            
+
             <Button
               animated="fade"
               className="botonFinalizarLaCompra"
@@ -125,10 +82,10 @@ const FinalizarCompra = () => {
             </Button>
           </div>
 
-          <div className="formPago_container">
+          <div className="formPagoContainer">
             <form action="">
               <h2>Medios de envío:</h2>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="sucursal"
@@ -140,7 +97,7 @@ const FinalizarCompra = () => {
                   Retiro por sucursal
                 </label>
               </div>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="domicilio"
@@ -151,7 +108,7 @@ const FinalizarCompra = () => {
                   <Icon name="truck" /> Envío a domicilio
                 </label>
               </div>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input type="radio" id="express" name="pagos" value="express" />
                 <label>
                   <Icon name="shipping fast" />
@@ -161,7 +118,7 @@ const FinalizarCompra = () => {
             </form>
             <form action="">
               <h1>Medios de pago</h1>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="efectivo"
@@ -173,7 +130,7 @@ const FinalizarCompra = () => {
                   Efectivo
                 </label>
               </div>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="transferencia"
@@ -185,7 +142,7 @@ const FinalizarCompra = () => {
                   Transferencia bancaria
                 </label>
               </div>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="tarjetas"
@@ -197,7 +154,7 @@ const FinalizarCompra = () => {
                   Tarjeta de crédito/débito
                 </label>
               </div>
-              <div className="medioPago_container">
+              <div className="medioPagoContainer">
                 <input type="radio" id="online" name="pagos" value="online" />
                 <label>
                   <Icon name="cc paypal" />

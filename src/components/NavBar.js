@@ -1,18 +1,15 @@
 import React, {useState} from "react";
-// import * as ReactBootStrap from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
 import Cart from "./CartWidget";
 import { NavLink } from "react-router-dom";
 import "../scss/Nav.scss";
 import logo from "../assets/img/logo.png"
-import mapIcon from "../assets/img/mapIcon.png"
+import favorito from "../assets/img/favorito.png"
 import logIn from "../assets/img/logIn.png"
+
 const Nav = () => {
 
-
-
     const [navbar, setNavbar] = useState(false);
-  
     const changeBackgroundNavbar = () => {
       if (window.scrollY >= 80) {
         setNavbar(true)
@@ -43,11 +40,10 @@ const Nav = () => {
       <>
   
         <nav className={navbar ? 'navbar active' : 'navbar'}>
-  
           <NavLink to={'/'}><img src={logo} alt="logoNav" style={{maxWidth:'150px'}}/></NavLink>
   
-          <button className='menuResponsive_btn' id='menuOpen' onClick={() => {openMenu()}}><Icon name='bars'/></button>
-          <button className='closeResponsive_btn' id='menuClose' onClick={() => {closeMenu()}}><Icon name='times'/></button>
+          <button className='menuResponsiveBtn' id='menuOpen' onClick={() => {openMenu()}}><Icon name='bars'/></button>
+          <button className='closeResponsiveBtn' id='menuClose' onClick={() => {closeMenu()}}><Icon name='times'/></button>
   
           <ul className='categorias' id='menuMobile'>
             <li>
@@ -63,12 +59,12 @@ const Nav = () => {
           </ul>
   
           <ul className='cartLogin'>
-            <li>
+            <li className="cartLi">
               <NavLink to={"/cart"}><Cart/></NavLink>
             </li>
             <span style={{background:'#d8d8d8', width:'0.7px', height:'40px'}} className='dividerSpan'></span>
             <li>
-              <img src={mapIcon} alt="mapIcon" style={{maxWidth:'24px', margin:'5px 10px 0'}} className="mapIcon"/>
+              <img src={favorito} alt="mapIcon" style={{maxWidth:'30px', margin:'5px 10px 0'}} className="mapIcon"/>
             </li>
             <li>
               <img src={logIn} alt="loginIcon" style={{maxWidth:'32px', margin:'5px 0 0'}} className="loginIcon"/>

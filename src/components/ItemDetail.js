@@ -2,10 +2,7 @@ import "../scss/ItemDetail.scss";
 import ItemCount from "./ItemCount";
 import { NavLink } from "react-router-dom";
 import { Icon, Divider } from "semantic-ui-react";
-
 import { Link } from "react-scroll";
-// import { Link } from "react-scroll";
-
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 import FadeIn from "react-fade-in";
@@ -61,8 +58,8 @@ const ItemDetail = ({ producto }) => {
               {producto.color}
             </p>
           </div>
-          <div className="colorSize_container">
-            <div className="selects_container">
+          <div className="colorSizeContainer">
+            <div className="selectsContainer">
               <p>Colores: </p>
               <select name="colorSelected" id="colorSelected">
                 {producto.colors &&
@@ -72,7 +69,7 @@ const ItemDetail = ({ producto }) => {
               </select>
             </div>
 
-            <div className="selects_container">
+            <div className="selectsContainer">
               <p>Talla: </p>
               <select name="sizes">
                 {producto.sizes &&
@@ -140,7 +137,7 @@ const ItemDetail = ({ producto }) => {
       <Divider />
       <div className="descriptionContainer" id="descriptionContainer">
         
-        <div className="descriptionArticles_container">
+        <div className="descriptionArticlesContainer">
           
           <article>
           <h1>Descripcion</h1>

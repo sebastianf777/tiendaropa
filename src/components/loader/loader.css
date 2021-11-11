@@ -1,3 +1,10 @@
+:root {
+
+  --rosa: #eb00b0;
+
+}
+
+
 .lds-roller {
   display: inline-block;
   position: absolute;
@@ -9,6 +16,7 @@
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 32px 32px;
+  
 }
 .lds-roller div:after {
   content: " ";
@@ -17,7 +25,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #cef;
+  background: var(--rosa);
   margin: -3px 0 0 -3px;
 }
 .lds-roller div:nth-child(1) {

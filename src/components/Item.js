@@ -30,7 +30,7 @@ function Item({ product }) {
           <p className="stockActual">Stock actual: {product.stock}</p>
         </div>
       </div>
-      <Link to={`/item/${product.id}`} className="btn_irItemDetail">
+      <Link to={`/item/${product.id}`} className="btnIrItemDetail">
         <Button animated="fade">
           <Button.Content visible>Ver detalle</Button.Content>
           <Button.Content hidden>

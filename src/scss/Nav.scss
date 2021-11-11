@@ -4,7 +4,7 @@ $violetaOscuro: #3a0130;
 .navbar.active {
     background-color: white;
     background: #fff;
-    box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.26);
+    box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.26);
 }
 
 .navbar {
@@ -19,15 +19,24 @@ $violetaOscuro: #3a0130;
     height: 5em;
     padding: 10px 35px;
     transition: .3s;
+
+    a img{
+        margin-top: 10px;
+    }
     @media (max-width: 768px) {
         padding: 10px;
         justify-content: center;
     }
 
+    .cartLi{
+        margin: 14px 20px 0 20px;
+        
+    }
     /* ///// RESPONSIVE MENU ////// */
 
-    .menuResponsive_btn {
+    .menuResponsiveBtn {
         display: none;
+
         @media (max-width: 768px) {
             display: flex;
             position: absolute;
@@ -36,6 +45,7 @@ $violetaOscuro: #3a0130;
             border: none;
             background: transparent;
             transition: opacity .3s;
+
             .icon {
                 font-size: 25px;
                 color: $violetaOscuro;
@@ -43,8 +53,9 @@ $violetaOscuro: #3a0130;
         }
     }
 
-    .closeResponsive_btn {
+    .closeResponsiveBtn {
         display: none;
+
         @media (max-width: 768px) {
             border: none;
             background: transparent;
@@ -61,11 +72,12 @@ $violetaOscuro: #3a0130;
             }
         }
     }
-    
+
     .categorias {
         display: flex;
         align-items: center;
         justify-content: center;
+
         @media (max-width: 768px) {
             display: none;
             flex-direction: column;
@@ -101,10 +113,12 @@ $violetaOscuro: #3a0130;
                 padding-bottom: 5px;
                 border-bottom: 2px solid transparent;
                 transition: .2s;
+
                 &:hover {
                     border-bottom: 2px solid $rosa;
                     border-radius: 1px;
                 }
+
                 @media (max-width: 768px) {
                     color: $rosa;
                     font-weight: 500;
@@ -112,6 +126,9 @@ $violetaOscuro: #3a0130;
                 }
             }
 
+            ///////////
+            //////////////////
+            ////////////////
             .categoria_home {
                 font-weight: 400;
                 font-size: 16px;
@@ -123,6 +140,7 @@ $violetaOscuro: #3a0130;
                 padding-bottom: 5px;
                 border-bottom: 2px solid transparent;
                 transition: .2s;
+
                 &:hover {
                     border-bottom: 2px solid $rosa;
                     border-radius: 1px;
@@ -141,30 +159,39 @@ $violetaOscuro: #3a0130;
     .cartLogin {
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
+
         @media (max-width: 768px) {
             position: absolute;
-            left: 1.5em;
-            
+            margin-top: 30px;
+            left: -1.5em;
+
         }
+
         .dividerSpan {
-            @media (max-width: 768px){
-                display: none;
-            }
-        }
-        a {
-            margin: 0;
-            color: gray;
-            transition: .3s;
-            &:hover {
-                color: $rosa;
-            }
-        }
-        .mapIcon, .loginIcon {
             @media (max-width: 768px) {
                 display: none;
             }
         }
-        li{
+
+        a {
+            margin: 0;
+            color: gray;
+            transition: .3s;
+
+            &:hover {
+                color: $rosa;
+            }
+        }
+
+        .mapIcon,
+        .loginIcon {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        li {
             list-style: none;
         }
     }

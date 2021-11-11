@@ -1,26 +1,13 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
-
-// import UserForm from "./UserForm";
-// import firebase from "firebase/app";
-// import "firebase/firestore";
-//  import "../css/Cart.css";
-import "../scss/Cart.scss";
-
 import CartProducts from "./CartProducts";
-
 import CheckoutComponent from "./CheckoutComponent";
 import FadeIn from "react-fade-in";
+import "../scss/Cart.scss";
 
 export const Cart = () => {
   const { cart } = useContext(CartContext);
-
-
-  // const calculatePrice = (precio, qty) => {
-  //   return precio * qty;
-  // };
- 
 
   return (
     <>
@@ -30,9 +17,7 @@ export const Cart = () => {
             {cart.length ? (
               <>
                 <CartProducts />
-
                 <CheckoutComponent />
-                
               </>
             ) : (
               <div className="cartView">

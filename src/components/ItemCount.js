@@ -4,13 +4,6 @@ import "../scss/ItemCount.scss";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
-  // const [stockFinal, setStockFinal] = useState(stock);
-
-  // useEffect(() => {
-  //   // setTimeout(() => {
-  //   //   setStockFinal(stock);
-  //   // }, 1000);
-  // }, [stock]);
 
   const suma = () =>
     count < stock ? setCount(count + 1) : console.log("ya no hay stock");
