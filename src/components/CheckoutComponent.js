@@ -1,12 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
  import "../scss/PagoYCheckOut.scss";
 import { CartContext } from "./CartContext";
 import { Button, Icon } from 'semantic-ui-react';
 import {Link} from "react-router-dom";
 
 const CheckoutComponent = () => {
-    const {calculoTotal, clearCart, cantidad} = useContext(CartContext);
+    const {clearCart, cantidad, cart} = useContext(CartContext);
+ const [calculoTotal, setCalculoTotal] = useState([])
 
+  const reducer = (previousValue, currentValue) => previousValue + currentValue;
+  useEffect(() => {
+    if (cart.length) {
+      const prices = cart.map((item) => item.price * item.qty);
+      console.log(prices.reduce(reducer));
+      setCalculoTotal(prices.reduce(reducer));
+    }
+  }, [cart]);
+
+  // const calculoTotal = () => cart.reduce((a, c) => a + c.price * c.qty, 0);
     return (
         <>  
             <section style={{marginBottom:'3em'}}>
@@ -16,7 +27,7 @@ const CheckoutComponent = () => {
                         <ul>
                             <li>
                                 <span className='checkout_quantity'>PRODUCTOS: {cantidad}</span>
-                                <span className='checkout_totalPrice' style={{color:'#2C3330'}}> $ {calculoTotal().toLocaleString("en-US")} </span>
+                                <span className='checkout_totalPrice' style={{color:'#2C3330'}}> $ {calculoTotal.toLocaleString("en-US")} </span>
                             </li>
                             <li>
                                 <span className='checkout_variants'>Envio</span>
@@ -28,7 +39,7 @@ const CheckoutComponent = () => {
                             </li>
                             <li>
                                 <span className='checkout_quantity'>TOTAL</span>
-                                <span className='checkout_totalPrice'>$ {calculoTotal().toLocaleString("en-US")}</span>
+                                <span className='checkout_totalPrice'>$ {calculoTotal.toLocaleString("en-US")}</span>
                             </li>
                         </ul>
                     </div>

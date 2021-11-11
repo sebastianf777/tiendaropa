@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Icon, Button } from "semantic-ui-react";
 
 const UserForm = ({ user, setUser }) => {
   const [nombre, setNombre] = useState("");
@@ -10,22 +11,21 @@ const UserForm = ({ user, setUser }) => {
   const handleMail2 = (e) => setMail2(e.target.value);
 
   const EmailVerif = (mail1, mail2, nombre) => {
-   
     if (mail1 === "" || nombre === "") {
       alert("Por favor llene todos los campos");
     } else if (mail1 === mail2) {
       setUser({
-         name: nombre,
-         email: mail1,
-        });
-       } else {
+        name: nombre,
+        email: mail1,
+      });
+    } else {
       alert("Los Emails deben coincidir");
     }
   };
 
   return (
     <div className="orderContainer">
-      {user.name ? <h3>Bienvenido</h3> : <h2>Información del cliente:</h2>}
+      {user.name ? <h2>Bienvenido</h2> : <h2>Información del cliente:</h2>}
       {user.name ? (
         <div className="userName">{user.name}</div>
       ) : (
@@ -48,14 +48,15 @@ const UserForm = ({ user, setUser }) => {
             onChange={handleMail2}
             value={mail2}
           />
-          <button
+          <Button
+            animated="fade"
             className="botonIngresar"
             onClick={() => {
               EmailVerif(mail1, mail2, nombre);
             }}
           >
-            Ingresar
-          </button>
+            Ingresar <Icon name="arrow right" />
+          </Button>
         </div>
       )}
     </div>

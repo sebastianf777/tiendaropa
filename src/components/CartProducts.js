@@ -1,47 +1,55 @@
 import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
 
-import { Button } from 'semantic-ui-react';
+import { Button } from "semantic-ui-react";
 
 const CartProducts = () => {
-    const { cart, calculoTotal, removeProduct} = useContext(CartContext);
+  const { cart, calculatePrice, removeProduct } = useContext(CartContext);
 
-    return (
-        <>
-            <div style={{display:'flex', flexDirection:'column'}}> 
-                {cart.map((producto) => {
-                    return (
-                        <>
-                            <section className='cartProductsContainer'>
-                                <div className='cart_product' >
+  return (
+    <>
+      <div className="allCartProducts">
+        {cart.map((producto) => {
+          return (
+            <>
+              <div key={producto.id} className="cartProductsContainer">
+                <div className="cartProduct">
+                  <div className="imgContainer">
+                    <img src={producto.image} />
+                  </div>
+                  <div className="cartProductInfo">
+                    <h2 className="product_tittle">{producto.name}</h2>
+                    <div className="price_quantity">
+                      <span className="product_quantity">
+                        Selecciono: {producto.qty}
+                      </span>
+                      <span className="product_price">
+                        ${" "}
+                        {calculatePrice(
+                          producto.price,
+                          producto.qty
+                        ).toLocaleString("en-US")}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="removeBtnContainer">
+                    <Button
+                      icon="remove"
+                      color="red"
+                      size="mini"
+                      onClick={() => {
+                        removeProduct(producto);
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
-                                    <div className='img_container' >
-                                        <img src={producto.image}/>
-                                    </div>
-                                    
-                                    <div className='cart_product_info'>
-
-                                        <h2 className='product_tittle'>{producto.name}</h2>
-
-                                        <div className='price_quantity'>
-                                            <span className='product_quantity'>Selecciono: {producto.qty}</span>
-                                            <span className='product_price'>$ {producto.price.toLocaleString("en-US")}</span>
-                                        </div>
-
-                                    </div>
-                                    
-                                    <div className='removeBtnContainer'>
-                                        <Button icon='remove' color='red' size='mini' onClick={()=>{removeProduct(producto)}} />
-                                    </div>
-
-                                </div>
-                            </section>
-                        </>
-                    )
-                })}
-            </div>
-        </>
-    )
-}
-
-export default CartProducts
+export default CartProducts;
