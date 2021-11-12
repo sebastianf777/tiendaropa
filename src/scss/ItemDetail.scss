@@ -59,7 +59,7 @@ $violetaOscuro: #3a0130;
             font-weight: 400;
             margin: 20px 0 0;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
         }
 
         .productName {
@@ -68,12 +68,12 @@ $violetaOscuro: #3a0130;
             font-weight: 300;
             margin: 10px 0;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
         }
 
         .discountColectionContainer {
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
 
             .productVariants {
                 margin: 10px 15px 10px 0;
@@ -83,14 +83,14 @@ $violetaOscuro: #3a0130;
                 background-color: $rosa;
                 border-radius: 4px;
                 display: flex;
-                justify-content: start;
+                justify-content: flex-start;
             }
         }
 
 
         .colorSizeContainer {
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             margin-top: 10px;
 
             .selectsContainer {

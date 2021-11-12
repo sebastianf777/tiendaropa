@@ -1,0 +1,74 @@
+$rosa: #eb00b0;
+$violetaOscuro: #3a0130;
+
+.carouselPure{
+    display: flex;
+    justify-content: flex-end;
+}
+// .sliderPure{
+//     div ul li {
+//         width: 37% !important;
+//     }
+// }
+.slidePure {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+        object-fit: cover;
+    
+    
+    img{
+        width: 100%;
+    height: 100%;
+        object-fit: cover;
+        max-height: 90vh;
+        object-position: 85% 35%;
+    }
+    
+    .descrip {
+        position: absolute;
+        margin: 30px 40px .3% 17%;
+
+       
+      
+          
+           
+        
+        button {
+            color: $rosa;
+            background-color: transparent;
+            border: 1px solid $rosa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            &:hover{
+                background-color: $rosa;
+                color: white;
+                
+            }
+        }
+        
+    }
+}
+
+.carousel_btns {
+    position: absolute;
+    margin: 20px;
+
+    .button_nextPrev{
+        background: transparent;
+        border: none;
+        color: $rosa;
+        font-size: 24px;
+        transition: .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &::selection{
+            border: none;
+            background: none;
+        }
+    }
+}

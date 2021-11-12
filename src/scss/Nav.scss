@@ -1,9 +1,16 @@
 $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
+@font-face {
+    font-family: "Beauty";
+    font-style: normal;
+    src: local("Beauty"),
+     url("../fonts/Beauty.otf") format("opentype");
 
+    }
 .navbar.active {
+
     background-color: white;
-    background: #fff;
+    filter: opacity(.9);
     box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.26);
 }
 
@@ -20,24 +27,79 @@ $violetaOscuro: #3a0130;
     padding: 10px 35px;
     transition: .3s;
 
-    a img{
+    .logo {
+        align-items: center;
+        display: flex;
+        color: white;
+        line-height: 0.7em;
+        font-family: "Beauty";
+        font-size: 35px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        margin: 10px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+        color: $violetaOscuro;
+        transition: .3s;
+
+        &:hover {
+            color: $rosa;
+        }
+
+        @media (max-width: 850px) {
+            font-size: 28px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 20px;
+ 
+
+
+        }
+
+        .logoHome {
+            width: 60px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+      
+            @media (max-width: 850px) {
+                width: 50px;
+
+
+            }
+
+            @media (max-width: 500px) {
+                width: 40px;
+
+            }
+
+        }
+    }
+
+    a img {
         margin-top: 10px;
     }
-    @media (max-width: 768px) {
+
+    @media (max-width: 950px) {
         padding: 10px;
         justify-content: center;
     }
 
-    .cartLi{
-        margin: 14px 20px 0 20px;
-        
+    .cartLi {
+        margin: 14px 10px 0 10px;
+        @media (max-width: 950px) {
+            margin: 14px 0px 0 0px;
+
+           
+        }
     }
+
     /* ///// RESPONSIVE MENU ////// */
 
     .menuResponsiveBtn {
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: 950px) {
             display: flex;
             position: absolute;
             right: 9px;
@@ -51,12 +113,13 @@ $violetaOscuro: #3a0130;
                 color: $violetaOscuro;
             }
         }
+
     }
 
     .closeResponsiveBtn {
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: 950px) {
             border: none;
             background: transparent;
             display: none;
@@ -78,7 +141,7 @@ $violetaOscuro: #3a0130;
         align-items: center;
         justify-content: center;
 
-        @media (max-width: 768px) {
+        @media (max-width: 950px) {
             display: none;
             flex-direction: column;
             position: absolute;
@@ -98,7 +161,7 @@ $violetaOscuro: #3a0130;
             margin: 12px 35px 0;
             list-style: none;
 
-            @media (max-width: 768px) {
+            @media (max-width: 950px) {
                 margin: 15px 20px;
             }
 
@@ -109,7 +172,7 @@ $violetaOscuro: #3a0130;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: grey;
+                color: $violetaOscuro;
                 padding-bottom: 5px;
                 border-bottom: 2px solid transparent;
                 transition: .2s;
@@ -119,7 +182,7 @@ $violetaOscuro: #3a0130;
                     border-radius: 1px;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: 950px) {
                     color: $rosa;
                     font-weight: 500;
                     font-size: 18px;
@@ -161,7 +224,7 @@ $violetaOscuro: #3a0130;
         align-items: center;
         margin-bottom: 20px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 950px) {
             position: absolute;
             margin-top: 30px;
             left: -1.5em;
@@ -169,7 +232,7 @@ $violetaOscuro: #3a0130;
         }
 
         .dividerSpan {
-            @media (max-width: 768px) {
+            @media (max-width: 950px) {
                 display: none;
             }
         }
@@ -186,7 +249,7 @@ $violetaOscuro: #3a0130;
 
         .mapIcon,
         .loginIcon {
-            @media (max-width: 768px) {
+            @media (max-width: 950px) {
                 display: none;
             }
         }

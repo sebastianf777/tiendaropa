@@ -3,7 +3,7 @@ import { Icon } from "semantic-ui-react";
 import Cart from "./CartWidget";
 import { NavLink } from "react-router-dom";
 import "../scss/Nav.scss";
-import logo from "../assets/img/logo.png"
+import logo from "../assets/img/logoHome.png"
 import favorito from "../assets/img/favorito.png"
 import logIn from "../assets/img/logIn.png"
 
@@ -17,6 +17,7 @@ const Nav = () => {
         setNavbar(false)
       }
     };
+    
     window.addEventListener('scroll', changeBackgroundNavbar);
   
     const openMenu = () => {
@@ -40,14 +41,15 @@ const Nav = () => {
       <>
   
         <nav className={navbar ? 'navbar active' : 'navbar'}>
-          <NavLink to={'/'}><img src={logo} alt="logoNav" style={{maxWidth:'150px'}}/></NavLink>
+          <NavLink to={'/'}>
+          <h1 className='logo'><img src={logo} style={{maxWidth:'150px'}} className="logoHome" alt="" />Beauty Queen</h1></NavLink>
   
           <button className='menuResponsiveBtn' id='menuOpen' onClick={() => {openMenu()}}><Icon name='bars'/></button>
           <button className='closeResponsiveBtn' id='menuClose' onClick={() => {closeMenu()}}><Icon name='times'/></button>
   
           <ul className='categorias' id='menuMobile'>
             <li>
-              <NavLink to={`/category/1`} activeClassName='categoriaActive' className='categoria'> Liquidacion </NavLink>
+              <NavLink to={`/category/Liquidación`} activeClassName='categoriaActive' className='categoria'> Liquidacion </NavLink>
             </li>
             <li>
               <NavLink to={`/category/2`} activeClassName='categoriaActive'  className='categoria'> Indumentaria </NavLink>
