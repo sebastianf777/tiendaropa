@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-//  import "../scss/PagoYCheckOut.scss";
 import { CartContext } from "./CartContext";
 import { Button, Icon } from 'semantic-ui-react';
 import {Link} from "react-router-dom";
@@ -17,7 +16,6 @@ const CheckoutComponent = () => {
     }
   }, [cart]);
 
-  // const calculoTotal = () => cart.reduce((a, c) => a + c.price * c.qty, 0);
     return (
         <>  
             <section style={{marginBottom:'3em'}}>
@@ -38,8 +36,8 @@ const CheckoutComponent = () => {
                                 <span className='checkoutVariants'> - $ 799,00 </span>
                             </li>
                             <li>
-                                <span className='checkout_quantity'>TOTAL</span>
-                                <span className='checkout_totalPrice'>$ {calculoTotal.toLocaleString("en-US")}</span>
+                                <span className='checkoutQuantity'>TOTAL</span>
+                                <span className='checkoutTotalPrice'>$ {calculoTotal.toLocaleString("en-US")}</span>
                             </li>
                         </ul>
                     </div>

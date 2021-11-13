@@ -27,13 +27,9 @@ $violetaOscuro: #3a0130;
         }
 
         img {
-            //     max-width: 550px;
-            //     height: 400px;
-            // object-fit: cover;
             width: 480px;
             height: 460px;
             object-fit: contain;
-
 
             @media (max-width: 768px) {
                 max-width: 100%;
@@ -44,12 +40,9 @@ $violetaOscuro: #3a0130;
     .detailsContainer {
         width: 30em;
         margin-left: 30px;
-        
-
 
         @media (max-width: 768px) {
             width: 100%;
-            
             padding: 20px;
         }
 

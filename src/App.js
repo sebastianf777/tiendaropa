@@ -19,12 +19,14 @@ const App = () => {
     <div>
       <Router>
         <CartProvider>
-          <Nav />
+          {/* <div className={navbar ? 'navbar active' : 'navbar'} > */}
+            <Nav />
+          {/* </div> */}
           <Switch>
           <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/shop">
+            <Route exact path="/category/shop">
               <ItemListContainer />
             </Route>
             <Route path="/category/:categoryId">

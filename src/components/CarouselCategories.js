@@ -12,19 +12,10 @@ import {
 import imgC1 from "../assets/img/homeGif1.gif";
 import imgC2 from "../assets/img/homeC2.webp";
 import imgC3 from "../assets/img/homeC3.jpg";
-// import logo from "../assets/img/logoHome.png";
-
 
 const CarouselCategories = () => {
   return (
-    <div
-      className="carousel_container"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-      }}
-    >
+    <div className="carouselContainer">
       <CarouselProvider
         className="carouselPure"
         naturalSlideWidth={2000}
@@ -40,36 +31,32 @@ const CarouselCategories = () => {
             <Slide index={0} className="slide">
               <div className="slidePure">
                 <img src={imgC1} alt="imagen1" />
-                <div className='descrip'>
-                {/* <h1 className='title'><img src={logo} className="logoHome" alt="" />Beauty Queen </h1> */}
+                <div className="descrip">
                 </div>
-
               </div>
             </Slide>
             <Slide index={1}>
               <div className="slidePure">
                 <img src={imgC2} alt="imagen2" />
-                <div className='descrip'>
-                {/* <h2 className='title'><img src={logo} className="logoHome" alt="" />Beauty Queen</h2> */}
+                <div className="descrip">
                 </div>
               </div>
             </Slide>
             <Slide index={2}>
               <div className="slidePure">
                 <img src={imgC3} alt="imagen3" />
-                <div className='descrip'>
-                {/* <h2 className='title'><img src={logo} className="logoHome" alt="" />Beauty Queen</h2> */}
+                <div className="descrip">
                 </div>
               </div>
             </Slide>
           </Slider>
         </Link>
 
-        <div className="carousel_btns">
-          <ButtonBack className="button_nextPrev">
+        <div className="carouselBtns">
+          <ButtonBack className="buttonNextPrev">
             <Icon name="caret square left outline" />
           </ButtonBack>
-          <ButtonNext className="button_nextPrev">
+          <ButtonNext className="buttonNextPrev">
             <Icon name="caret square right outline" />
           </ButtonNext>
         </div>

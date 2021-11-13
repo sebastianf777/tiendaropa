@@ -6,77 +6,10 @@
 
 $rosa: #eb00b0;
 
-.home_container {
+.homeContainer {
     position: relative;
-  
-    .video {
-        height: 100vh;
-        @media (max-width: 768px) {
-            height: 100vh;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
 
-    .title_container {
-        display: flex;
-        flex-direction: column;
-        background: transparent;
-        position: absolute;
-        top: 24em;
-        left: 6em;
-        @media (max-width: 768px) {
-            top: 20em;
-            left: 2em;
-        }
-
-        .home_title {
-            font-size: 55px;
-            font-weight: 400;
-            color: white;
-            display: inline-block;
-            position: relative;
-            margin: 0;
-            @media (max-width: 768px) {
-                font-size: 40px;
-            }
-        }
-
-        .home_subtitle {
-            display: inline-block;
-            color: white;
-            font-weight: 600;
-            font-size: 18px;
-            margin-left: 5px;
-        }
-    } 
-    
-    .catalogo_btn {
-        font-size: 17px;
-        position: relative;
-        bottom: 8em;
-        left: 5em;
-        border: 1px solid white;
-        border-radius: 15px;
-        padding: 10px 15px;
-        color: white;
-        transition: .3s;
-        &:hover {
-            color: white;
-            background: $rosa;
-            border: $rosa;
-        }
-        @media (max-width: 768px) {
-            width: 14em;
-            display: block;
-            text-align: center;
-            margin: auto;
-            left: auto;
-            bottom: 12em;
-        }
-    }
-
-    .icon_container {
+    .iconContainer {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -84,7 +17,7 @@ $rosa: #eb00b0;
         padding-top: 50px;
         top: 0%;
         left: 0%;
-        .down_icon {
+        .downIcon {
             font-size: 50px;
             filter: opacity(.5);
             color: $rosa;
@@ -97,72 +30,3 @@ $rosa: #eb00b0;
 
 }
 
-.footer {
-    background-color: #f4f4f4;
-    width: 100%;
-    padding: 60px 40px 20px 40px;
-
-    .footer_container {
-        display: flex;
-        justify-content: space-around;
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
-
-        h2 {
-            font-size: 17px;
-            font-weight: 400;
-        }
-
-        h3 {
-            font-size: 11px;
-            font-weight: 700;
-            margin-bottom: 14px;
-        }
-
-        p {
-            font-size: 11px;
-            margin: 10px 0;
-        }
-
-        ul {
-            @media (max-width: 768px) {
-                margin-bottom: 20px;
-            }
-            li {
-                margin: 12px 0;
-                color: gray;
-            }
-        }
-
-        .icon {
-            color: $rosa;
-            font-size: 16px;
-            margin-top: 30px;
-        }
-
-        .button {
-            color: $rosa;
-            @media (max-width: 768px) {
-                margin: 0 0 30px 0;
-            }
-        }
-
-        input{
-            &:focus {
-                border-color: $rosa;
-            }
-        }
-        
-    }
-
-    h3 {
-        font-size: 15px;
-        margin-bottom: 15px;
-    }
-    .icon{
-        font-size: 22px;
-        color: gray;
-        margin: 0 7px;
-    }
-}

@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import CarouselCategories from "./CarouselCategories";
 import { Icon } from "semantic-ui-react";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "../scss/Categories.scss";
 import imgH1 from "../assets/img/home1.jpg";
 import imgH2 from "../assets/img/home2.jpg";
 import imgH3 from "../assets/img/home3.webp";
 import imgH4 from "../assets/img/home4.webp";
-
-
 
 const CategoriesHome = () => {
   const [scrollTop, setScrollTop] = useState(false);
@@ -25,34 +24,46 @@ const CategoriesHome = () => {
 
   return (
     <>
-      <section className="categoriesLayout_home" id="categoriesHome">
-        <div className="category_home">
+      <section className="categoriesLayoutHome" id="categoriesHome">
+        <div className="categoryHome">
           <CarouselCategories />
-          <div className='icon_container'>
-                <Link smooth={true} duration={600} offset={-75} to="imgH4">
-                    <Icon name='chevron down' className='down_icon'/>
-                </Link>
-            </div>
+          <div className="iconContainer">
+            <Link smooth={true} duration={600} offset={-75} to="imgH4">
+              <Icon name="chevron down" className="downIcon" />
+            </Link>
+          </div>
         </div>
 
         <div className="allCategories">
-          <div className="cateogries_home">
-            <div className="category_home">
-              <img src={imgH1} alt="" />
-              {/* <Link className="link_btn">ACCESORIOS</Link> */}
+          <div className="cateogoriesHome">
+            <div className="categoryHome">
+              <NavLink to="/category/Jeans">
+                <img src={imgH1} alt="" />
+                {/* <Link className="link_btn">ACCESORIOS</Link> */}
+              </NavLink>
             </div>
-            <div className="category_home">
-              <img src={imgH2} alt="" />
+            <div className="categoryHome">
+              <NavLink to="/category/Accesorios">
+                <img src={imgH2} alt="" />
+              </NavLink>
+
               {/* <Link className="link_btn">ACCESORIOS</Link> */}
             </div>
           </div>
-          <div className="cateogries_home">
-            <div className="category_home">
+          <div className="cateogoriesHome">
+            <div className="categoryHome">
+            <NavLink to="/category/Carteras">
+
               <img src={imgH3} alt="" />
+              </NavLink>
+
               {/* <Link className="link_btn">CALZADO</Link> */}
             </div>
-            <div className="category_home">
-              <img src={imgH4} alt="" className="imgH4" />
+            <div className="categoryHome">
+              <NavLink to="/category/Calzados">
+                <img src={imgH4} alt="" className="imgH4" />
+              </NavLink>
+
               {/* <Link className="link_btn">POLOS</Link> */}
             </div>
           </div>

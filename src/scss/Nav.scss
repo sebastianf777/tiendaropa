@@ -14,6 +14,10 @@ $violetaOscuro: #3a0130;
     box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.26);
 }
 
+.menuResponsiveBtn.active{
+    display: none!important;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -76,19 +80,23 @@ $violetaOscuro: #3a0130;
         }
     }
 
-    a img {
+    a{ 
+     
+    img {
         margin-top: 10px;
     }
 
     @media (max-width: 950px) {
         padding: 10px;
         justify-content: center;
-    }
+    }}
 
     .cartLi {
-        margin: 14px 10px 0 10px;
+        width: 55px;
+        height: 40px;
+   margin-bottom: 5px;
         @media (max-width: 950px) {
-            margin: 14px 0px 0 0px;
+           margin-bottom: 10px;
 
            
         }
@@ -145,7 +153,7 @@ $violetaOscuro: #3a0130;
             display: none;
             flex-direction: column;
             position: absolute;
-            top: 5em;
+            top: 4em;
             right: 0;
             align-items: flex-end;
             background: white;
@@ -158,7 +166,7 @@ $violetaOscuro: #3a0130;
         }
 
         li {
-            margin: 12px 35px 0;
+            margin: 12px 10px 0;
             list-style: none;
 
             @media (max-width: 950px) {
@@ -167,7 +175,10 @@ $violetaOscuro: #3a0130;
 
             .categoria {
                 font-weight: 300;
-                font-size: 16px;
+                font-size: 20px;
+        
+        
+    
                 text-align: center;
                 display: flex;
                 align-items: center;
@@ -175,15 +186,16 @@ $violetaOscuro: #3a0130;
                 color: $violetaOscuro;
                 padding-bottom: 5px;
                 border-bottom: 2px solid transparent;
-                transition: .2s;
+                transition: .5s;
 
                 &:hover {
                     border-bottom: 2px solid $rosa;
                     border-radius: 1px;
+                    color: $rosa;
+
                 }
 
                 @media (max-width: 950px) {
-                    color: $rosa;
                     font-weight: 500;
                     font-size: 18px;
                 }
@@ -192,7 +204,7 @@ $violetaOscuro: #3a0130;
             ///////////
             //////////////////
             ////////////////
-            .categoria_home {
+            .categoriaHome {
                 font-weight: 400;
                 font-size: 16px;
                 text-align: center;

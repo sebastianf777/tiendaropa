@@ -12,7 +12,6 @@ const Categorias = () => {
   const [getIsEmpty, setGetIsEmpty] = useState(false);
   const { categoryId } = useParams();
 
-  // Traingo datos desde Firebase
   useEffect(() => {
 
     setIsLoading(true);

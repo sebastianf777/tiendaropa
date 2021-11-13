@@ -10,8 +10,6 @@ import logIn from "../assets/img/logIn.png"
 const Nav = () => {
 
     const [navbar, setNavbar] = useState(false);
-    const [Menu, setMenu] = useState(false);
-
     const changeBackgroundNavbar = () => {
       if (window.scrollY >= 80) {
         setNavbar(true)
@@ -19,14 +17,6 @@ const Nav = () => {
         setNavbar(false)
       }
     };
-    const changeMenu = () => {
-      if (window.innerWidth >= 950) {
-        setMenu(true)
-      } else {
-        setMenu(false)
-      }
-    };
-    window.addEventListener('resize', changeMenu);
     
     window.addEventListener('scroll', changeBackgroundNavbar);
   
@@ -54,27 +44,18 @@ const Nav = () => {
           <NavLink to={'/'}>
           <h1 className='logo'><img src={logo} style={{maxWidth:'150px'}} className="logoHome" alt="" />Beauty Queen</h1></NavLink>
   
-          <button className={Menu ? 'menuResponsiveBtn active' : 'menuResponsiveBtn '} id='menuOpen' onClick={() => {openMenu()}}><Icon name='bars'/></button>
+          <button className='menuResponsiveBtn' id='menuOpen' onClick={() => {openMenu()}}><Icon name='bars'/></button>
           <button className='closeResponsiveBtn' id='menuClose' onClick={() => {closeMenu()}}><Icon name='times'/></button>
   
           <ul className='categorias' id='menuMobile'>
-          <li>
-              <NavLink to={`/category/shop`} activeClassName='categoriaActive' className='categoria'> Shop </NavLink>
+            <li>
+              <NavLink to={`/category/Liquidación`} activeClassName='categoriaActive' className='categoria'> Liquidacion </NavLink>
             </li>
             <li>
-              <NavLink to={`/category/liquidación`} activeClassName='categoriaActive' className='categoria'> Liquidacion </NavLink>
+              <NavLink to={`/category/2`} activeClassName='categoriaActive'  className='categoria'> Indumentaria </NavLink>
             </li>
             <li>
-              <NavLink to={`/category/jeans`} activeClassName='categoriaActive'  className='categoria'> Jeans </NavLink>
-            </li>
-            <li>
-              <NavLink to={`/category/accesorios`} activeClassName='categoriaActive' className='categoria'> Accesorios </NavLink>
-            </li>
-            <li>
-              <NavLink to={`/category/carteras`} activeClassName='categoriaActive' className='categoria'> Carteras </NavLink>
-            </li>
-            <li>
-              <NavLink to={`/category/calzados`} activeClassName='categoriaActive' className='categoria'> Calzados </NavLink>
+              <NavLink to={`/category/3`} activeClassName='categoriaActive' className='categoria'> Calzados </NavLink>
             </li>
           
           </ul>
@@ -97,41 +78,3 @@ const Nav = () => {
     );
   } 
   
-
-
-
-
-
-
-
-//   return (
-//     <header>
-//       {/* <ReactBootStrap.Navbar className="mx-3" bg="none" expand="lg">
-//         <ReactBootStrap.Navbar.Brand> */}
-//           <Link to="/" className="nav-link">
-//             Yohanna Calzados
-//           </Link>
-//         {/* </ReactBootStrap.Navbar.Brand>
-//         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-//           <ReactBootStrap.Nav className="mx-1 my-2 my-lg-0"> */}
-//             <Link to={`/category/1`} className="nav-link">
-//               Liquidación
-//             </Link>
-//             <Link to={`/category/2`} className="nav-link">
-//               Indumentaria
-//             </Link>
-//             <Link to={`/category/3`} className="nav-link">
-//               Calzados
-//             </Link>
-//             <Link to={`/cart`} className="nav-link">
-//               <Cart />
-//             </Link>
-//           {/* </ReactBootStrap.Nav>
-//         </ReactBootStrap.Navbar.Collapse>
-//       </ReactBootStrap.Navbar> */}
-//     </header>
-//   );
-// };
-
-export default Nav;

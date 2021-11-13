@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
 import Loader from "./loader/Loader";
-// import FadeIn from 'react-fade-in';
 import { useParams } from "react-router-dom";
 
   const ItemListContainer = () => {

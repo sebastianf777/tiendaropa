@@ -180,7 +180,3 @@ const ItemDetail = ({ producto }) => {
 };
 
 export default ItemDetail;
-
-// IDEAS: agregar boton cancelar
-//poner color en descripcion
-//Agregar marca!!!
