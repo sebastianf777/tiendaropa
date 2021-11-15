@@ -19,9 +19,8 @@ const App = () => {
     <div>
       <Router>
         <CartProvider>
-          {/* <div className={navbar ? 'navbar active' : 'navbar'} > */}
             <Nav />
-          {/* </div> */}
+ 
           <Switch>
           <Route exact path="/">
               <Home />

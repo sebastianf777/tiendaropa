@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Beauty";
+
+    src: local("Beauty"),
+        url("./fonts/Beauty.otf") format("opentype");
+
+}

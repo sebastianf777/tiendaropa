@@ -1,15 +1,16 @@
 $rosa: #eb00b0;
-$negroLacoste: #3a0130;
+$violetaOscuro: #3a0130;
 
-.purcharseData {
+.purchaseData {
     @media (max-width: 768px) {
             padding: 0 20px;
             margin-bottom: 2em;
     }
 
-    h3 {
+    h3, h4 {
         font-size: 16px;
         margin: 0;
+        color: $violetaOscuro;
     }
     h2 {
         font-weight: 400;
@@ -27,12 +28,27 @@ $negroLacoste: #3a0130;
     .priceTotalContainer {
         border: 1px solid #d0d0d0;
         padding: 20px 20px;
-        width: 22em;
-        height: 10em;
+        
         margin-bottom: 15px;
         @media (max-width: 768px) {
             padding: 20px;
             width: 100%;
+            
+        }
+        
+        .priceTotalItem{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            a .ui.animated.button{
+                background-color: $violetaOscuro;
+            color: white;
+                &:hover{
+                    background-color: transparent;
+                    color: red;
+                    border: red solid 1px;
+                }
+                }
         }
     }
 

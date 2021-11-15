@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import Loader from "./loader/Loader";
 import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
-
+import logo from "../assets/img/logoHome.png";
+import "../scss/Mantenimiento.scss"; 
 
 
 const Categorias = () => {
@@ -50,7 +51,12 @@ const Categorias = () => {
         <Loader />
       ) : getIsEmpty ? (
           
-        <h2>NO HAY PRODUCTOS</h2>
+        <div className="mantenimiento">
+          <h2>Próximamente</h2>
+
+          <h3>Página en mantenimiento</h3>
+          <img src={logo} alt="" />
+        </div>
       ) : (
           
         <ItemList productos={productos} />

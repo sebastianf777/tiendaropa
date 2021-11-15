@@ -37,13 +37,13 @@ const CategoriesHome = () => {
         <div className="allCategories">
           <div className="cateogoriesHome">
             <div className="categoryHome">
-              <NavLink to="/category/Jeans">
+              <NavLink to="/category/jeans">
                 <img src={imgH1} alt="" />
                 {/* <Link className="link_btn">ACCESORIOS</Link> */}
               </NavLink>
             </div>
             <div className="categoryHome">
-              <NavLink to="/category/Accesorios">
+              <NavLink to="/category/accesorios">
                 <img src={imgH2} alt="" />
               </NavLink>
 
@@ -52,7 +52,7 @@ const CategoriesHome = () => {
           </div>
           <div className="cateogoriesHome">
             <div className="categoryHome">
-            <NavLink to="/category/Carteras">
+            <NavLink to="/category/carteras">
 
               <img src={imgH3} alt="" />
               </NavLink>
@@ -60,7 +60,7 @@ const CategoriesHome = () => {
               {/* <Link className="link_btn">CALZADO</Link> */}
             </div>
             <div className="categoryHome">
-              <NavLink to="/category/Calzados">
+              <NavLink to="/category/calzados">
                 <img src={imgH4} alt="" className="imgH4" />
               </NavLink>
 

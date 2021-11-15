@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
 import Loader from "./loader/Loader";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 
   const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
@@ -38,12 +39,20 @@ import { useParams } from "react-router-dom";
       {isLoading ? (
         <Loader />
       ) : getIsEmpty ? (
-        <h2>NO HAY PRODUCTOS</h2>
-      ) : (
-        <div>
-          <ItemList productos={productos} />
+        <div className="errorServidor">
+          <h2>No se encontraron productos en la base de datos, ¡error en el servidor!</h2>
         </div>
+      ) : (
+        <>
+          <div>
+            <ItemList productos={productos} />
+          </div>
+          <>
+            <Footer/>
+            </>
+        </>
       )}
+      
     </>
   );
 };

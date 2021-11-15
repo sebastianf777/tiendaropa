@@ -1,0 +1,30 @@
+$rosa: #eb00b0;
+
+.mantenimiento {
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    h2,
+    h3 {
+        font-family: "Beauty";
+
+    }
+
+    h2 {
+        font-size: 40px;
+        color: #eb00b0;
+
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    img {
+        width: 200px;
+    }
+}

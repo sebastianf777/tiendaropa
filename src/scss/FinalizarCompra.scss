@@ -1,7 +1,7 @@
 $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
 
-.desaparece{
+.desaparece {
     display: none;
 }
 
@@ -9,52 +9,93 @@ $violetaOscuro: #3a0130;
     display: flex;
     justify-content: center;
     margin-top: 7em;
+
     @media (max-width: 768px) {
         flex-direction: column;
     }
 
-    h1, h2 {
+    h3,
+    h2 {
         font-size: 22px;
         font-weight: 500;
         color: $rosa;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        display: flex;
+         
+                justify-content: center;
     }
-    #crearOrden{
- button{
-     margin: 10px auto;
- }
+
+    #crearOrden {
+
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin: 0 auto 20px;
+        }
+
+
+        button {
+            margin: 10px auto;
+        }
     }
- 
+
 
     .formPagoContainer {
         display: flex;
         flex-direction: column;
         margin: 0 50px;
+
         @media (max-width: 768px) {
             margin: 0 20px;
             margin-bottom: 50px;
         }
-        .medioPagoContainer{
-            margin-bottom: 20px;
-            label {
-                .icon {
-                    margin-right: 10px;
-                    font-size: 19px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .medioPagoContainer {
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                @media (max-width: 768px) {
+                    justify-content: center;
+
                 }
-                font-family: 'Montserrat', sans-serif;
-                color: $violetaOscuro;
-                font-size: 15px;
-                font-weight: 600;
-                margin-left: 10px;
+
+                label {
+                    .icon {
+                        margin-right: 10px;
+                        font-size: 19px;
+                    }
+
+                    font-family: 'Montserrat',
+                    sans-serif;
+                    color: $violetaOscuro;
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin-left: 10px;
+                }
             }
         }
-        .button{
+
+        .button {
             margin-top: 20px;
             color: white;
             font-family: 'Montserrat', sans-serif;
             background-color: $rosa;
             font-weight: 500;
             font-size: 17px;
+        }
+    }
+    .resumenYProductos{
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            margin: 0 auto 20px;
         }
     }
 }

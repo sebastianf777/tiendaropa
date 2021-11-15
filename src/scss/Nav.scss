@@ -1,12 +1,8 @@
 $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
-@font-face {
-    font-family: "Beauty";
-    font-style: normal;
-    src: local("Beauty"),
-     url("../fonts/Beauty.otf") format("opentype");
 
-    }
+
+
 .navbar.active {
 
     background-color: white;
@@ -14,8 +10,8 @@ $violetaOscuro: #3a0130;
     box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.26);
 }
 
-.menuResponsiveBtn.active{
-    display: none!important;
+.menuResponsiveBtn.active {
+    display: none !important;
 }
 
 .navbar {
@@ -31,7 +27,16 @@ $violetaOscuro: #3a0130;
     padding: 10px 35px;
     transition: .3s;
 
-    .logo {
+    .logoDiv{
+        @media (max-width: 950px) {
+            position: absolute;
+            left: 30%;
+        }
+        @media (max-width: 500px) {
+         
+            left: 20%;
+        }
+        .logo {
         align-items: center;
         display: flex;
         color: white;
@@ -56,16 +61,15 @@ $violetaOscuro: #3a0130;
 
         @media (max-width: 500px) {
             font-size: 20px;
- 
 
+            
 
         }
-
-        .logoHome {
+        .logoImg {
             width: 60px;
             margin-right: 10px;
             margin-bottom: 10px;
-      
+            margin-top: 10px;
             @media (max-width: 850px) {
                 width: 50px;
 
@@ -76,198 +80,255 @@ $violetaOscuro: #3a0130;
                 width: 40px;
 
             }
-
         }
-    }
 
-    a{ 
-     
-    img {
-        margin-top: 10px;
     }
+}
+}
+
+
+// a {
+
+//     img {
+        
+//     }
+
+//     @media (max-width: 950px) {
+//         padding: 10px;
+//         justify-content: center;
+//     }
+// }
+.mapIcon, .loginIcon{
+  
+        filter:contrast(0);
+  
+    cursor:default;
+  
+}
+.cartLi {
+    width: 55px;
+    height: 40px;
+    margin-bottom: 5px;
 
     @media (max-width: 950px) {
-        padding: 10px;
-        justify-content: center;
-    }}
+        margin-bottom: 10px;
 
-    .cartLi {
-        width: 55px;
-        height: 40px;
-   margin-bottom: 5px;
-        @media (max-width: 950px) {
-           margin-bottom: 10px;
-
-           
-        }
-    }
-
-    /* ///// RESPONSIVE MENU ////// */
-
-    .menuResponsiveBtn {
-        display: none;
-
-        @media (max-width: 950px) {
-            display: flex;
-            position: absolute;
-            right: 9px;
-            top: 21px;
-            border: none;
-            background: transparent;
-            transition: opacity .3s;
-
-            .icon {
-                font-size: 25px;
-                color: $violetaOscuro;
-            }
-        }
 
     }
+}
 
-    .closeResponsiveBtn {
-        display: none;
+/* ///// RESPONSIVE MENU ////// */
 
-        @media (max-width: 950px) {
-            border: none;
-            background: transparent;
-            display: none;
-            position: absolute;
-            right: 9px;
-            top: 21px;
-            border: none;
-            background: transparent;
+.menuResponsiveBtn {
+    display: none;
 
-            .icon {
-                font-size: 25px;
-                color: $violetaOscuro;
-            }
-        }
-    }
-
-    .categorias {
+    @media (max-width: 950px) {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        right: 9px;
+        top: 21px;
+        border: none;
+        background: transparent;
+        transition: opacity .3s;
 
-        @media (max-width: 950px) {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 4em;
-            right: 0;
-            align-items: flex-end;
-            background: white;
-            padding: 20px 0;
-            width: 50%;
-            padding: 40px 0;
-            border-radius: 0px 0px 0 6px;
-            border-left: 2px solid $rosa;
-            border-bottom: 2px solid $rosa;
-        }
-
-        li {
-            margin: 12px 10px 0;
-            list-style: none;
-
-            @media (max-width: 950px) {
-                margin: 15px 20px;
-            }
-
-            .categoria {
-                font-weight: 300;
-                font-size: 20px;
-        
-        
-    
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: $violetaOscuro;
-                padding-bottom: 5px;
-                border-bottom: 2px solid transparent;
-                transition: .5s;
-
-                &:hover {
-                    border-bottom: 2px solid $rosa;
-                    border-radius: 1px;
-                    color: $rosa;
-
-                }
-
-                @media (max-width: 950px) {
-                    font-weight: 500;
-                    font-size: 18px;
-                }
-            }
-
-            ///////////
-            //////////////////
-            ////////////////
-            .categoriaHome {
-                font-weight: 400;
-                font-size: 16px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                padding-bottom: 5px;
-                border-bottom: 2px solid transparent;
-                transition: .2s;
-
-                &:hover {
-                    border-bottom: 2px solid $rosa;
-                    border-radius: 1px;
-                }
-            }
-
-            .categoriaActive {
-                transition: .2s;
-                border-bottom: 2px solid $rosa;
-                color: $rosa;
-                font-weight: 600;
-            }
+        .icon {
+            font-size: 25px;
+            color: $violetaOscuro;
         }
     }
 
-    .cartLogin {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+}
+
+.closeResponsiveBtn {
+    display: none;
+
+    @media (max-width: 950px) {
+        border: none;
+        background: transparent;
+        display: none;
+        position: absolute;
+        right: 9px;
+        top: 21px;
+        border: none;
+        background: transparent;
+
+        .icon {
+            font-size: 25px;
+            color: $violetaOscuro;
+        }
+    }
+}
+
+.categorias {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media (max-width: 950px) {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 4em;
+        right: 0;
+        text-align: center;
+        background: white;
+        width: 50%;
+        padding: 0px 0 20px;
+        margin-top: 14px;
+        border-radius: 0px 0px 0 6px;
+        border-left: 2px solid $rosa;
+        border-bottom: 2px solid $rosa;
+    }
+
+    li {
+        margin: 12px 10px 0;
+        list-style: none;
 
         @media (max-width: 950px) {
-            position: absolute;
-            margin-top: 30px;
-            left: -1.5em;
+            width: 100%;
+            margin: 20px 10px 0;
 
         }
-
-        .dividerSpan {
-            @media (max-width: 950px) {
-                display: none;
-            }
-        }
-
-        a {
-            margin: 0;
-            color: gray;
-            transition: .3s;
+        
+        // .divider.text,
+        .categoria {
+            font-weight: 300;
+            font-size: 20px;
+            color: $violetaOscuro;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: .5s;
 
             &:hover {
+
+                border-bottom: 2px solid $rosa;
+                border-radius: 1px;
                 color: $rosa;
             }
+
+            // @media (max-width: 950px) {
+            //     font-weight: 500;
+            //     font-size: 18px;
+            //     width: 50%;
+            //     // padding: 0 10px;
+            // }
         }
 
-        .mapIcon,
-        .loginIcon {
+        .divider.text {
+            padding: 0;
+            color: $violetaOscuro;
+            font-size: 20px;
+            
+
+
             @media (max-width: 950px) {
-                display: none;
+                margin: 0;
+
+                width: 200px;
+                text-align: center;
             }
         }
 
-        li {
-            list-style: none;
+        .dropdown.icon {
+            display: none;
         }
+
+        .ui.right.pointing.dropdown>.menu::after {
+            display: none;
+        }
+
+        // .ui.dropdown .menu > .item{
+        //     padding: 0.786rem .rem !important;
+        // }
+        .ui.left.pointing.dropdown>.menu::after {
+            display: none;
+        }
+
+        .ui.simple.dropdown:hover>.menu {
+            top: 105% !important;
+            left: -60%;
+             border: none;
+            // border-radius: none;
+            //     border-bottom: 2px solid $rosa;
+            //     border-radius: 1px;
+            //     color: $rosa;
+
+            @media (max-width: 950px) {
+                top: 0 !important;
+                border-bottom: 2px solid $rosa;
+                border-left: 2px solid $rosa ;
+                left: -80%;
+                margin: 0;
+                right: 150%
+            }
+        }
+
+        ///////////
+        //////////////////
+        ////////////////
+        .categoriaHome {
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: .2s;
+
+            &:hover {
+                border-bottom: 2px solid $rosa;
+                border-radius: 1px;
+            }
+        }
+
+        .categoriaActive {
+            transition: .2s;
+            border-bottom: 2px solid $rosa;
+            color: $rosa;
+            font-weight: 600;
+        }
+    }
+}
+
+.cartLogin {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 950px) {
+        position: absolute;
+        margin-top: 30px;
+        left: -1.5em;
+
+    }
+
+    .dividerSpan {
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    a {
+        margin: 0;
+        color: gray;
+        transition: .3s;
+
+        &:hover {
+            color: $rosa;
+        }
+    }
+
+    .mapIcon,
+    .loginIcon {
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    li {
+        list-style: none;
     }
 }

@@ -3,7 +3,10 @@ import imgCart from "../svg/cartSvg.svg";
 import "../scss/ItemCount.scss";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(initial);
+  let [count, setCount] = useState(initial);
+  
+
+
 
   const suma = () =>
     count < stock ? setCount(count + 1) : console.log("ya no hay stock");
@@ -13,7 +16,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <div className="buttonsCountContainer">
     
-      <div className="countButtons">
+      {stock === 0 ?
+        <div className="agotado">
+AGOTADO
+        </div>
+        :
+        <div className="countButtons">
         <button className="stockBtn" onClick={resta}>
           -
         </button>
@@ -24,8 +32,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </div>
+    }
 
-      <div>
+
+      {stock === 0 ?
+      null
+      :
+        <div>
         <button
           className="onAddBtn"
           onClick={() => {
@@ -35,7 +48,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           Agregar al carrito
           <img className="itemCountImg" src={imgCart} alt="" />
         </button>
+        
       </div>
+      }
     </div>
   );
 };

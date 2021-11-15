@@ -1,4 +1,5 @@
-import PurchaseTotal from "./PurchaseTotal";
+import ResumenTotal from "./ResumenTotal";
+import Footer from "./Footer";
 import React, { useContext, useState, useEffect } from "react";
 import { getFirestore } from "../firebase/";
 import Loader from "./loader/Loader";
@@ -14,13 +15,17 @@ import "../scss/FinalizarCompra.scss";
 const FinalizarCompra = () => {
   const { cart } = useContext(CartContext);
   const reducer = (previousValue, currentValue) => previousValue + currentValue;
-  const [calculoTotal, setCalculoTotal] = useState([])
+  const [calculoTotal, setCalculoTotal] = useState([]);
   const [desaparece, setDesaparece] = useState([]);
   const [order, setOrder] = useState({});
+  const [pago, setPago] = useState({checked: null})
+  const [envio, setEnvio] = useState({checked: null})
   const [user, setUser] = useState({
+    
     name: null,
     email: null,
   });
+
 
   useEffect(() => {
     if (cart.length) {
@@ -30,6 +35,22 @@ const FinalizarCompra = () => {
     }
     setDesaparece("desaparece");
   }, [cart]);
+
+const handleChangeEnvio = e =>{
+  setEnvio(
+    {
+      checked: e.target.value
+    }
+  )
+}
+const handleChangePago = e =>{
+  setPago(
+    {
+      checked: e.target.value
+    }
+  )
+}
+
   const crearOrden = () => {
     const db = getFirestore();
     const orders = db.collection("orders");
@@ -37,7 +58,7 @@ const FinalizarCompra = () => {
       buyer: user,
       items: cart,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
-       total: calculoTotal,
+      total: calculoTotal,
     };
 
     orders
@@ -50,7 +71,6 @@ const FinalizarCompra = () => {
         console.log("Error creating order", error);
       });
     setDesaparece("");
-
   };
 
   return (
@@ -70,7 +90,7 @@ const FinalizarCompra = () => {
             <Button
               animated="fade"
               className="botonFinalizarLaCompra"
-              disabled={!(user.name && user.email && cart.length)}
+              disabled={!(user.name && user.email && cart.length && pago.checked != null && envio.checked != null)}
               onClick={() => crearOrden()}
             >
               <Button.Content visible>
@@ -91,6 +111,8 @@ const FinalizarCompra = () => {
                   id="sucursal"
                   name="pagos"
                   value="sucursal"
+                  checked={envio.checked === "sucursal"}
+                  onChange={handleChangeEnvio}
                 />
                 <label>
                   <Icon name="warehouse" />
@@ -103,13 +125,16 @@ const FinalizarCompra = () => {
                   id="domicilio"
                   name="pagos"
                   value="domicilio"
+                  checked={envio.checked === "domicilio"}
+                  onChange={handleChangeEnvio}
                 />
                 <label>
                   <Icon name="truck" /> Envío a domicilio
                 </label>
               </div>
               <div className="medioPagoContainer">
-                <input type="radio" id="express" name="pagos" value="express" />
+                <input type="radio" id="express" name="pagos" value="express" 
+                checked={envio.checked === "express"} onChange={handleChangeEnvio}/>
                 <label>
                   <Icon name="shipping fast" />
                   Envío express
@@ -117,13 +142,15 @@ const FinalizarCompra = () => {
               </div>
             </form>
             <form action="">
-              <h1>Medios de pago</h1>
+              <h3>Medios de pago</h3>
               <div className="medioPagoContainer">
                 <input
                   type="radio"
                   id="efectivo"
                   name="pagos"
                   value="efectivo"
+                  checked={pago.checked === "efectivo"}
+                  onChange={handleChangePago}
                 />
                 <label>
                   <Icon name="money bill alternate outline" />
@@ -136,6 +163,8 @@ const FinalizarCompra = () => {
                   id="transferencia"
                   name="pagos"
                   value="transferencia"
+                  checked={pago.checked === "transferencia"}
+                  onChange={handleChangePago}
                 />
                 <label>
                   <Icon name="university" />
@@ -148,6 +177,8 @@ const FinalizarCompra = () => {
                   id="tarjetas"
                   name="pagos"
                   value="tarjetas"
+                  checked={pago.checked === "tarjetas"}
+                  onChange={handleChangePago}
                 />
                 <label>
                   <Icon name="credit card" />
@@ -155,23 +186,35 @@ const FinalizarCompra = () => {
                 </label>
               </div>
               <div className="medioPagoContainer">
-                <input type="radio" id="online" name="pagos" value="online" />
+                <input
+                  type="radio"
+                  id="online"
+                  name="pagos"
+                  value="online"
+                  checked={pago.checked === "online"}
+                  onChange={handleChangePago}
+                />
                 <label>
                   <Icon name="cc paypal" />
                   Mercado pago - Paypal
                 </label>
+                
               </div>
             </form>
           </div>
 
           <>
-            <div>
+            <div className="resumenYProductos">
               <h2>Resumen:</h2>
-              <PurchaseTotal/>
+              <ResumenTotal />
+              <h2>Productos a enviar:</h2>
               <CartProducts />
             </div>
           </>
         </section>
+        <>
+  <Footer/>
+  </>
       </FadeIn>
     </>
   );
