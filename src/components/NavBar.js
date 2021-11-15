@@ -10,10 +10,25 @@ import logIn from "../assets/img/logIn.png";
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
   const [Menu, setMenu] = useState(false);
+// const [Fix, setFix] = useState(false)
 
   useEffect(() => {
     changeMenu();
   }, []);
+
+// const stopPropagation = (e) =>{
+//   if (e.defaultPrevented) return
+//   e.stopPropagation()
+// }
+
+
+// const bug = document.getElementById("menuClose")
+
+// // const applyFix = () => {
+// // bug.addEventListener 
+// // }
+// bug.addEventListener("onMouseEnter", stopPropagation)
+
 
   const changeBackgroundNavbar = () => {
     if (window.scrollY >= 80) {
@@ -51,11 +66,11 @@ const Nav = () => {
     menuMobile.style.display = "flex";
   };
   const closeMenu = () => {
+    let open = document.getElementById("menuOpen");
+    let menuMobile = document.getElementById("menuMobile");
     let close = document.getElementById("menuClose");
     close.style.display = "none";
-    let open = document.getElementById("menuOpen");
     open.style.display = "flex";
-    let menuMobile = document.getElementById("menuMobile");
     menuMobile.style.display = "none";
   };
 
@@ -97,15 +112,24 @@ const Nav = () => {
 
         <ul className="categorias" id="menuMobile">
           <li>
-            <NavLink to={`/category/shop`}>
-              <div>
+            
+              <div id="bug">
                 <Dropdown
-                  text="SHOP"
+                  text="BQ"
                   simple
                   item
                   pointing={Menu ? "left" : "right"}
                 >
                   <Dropdown.Menu>
+                  <Dropdown.Item>
+                      <NavLink
+                        to={`/category/shop`}
+                        activeClassName="categoriaActive"
+                        className="categoria"
+                      >
+                        SHOP
+                      </NavLink>
+                    </Dropdown.Item>
                     <Dropdown.Item>
                       <NavLink
                         to={`/category/accesorios`}
@@ -154,7 +178,7 @@ const Nav = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-            </NavLink>
+        
           </li>
           <li>
             <NavLink

@@ -22,7 +22,7 @@ const CarouselCategories = () => {
         naturalSlideHeight={2000}
         totalSlides={3}
         isPlaying={true}
-        interval={2000}
+        interval={6000}
         infinite={true}
         isIntrinsicHeight={true}
       >

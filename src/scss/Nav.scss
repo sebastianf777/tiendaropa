@@ -28,14 +28,15 @@ $violetaOscuro: #3a0130;
     transition: .3s;
 
     .logoDiv{
+        width: fit-content;
         @media (max-width: 950px) {
             position: absolute;
-            left: 30%;
+            margin:auto;
+            text-align: center;
+            left: 0;
+            right: 0;
         }
-        @media (max-width: 500px) {
-         
-            left: 20%;
-        }
+        
         .logo {
         align-items: center;
         display: flex;
@@ -161,7 +162,7 @@ $violetaOscuro: #3a0130;
 
 .categorias {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     justify-content: center;
 
     @media (max-width: 950px) {
@@ -181,7 +182,7 @@ $violetaOscuro: #3a0130;
     }
 
     li {
-        margin: 12px 10px 0;
+        margin: 0px 10px 0;
         list-style: none;
 
         @media (max-width: 950px) {
@@ -218,17 +219,25 @@ $violetaOscuro: #3a0130;
             padding: 0;
             color: $violetaOscuro;
             font-size: 20px;
+            width: 40px;
+            height: 40px;
+            margin-top: 18px;
+            
             
 
 
             @media (max-width: 950px) {
                 margin: 0;
+                height: auto;
 
                 width: 200px;
                 text-align: center;
             }
+            .menu.transition{
+                pointer-events: none;
+            }
         }
-
+    
         .dropdown.icon {
             display: none;
         }
@@ -237,17 +246,21 @@ $violetaOscuro: #3a0130;
             display: none;
         }
 
-        // .ui.dropdown .menu > .item{
-        //     padding: 0.786rem .rem !important;
-        // }
         .ui.left.pointing.dropdown>.menu::after {
             display: none;
         }
+        .ui.simple.active.dropdown > .menu{
+            
+             display: none!important;
+        }
 
         .ui.simple.dropdown:hover>.menu {
-            top: 105% !important;
+            display: flex !important;
+            flex-direction: column;
+            top: 97% !important;
             left: -60%;
              border: none;
+        
             // border-radius: none;
             //     border-bottom: 2px solid $rosa;
             //     border-radius: 1px;

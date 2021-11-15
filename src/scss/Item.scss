@@ -1,4 +1,5 @@
 $rosa: #eb00b0;
+$violetaOscuro: #3a0130;
 
 .itemCard {
     background-color: white;
@@ -7,23 +8,27 @@ $rosa: #eb00b0;
     justify-content: center;
     align-items: center;
     margin: 5px;
-    padding: 5px 15px 5px ;
+    padding: 5px 15px 5px;
     border: 1px solid ghostwhite;
     border-radius: 5px;
-    width: 26em;
-    height: 40em;
+    width: 18em;
+    height: 31em;
     transition: box-shadow .3s;
+    overflow: hidden;
+
     &:hover {
-        box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.50);
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.50);
     }
+
     @media (max-width: 768px) {
         margin: 0;
     }
-    .imgProducto{
-width: 20em;
-height: 20em;
-object-fit: contain;
-margin: 10px;
+
+    .imgProducto {
+        width: 20em;
+        height: 25em;
+        object-fit: contain;
+        margin: 10px;
     }
 
     .discountContainer {
@@ -31,33 +36,46 @@ margin: 10px;
         justify-content: flex-start;
 
         .productVariants {
-            margin-right: 7px;
+            margin-right: 1px;
             margin-bottom: 0;
-            padding: 4px 6px;
+            padding: 1px 2px;
             font-size: 11px;
             color: white;
             background-color: $rosa;
             border-radius: 4px;
-        }   
-    }
-    .productBrand{
-        font-weight: 500;
-        margin: 5px 0 0 0;
-
+        }
     }
 
-    .productName {
-        color: #2C3330;
-        font-weight: 400;
-        font-size: 16px;
-        margin: 5px 0 5px 0;
+    .brandAndName {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .productBrand {
+            font-weight: 500;
+            margin: 5px 5px 0;
+            font-size: 14px;
+        color: $rosa;
+
+        }
+
+        .productName {
+            color: $violetaOscuro;
+            font-weight: 400;
+            font-size: 11px;
+            margin: 5px 0 5px 0;
+        }
     }
+
     .productPrice {
         color: $rosa;
         font-size: 15px;
         font-weight: 700;
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: 0 5px 5px;
+        
     }
+
     .productLastPrice {
         color: gray;
         font-size: 14px;
@@ -66,12 +84,14 @@ margin: 10px;
         margin: 5px 0 0 0;
 
     }
+
     .stockActual {
         color: #2C3330;
         font-size: 13px;
         margin-top: 5px;
     }
-    .btnIrItemDetail{
+
+    .btnIrItemDetail {
         margin-top: 10px;
 
         .ui.button {
