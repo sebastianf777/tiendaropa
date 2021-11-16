@@ -1,4 +1,7 @@
-#<img src="/src/assets/img/logo.png"/>
+<h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
+<h3 align="center">A passionate frontend developer from Argentina</h3>
+
+<img src="/src/assets/img/logo.png"/>
 
 ### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
 <br><br>
