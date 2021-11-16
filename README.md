@@ -5,7 +5,7 @@
 <br>
 <img src="/src/assets/img/logo.png"/>
  <br>
-## Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
+- Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
 <br><br>
 
 ## _This was a project for:_ 
