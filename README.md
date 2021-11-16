@@ -1,35 +1,62 @@
-<h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+# Beauty Queen
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=sebastianf777&label=Profile%20views&color=0e75b6&style=flat" alt="sebastianf777" /> </p>
+### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
+<br><br>
 
-- 🔭 I’m currently working on [tiendaropa](in process)
+## Demostración del Sitio Web
 
-- 🌱 I’m currently learning **React Js**
+<img src="tiendaRopa.gif"/>
+<br><br>
 
-- 👯 I’m looking to collaborate on [Style Desings](https://javier-albornoz.github.io/PrimerPrototipo/)
+# Este e-commerce está construido con: 💻
+<br>
 
-- 🤝 I’m looking for help with [Fontana Materiales](https://fontanamateriales.com/)
+⚪ Create-React-App (React Js)
+⚪ Firebase
+⚪ Estilos en CSS 
+⚪ Sass
 
-- 👨‍💻 All of my projects are available at [https://github.com/sebastianf777?tab=repositories](https://github.com/sebastianf777?tab=repositories)
+<br><br>
 
-- 📄 Know about my experiences [https://www.linkedin.com/in/sebastianfontana](https://www.linkedin.com/in/sebastianfontana)
+# Instalación para poder usarlo 📋
+<br>
 
-- 💬 Ask me about **Sass, Git or JavaScript**
+### 1- Instalar las dependencias de React Js. 🔧
+<br>
 
-- 📫 How to reach me **sebastianf777@outlook.com**
+〰️〰️〰️
+npm i
+〰️〰️〰️
 
-- ⚡ Fun fact Singing is one of my hidden talents ;)
+<br>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/sebastián antonio fontana" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sebastián antonio fontana" height="30" width="40" /></a>
-</p>
+- git clone https://github.com/sebastianf777/tiendaropa.git
+- npm install
+- npm start
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> </p>
+	// Open your browser in https://localhost:3000
+<br>
 
-<h3 align="left">Support:</h3>
-<p><a href="https://www.buymeacoffee.com/sebastianf777"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="sebastianf777" /></a></p><br><br>
+# Creación del E-commerce 🛠️
+## Components:
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sebastianf777&show_icons=true&locale=en&layout=compact" alt="sebastianf777" /></p>
+#### En la carpeta `components` vas a encontrar todos los componentes con los que se realizó el proyecto.
+
+<br>
+
+## Context 📄
+
+#### En la carpeta `context/CartContext.js` se encuentra toda la lógica con la que se desarrolló el carrito de compras y las funciones para remover, agregar, vaciar productos del carrito.
+
+<br>
+
+## Firebase 📄
+
+#### En la carpeta `Services/firebase.js` se encuentra toda la lógica con la que se desarrollaron las funciones para que aparezcan todos los productos, el producto seleccionado por el usuario, y tambien la función para crear una orden de compra con los datos del usuario y los productos que fueron comprados.
+
+
+<br>
+
+# Autor ✒️
+
+Sebastian Fontana - 2021.
