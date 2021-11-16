@@ -2,23 +2,20 @@
 <h3 align="center">A passionate frontend developer from Argentina</h3>
 
 <img src="/src/assets/img/logo.png"/>
-
-### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
+## _Here we go!:)🚀_ 
 ### Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available.
 <br><br>
 
-## _Este proyecto fue realizado para:_ 
+
 ## _This was a project for:_ 
 [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
-## Demostración del Sitio Web:
 ## Web demonstration:
-
 <img src="tiendaRopa.gif"/>
 <br><br>
 
-# Este e-commerce está construido con:
-# Este e-commerce is build with:
+
+# This e-commerce is build with:
 <br>
 
 -  Create-React-App (React Js)
@@ -28,7 +25,7 @@
 
 <br><br>
 
-# Instalación:
+#
 # How to install:
 <br>
 
