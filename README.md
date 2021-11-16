@@ -3,8 +3,8 @@
 ### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
 <br><br>
 
-##_Este proyecto fue realizado para: [![coderhouse]_(https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
-
+##_Este proyecto fue realizado para:_ [![coderhouse]_(https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
+## _The Last Markdown Editor, Ever_
 ## Demostración del Sitio Web
 
 <img src="tiendaRopa.gif"/>
