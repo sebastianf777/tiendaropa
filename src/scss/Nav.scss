@@ -177,7 +177,7 @@ $violetaOscuro: #3a0130;
     }
 
     li {
-        margin: 0px 10px 0;
+        margin: auto 10px ;
         list-style: none;
         @media (max-width: 950px) {
             width: 100%;
@@ -195,7 +195,7 @@ $violetaOscuro: #3a0130;
             font-weight: 300;
             font-size: 20px;
             color: $violetaOscuro;
-            padding-bottom: 5px;
+            padding-bottom: 1px;
             border-bottom: 2px solid transparent;
             transition: .5s;
 
@@ -219,9 +219,10 @@ $violetaOscuro: #3a0130;
             color: $rosa;
             font-size: 30px;
             width: 40px;
-            margin-top: 20px;
+            margin-top: 40px;
             font-family: "Beauty";
             letter-spacing: 2px;
+            height: 50px;
             
             
 
@@ -257,9 +258,10 @@ $violetaOscuro: #3a0130;
         .ui.simple.dropdown:hover>.menu {
             display: flex !important;
             flex-direction: column;
-            top: 97% !important;
+            top: 89% !important;
             left: -60%;
              border: none;
+             border-radius: 0px 0px 1px 1px;
         
             // border-radius: none;
             //     border-bottom: 2px solid $rosa;
@@ -305,11 +307,13 @@ $violetaOscuro: #3a0130;
         }
     }
   .liDivider{
-      
+       display: flex;
+       align-items: center;
       margin-top: 0px;
       height: 60px;
       @media (max-width: 950px) {
       height: 25px;
+      display: initial;
 
     }
       #bug{
