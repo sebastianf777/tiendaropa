@@ -6,12 +6,13 @@
 <img src="/src/assets/img/logo.png"/>
  <br>
 - Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
-<br><br>
 
-## _This was a project for:_ 
+## _This was a project for 🛠️:_ 
 [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
-## Web demonstration:
+- This work is the final asignment for the React Js course!
+
+## Web demonstration 📄:
 <img src="tiendaRopa.gif"/>
 <br><br>
 
@@ -25,7 +26,7 @@
 
 <br><br>
 
-# How to install:
+# How to install ⚙️:
 <br>
 
 - git clone https://github.com/sebastianf777/tiendaropa.git
@@ -35,8 +36,7 @@
 	// Open your browser in https://localhost:3000
 <br>
 
-## Principales librerias usadas:
-## Main libraries used in the project:
+## Main libraries used in the project 📋:
 
 | Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
@@ -52,16 +52,22 @@
 
 <br>
 
-## Aspectos a realizar en el futuro:
-## Aspects to be developed in the future:
+
+## Aspects to be developed in the future 🔧:
 - Login and password
 - Favorite section
 - Payment methods.
 - Size and color variables
 
+<br>
+
+# Appreciation words and final words 🎁:
+
+- Thanks to my family and friends who are supporting me on this, I am really grateful for your support :)
+- Gracias a mi familia y amigos que me apoyan en esto, estoy muy agradecido por su apoyo :)
 
 <br>
 
-# Autor:
+# Autor ✒️:
 
 Sebastian Fontana - 2021.
