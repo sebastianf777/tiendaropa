@@ -16,12 +16,12 @@
 <img src="tiendaRopa.gif"/>
 <br><br>
 
-# This e-commerce is build with:
+# This e-commerce is build with 👩‍💻:
 <br>
 
 -  Create-React-App (React Js)
 -  Firebase
--  Estilos en CSS 
+-  CSS 
 -  Sass
 
 <br><br>
@@ -61,7 +61,7 @@
 
 <br>
 
-# Appreciation words and final words 🎁:
+# Appreciation and final words 🎁:
 
 - Thanks to my family and friends who are supporting me on this, I am really grateful for your support :)
 - Gracias a mi familia y amigos que me apoyan en esto, estoy muy agradecido por su apoyo :)
