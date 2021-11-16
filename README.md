@@ -5,7 +5,7 @@
 
 ## Demostración del Sitio Web
 
-<img src="a cargar"/>
+<img src="tiendaRopa.gif"/>
 <br><br>
 
 # Este e-commerce está construido con: 💻
@@ -30,9 +30,9 @@ npm i
 
 <br>
 
- git clone https://github.com/sebastianf777/tiendaropa.git
-	npm install
-	npm start
+- git clone https://github.com/sebastianf777/tiendaropa.git
+- npm install
+- npm start
 
 	// Open your browser in https://localhost:3000
 <br>
