@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
 <h3 align="center">A passionate frontend developer from Argentina</h3>
 
-## _Here we go!:)🚀_
+## _Here we go! :) 🚀_
 <br>
 <img src="/src/assets/img/logo.png"/>
  <br>
-### Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available.
+## Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available.
 <br><br>
 
 
