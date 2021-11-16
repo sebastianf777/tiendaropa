@@ -120,13 +120,13 @@ const ItemDetail = ({ producto }) => {
                 </FadeIn>
                 <FadeIn>
                   <NavLink
-                    to="/"
+                    to="/category/shop"
                     onClick={() => {
                       goToPayment();
                     }}
                     className="irACartBtn"
                   >
-                      Seguir comprando <Icon name="share" />
+                       Seguir comprando<Icon name="arrow left" />
                   </NavLink>
                 </FadeIn>
               </>

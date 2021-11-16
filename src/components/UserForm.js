@@ -25,7 +25,7 @@ const UserForm = ({ user, setUser }) => {
 
   return (
     <div className="orderContainer">
-      {user.name ? <h2>Bienvenido</h2> : <h2>Información del cliente:</h2>}
+      {user.name ? <h2>Bienvenida/o</h2> : <h2>Información del cliente:</h2>}
       {user.name ? (
         <div className="userName">{user.name}</div>
       ) : (

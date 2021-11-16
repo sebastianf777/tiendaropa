@@ -55,7 +55,7 @@ const CheckoutComponent = () => {
 
                 <div className='checkoutBtnsContainer'>
                     <button className='seguirComprandoBtn vaciar' onClick={() => {clearCart()}}>Vaciar carrito <Icon name='trash alternate outline'/></button>
-                    <Link to="/" className='seguirComprandoBtn'><Icon name='arrow left'/> Seguir comprando</Link>
+                    <Link to="/category/shop" className='seguirComprandoBtn'><Icon name='arrow left'/> Seguir comprando</Link>
                 </div>
             </section>
 
