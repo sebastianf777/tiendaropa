@@ -36,25 +36,6 @@
 	// Open your browser in https://localhost:3000
 <br>
 
-# Creación del E-commerce 🛠️
-## Components:
-
-#### En la carpeta `components` vas a encontrar todos los componentes con los que se realizó el proyecto.
-
-<br>
-
-## Context 📄
-
-#### En la carpeta `context/CartContext.js` se encuentra toda la lógica con la que se desarrolló el carrito de compras y las funciones para remover, agregar, vaciar productos del carrito.
-
-<br>
-
-## Firebase 📄
-
-#### En la carpeta `Services/firebase.js` se encuentra toda la lógica con la que se desarrollaron las funciones para que aparezcan todos los productos, el producto seleccionado por el usuario, y tambien la función para crear una orden de compra con los datos del usuario y los productos que fueron comprados.
-
-<br>
-
 ## Main libraries used in the project
 
 | Library                                                          | Used                      |
@@ -67,6 +48,7 @@
 | [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor          |
 | [React Router](https://reactrouter.com/)                         | Router                    |
 | [React Scroll](https://www.npmjs.com/package/react-scroll)                               | Component for animating vertical scrolling |
+| [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|
 
 <br>
 
