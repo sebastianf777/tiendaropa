@@ -1,10 +1,5 @@
 <h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
 <h3 align="center">A passionate frontend developer from Argentina</h3>
-<<<<<<< HEAD
-
-<img src="/src/assets/img/logo.png"/>
-=======
->>>>>>> 5c4959abef1cbb7e4743717359c116126d5b71f9
 
 ## _Here we go! :) 🚀_
 <br>
