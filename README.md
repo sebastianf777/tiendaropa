@@ -1,38 +1,37 @@
 <h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
 <h3 align="center">A passionate frontend developer from Argentina</h3>
+<<<<<<< HEAD
 
 <img src="/src/assets/img/logo.png"/>
+=======
+>>>>>>> 5c4959abef1cbb7e4743717359c116126d5b71f9
 
-### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
-<br><br>
+## _Here we go! :) 🚀_
+<br>
+<img src="/src/assets/img/logo.png"/>
+ <br>
+- Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
 
-##_Este proyecto fue realizado para:_ [![coderhouse]_(https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
-## _The Last Markdown Editor, Ever_
-## Demostración del Sitio Web
+## _This was a project for 🛠️:_ 
+[![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
+- This work is the final asignment for the React Js course!
+
+## Web demonstration 📄:
 <img src="tiendaRopa.gif"/>
 <br><br>
 
-# Este e-commerce está construido con: 💻
+# This e-commerce is build with 👩‍💻:
 <br>
 
-⚪ Create-React-App (React Js)
-⚪ Firebase
-⚪ Estilos en CSS 
-⚪ Sass
+-  Create-React-App (React Js)
+-  Firebase
+-  CSS 
+-  Sass
 
 <br><br>
 
-# Instalación para poder usarlo 📋
-<br>
-
-### 1- Instalar las dependencias de React Js. 🔧
-<br>
-
-〰️〰️〰️
-npm i
-〰️〰️〰️
-
+# How to install ⚙️:
 <br>
 
 - git clone https://github.com/sebastianf777/tiendaropa.git
@@ -42,26 +41,38 @@ npm i
 	// Open your browser in https://localhost:3000
 <br>
 
-# Creación del E-commerce 🛠️
-## Components:
+## Main libraries used in the project 📋:
 
-#### En la carpeta `components` vas a encontrar todos los componentes con los que se realizó el proyecto.
-
-<br>
-
-## Context 📄
-
-#### En la carpeta `context/CartContext.js` se encuentra toda la lógica con la que se desarrolló el carrito de compras y las funciones para remover, agregar, vaciar productos del carrito.
-
-<br>
-
-## Firebase 📄
-
-#### En la carpeta `Services/firebase.js` se encuentra toda la lógica con la que se desarrollaron las funciones para que aparezcan todos los productos, el producto seleccionado por el usuario, y tambien la función para crear una orden de compra con los datos del usuario y los productos que fueron comprados.
-
+| Library                                                          | Used                      |
+| ---------------------------------------------------------------- | ------------------------- |
+| [ReactJs](https://es.reactjs.org/)                               | JavaScript framework      |
+| [Create React App](https://github.com/facebook/create-react-app) | Create React Project      |
+| [Pure React Carousel](https://www.npmjs.com/package/pure-react-carousel)| Carousel Component |
+| [Semantic UI React](https://react.semantic-ui.com/)              | UI framework              |
+| [Firebase](https://firebase.google.com/?hl=es)                   | Authentication & DataBase |
+| [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor          |
+| [React Router](https://reactrouter.com/)                         | Router                    |
+| [React Scroll](https://www.npmjs.com/package/react-scroll)                               | Component for animating vertical scrolling |
+| [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|
 
 <br>
 
-# Autor ✒️
+
+## Aspects to be developed in the future 🔧:
+- Login and password
+- Favorite section
+- Payment methods.
+- Size and color variables
+
+<br>
+
+# Appreciation and final words 🎁:
+
+- Thanks to my family and friends who are supporting me on this, I am really grateful for your support :)
+- Gracias a mi familia y amigos que me apoyan en esto, estoy muy agradecido por su apoyo :)
+
+<br>
+
+# Autor ✒️:
 
 Sebastian Fontana - 2021.
