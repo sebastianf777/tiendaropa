@@ -18,10 +18,10 @@
 # Este e-commerce is build with:
 <br>
 
-⚪ Create-React-App (React Js)
-⚪ Firebase
-⚪ Estilos en CSS 
-⚪ Sass
+-  Create-React-App (React Js)
+-  Firebase
+-  Estilos en CSS 
+-  Sass
 
 <br><br>
 
