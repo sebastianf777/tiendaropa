@@ -1,4 +1,4 @@
-#<img src="/src/assets/img/logo.png"/>
+<img src="/src/assets/img/logo.png"/>
 
 ### Beauty Queen es un e-commerce de indumentaria y calzado femenino desarrollado en React Js donde el usuario encontrara múltiples secciones con todos los productos disponibles según sea el caso.
 ### Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available.
