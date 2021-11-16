@@ -29,7 +29,7 @@
 -  CSS 
 -  Sass
 
-<br><br>
+<br>
 
 # How to install ⚙️:
 <br>
