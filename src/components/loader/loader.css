@@ -10,7 +10,9 @@
   position: absolute;
   width: 64px;
   height: 64px;
-  left: 50%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   top: 50%;
 }
 .lds-roller div {
