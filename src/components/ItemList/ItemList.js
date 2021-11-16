@@ -1,7 +1,7 @@
 import React from "react";
-import Item from "./Item";
-import "../scss/ItemList.scss";
-import Footer from "./Footer";
+import Item from "../Item";
+import "../../scss/ItemList.scss";
+import Footer from "../../layout/Footer";
 
 const ItemList = ({ productos }) => {
   return (

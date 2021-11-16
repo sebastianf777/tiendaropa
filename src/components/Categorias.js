@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader/Loader";
-import ItemList from "./ItemList";
+import ItemList from "./ItemList/ItemList";
 import { getFirestore } from "../firebase/";
 import logo from "../assets/img/logoHome.png";
-import "../scss/Mantenimiento.scss"; 
-
+import "../scss/Mantenimiento.scss";
 
 const Categorias = () => {
   const [productos, setProductos] = useState([]);
@@ -14,22 +13,17 @@ const Categorias = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-
     setIsLoading(true);
 
     const db = getFirestore();
     const itemCollection = db.collection("data");
-    const itemsByCategory = itemCollection.where(
-      "categoria",
-      "==",
-      categoryId
-    );
+    const itemsByCategory = itemCollection.where("categoria", "==", categoryId);
 
     itemsByCategory
       .get()
       .then((querySnapshot) => {
         if (querySnapshot.size === 0) {
-            setGetIsEmpty(true);
+          setGetIsEmpty(true);
         }
         setProductos(
           querySnapshot.docs.map((doc) => {
@@ -50,7 +44,6 @@ const Categorias = () => {
       {isLoading ? (
         <Loader />
       ) : getIsEmpty ? (
-          
         <div className="mantenimiento">
           <h2>Próximamente</h2>
 
@@ -58,12 +51,10 @@ const Categorias = () => {
           <img src={logo} alt="" />
         </div>
       ) : (
-          
         <ItemList productos={productos} />
       )}
     </>
   );
 };
-
 
 export default Categorias;

@@ -20,7 +20,7 @@ function Item({ product }) {
                 : "NEW"}
             </p>
             <p className="productVariants" style={{ background: "gray" }}>
-              Colección {product.coleccion}
+              colección {product.coleccion}
             </p>
             <p className="productVariants" style={{ background: "#496ABE" }}>
               {product.color}

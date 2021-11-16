@@ -9,7 +9,7 @@ import {
   ButtonBack,
   ButtonNext,
 } from "pure-react-carousel";
-import imgC1 from "../assets/img/homeGif1.gif";
+import imgC1 from "../assets/img/homeC1.jpg";
 import imgC2 from "../assets/img/homeC2.webp";
 import imgC3 from "../assets/img/homeC3.jpg";
 
@@ -31,22 +31,19 @@ const HomeCarousel = () => {
             <Slide index={0} className="slide">
               <div className="slidePure">
                 <img src={imgC1} alt="imagen1" />
-                <div className="descrip">
-                </div>
+                <div className="descrip"></div>
               </div>
             </Slide>
             <Slide index={1}>
               <div className="slidePure">
                 <img src={imgC2} alt="imagen2" />
-                <div className="descrip">
-                </div>
+                <div className="descrip"></div>
               </div>
             </Slide>
             <Slide index={2}>
               <div className="slidePure">
                 <img src={imgC3} alt="imagen3" />
-                <div className="descrip">
-                </div>
+                <div className="descrip"></div>
               </div>
             </Slide>
           </Slider>

@@ -10,7 +10,7 @@ import imgH2 from "../assets/img/home2.jpg";
 import imgH3 from "../assets/img/home3.webp";
 import imgH4 from "../assets/img/home4.webp";
 
-const CategoriesHome = () => {
+const HomeCategories = () => {
   const [scrollTop, setScrollTop] = useState(false);
 
   const scrollToTop = () => {
@@ -39,32 +39,24 @@ const CategoriesHome = () => {
             <div className="categoryHome">
               <NavLink to="/category/jeans">
                 <img src={imgH1} alt="" />
-                {/* <Link className="link_btn">ACCESORIOS</Link> */}
               </NavLink>
             </div>
             <div className="categoryHome">
               <NavLink to="/category/accesorios">
                 <img src={imgH2} alt="" />
               </NavLink>
-
-              {/* <Link className="link_btn">ACCESORIOS</Link> */}
             </div>
           </div>
           <div className="cateogoriesHome">
             <div className="categoryHome">
-            <NavLink to="/category/carteras">
-
-              <img src={imgH3} alt="" />
+              <NavLink to="/category/carteras">
+                <img src={imgH3} alt="" />
               </NavLink>
-
-              {/* <Link className="link_btn">CALZADO</Link> */}
             </div>
             <div className="categoryHome">
               <NavLink to="/category/calzados">
                 <img src={imgH4} alt="" className="imgH4" />
               </NavLink>
-
-              {/* <Link className="link_btn">POLOS</Link> */}
             </div>
           </div>
         </div>
@@ -82,4 +74,4 @@ const CategoriesHome = () => {
   );
 };
 
-export default CategoriesHome;
+export default HomeCategories;

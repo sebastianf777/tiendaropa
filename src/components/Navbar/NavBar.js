@@ -2,25 +2,22 @@ import React, { useState, useEffect } from "react";
 import { Icon, Dropdown } from "semantic-ui-react";
 import Cart from "./CartWidget";
 import { NavLink, useHistory } from "react-router-dom";
-import "../scss/Nav.scss";
-import logo from "../assets/img/logoHome.png";
-import favorito from "../assets/img/favorito.png";
-import logIn from "../assets/img/logIn.png";
+import "../../scss/Nav.scss";
+import logo from "../../assets/img/logoHome.png";
+import favorito from "../../assets/img/favorito.png";
+import logIn from "../../assets/img/logIn.png";
 
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
   const [Menu, setMenu] = useState(false);
-  const history = useHistory() 
-
+  const history = useHistory();
 
   useEffect(() => {
-
     changeMenu();
-    return history.listen(() => { 
-      changeMenu()
-   }) 
+    return history.listen(() => {
+      changeMenu();
+    });
   }, [history]);
-
 
   const changeBackgroundNavbar = () => {
     if (window.scrollY >= 80) {
@@ -37,10 +34,11 @@ const Nav = () => {
     if (window.innerWidth >= 950) {
       setMenu(true);
       menuMobile.style.display = "flex";
-
     } else {
       setMenu(false);
-      if (open.style.display === "none")  {open.style.display = "flex"};
+      if (open.style.display === "none") {
+        open.style.display = "flex";
+      }
       menuMobile.style.display = "none";
       close.style.display = "none";
     }
@@ -64,7 +62,6 @@ const Nav = () => {
     open.style.display = "flex";
     menuMobile.style.display = "none";
   };
-
 
   return (
     <>
@@ -104,73 +101,71 @@ const Nav = () => {
 
         <ul className="categorias" id="menuMobile">
           <li className="liDivider">
-            
-              <div id="bug">
-                <Dropdown
-                  text="BQ"
-                  simple
-                  item
-                  pointing={Menu ? "left" : "right"}
-                >
-                  <Dropdown.Menu>
+            <div id="bug">
+              <Dropdown
+                text="BQ"
+                simple
+                item
+                pointing={Menu ? "left" : "right"}
+              >
+                <Dropdown.Menu>
                   <Dropdown.Item>
-                      <NavLink
-                        to={`/category/shop`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        SHOP
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/accesorios`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        ACCESORIOS
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/carteras`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        CARTERAS
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/calzados`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        CALZADOS
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/indumentaria`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        INDUMENTARIA
-                      </NavLink>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/jeans`}
-                        activeClassName="categoriaActive"
-                        className="categoria"
-                      >
-                        JEANS
-                      </NavLink>
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-        
+                    <NavLink
+                      to={`/category/shop`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      SHOP
+                    </NavLink>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <NavLink
+                      to={`/category/accesorios`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      ACCESORIOS
+                    </NavLink>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <NavLink
+                      to={`/category/carteras`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      CARTERAS
+                    </NavLink>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <NavLink
+                      to={`/category/calzados`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      CALZADOS
+                    </NavLink>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <NavLink
+                      to={`/category/indumentaria`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      INDUMENTARIA
+                    </NavLink>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <NavLink
+                      to={`/category/jeans`}
+                      activeClassName="categoriaActive"
+                      className="categoria"
+                    >
+                      JEANS
+                    </NavLink>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
           </li>
           <li>
             <NavLink
@@ -196,7 +191,6 @@ const Nav = () => {
               activeClassName="categoriaActive"
               className="categoria"
             >
-             
               LIQUI
             </NavLink>
           </li>
@@ -207,7 +201,7 @@ const Nav = () => {
               activeClassName="categoriaActive"
               className="categoria"
             > */}
-              <div className="noDisponible">LOCALES</div>
+            <div className="noDisponible">LOCALES</div>
             {/* </NavLink> */}
           </li>
           <li>
@@ -216,7 +210,7 @@ const Nav = () => {
               activeClassName="categoriaActive"
               className="categoria"
             > */}
-              <div className="noDisponible">CONTACTO</div>
+            <div className="noDisponible">CONTACTO</div>
             {/* </NavLink> */}
           </li>
         </ul>

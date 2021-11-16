@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import { getFirestore } from "../firebase/";
-import Footer from "./Footer";
+import { getFirestore } from "../../firebase/";
+import Footer from "../../layout/Footer";
 
-import Loader from "./Loader/Loader";
+import Loader from "../Loader/Loader";
 function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id } = useParams();

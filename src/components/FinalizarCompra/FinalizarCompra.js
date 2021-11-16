@@ -1,16 +1,16 @@
-import ResumenTotal from "./ResumenTotal";
-import Footer from "./Footer";
 import React, { useContext, useState, useEffect } from "react";
-import { getFirestore } from "../firebase/";
-import Loader from "./Loader/Loader";
-import { CartContext } from "../context/CartContext";
-import CartProducts from "./CartProducts";
-import UserForm from "./UserForm";
+import { Icon, Button } from "semantic-ui-react";
+import { CartContext } from "../../context/CartContext";
+import { getFirestore } from "../../firebase";
 import firebase from "firebase/app";
 import "firebase/firestore";
-import { Icon, Button } from "semantic-ui-react";
+import ResumenTotal from "./ResumenTotal";
+import Footer from "../../layout/Footer";
+import Loader from "../Loader/Loader";
+import CartProducts from "../CartProducts";
+import UserForm from "./UserForm";
 import FadeIn from "react-fade-in";
-import "../scss/FinalizarCompra.scss";
+import "../../scss/FinalizarCompra.scss";
 
 const FinalizarCompra = () => {
   const { cart } = useContext(CartContext);
@@ -33,7 +33,6 @@ const FinalizarCompra = () => {
       console.log(prices.reduce(reducer));
       setCalculoTotal(prices.reduce(reducer));
     }
-
   }, [cart]);
 
   const handleChangeEnvio = (e) => {
@@ -62,8 +61,7 @@ const FinalizarCompra = () => {
       .then(({ id }) => {
         console.log(id);
         setOrder({ id: id, ...newOrder });
-      setDisplaNone("displayNone")
-
+        setDisplaNone("displayNone");
       })
       .catch((error) => {
         console.log("Error creating order", error);
@@ -80,7 +78,10 @@ const FinalizarCompra = () => {
             {order.id ? (
               <div className="ordenCreada">
                 <h3>Compra finalizada con éxito! </h3>
-                <img src="https://img.icons8.com/color/48/000000/checked--v4.png" alt="confirmado"/>
+                <img
+                  src="https://img.icons8.com/color/48/000000/checked--v4.png"
+                  alt="confirmado"
+                />
                 <h4>Tu número de orden es: {order.id}</h4>
               </div>
             ) : (
@@ -88,7 +89,7 @@ const FinalizarCompra = () => {
                 <Loader />
               </div>
             )}
-  
+
             <div className={displayNone}>
               <h4>Completa todos los datos para poder finalizar</h4>
               <Button

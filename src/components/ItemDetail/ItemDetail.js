@@ -1,12 +1,12 @@
-import "../scss/ItemDetail.scss";
-import ItemCount from "./ItemCount";
+import "../../scss/ItemDetail.scss";
+import ItemCount from "../ItemCount";
 import { NavLink } from "react-router-dom";
 import { Icon, Divider } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import FadeIn from "react-fade-in";
-import imgCart from "../svg/cartSvg.svg";
+import imgCart from "../../svg/cartSvg.svg";
 
 const ItemDetail = ({ producto }) => {
   const [isActive, setActive] = useState("false");
@@ -50,11 +50,13 @@ const ItemDetail = ({ producto }) => {
           <h2 className="productName"> {producto.nombre}</h2>
 
           <div className="discountColectionContainer">
-            <p className="productVariants">{producto.descuento !== "--"
+            <p className="productVariants">
+              {producto.descuento !== "--"
                 ? producto.descuento + "%descuento"
-                : "NEW"}</p>
+                : "NEW"}
+            </p>
             <p className="productVariants" style={{ background: "gray" }}>
-              Colección {producto.coleccion}
+              colección {producto.coleccion}
             </p>
             <p className="productVariants" style={{ background: "#496ABE" }}>
               {producto.color}
@@ -85,7 +87,15 @@ const ItemDetail = ({ producto }) => {
           <div className="precioDescriptionContainer">
             <article className="preciosContainer">
               <p className="productPrice"> $ {producto.precio}</p>
-              <p className={producto.ultimoPrecio = "--" ? "displayNone" : "productLastPrice"}> $ {producto.ultimoPrecio}</p>
+              <p
+                className={
+                  (producto.ultimoPrecio = "--"
+                    ? "displayNone"
+                    : "productLastPrice")
+                }
+              >
+                $ {producto.ultimoPrecio}
+              </p>
             </article>
             <article className="description">
               <Link
@@ -126,7 +136,8 @@ const ItemDetail = ({ producto }) => {
                     }}
                     className="irACartBtn"
                   >
-                       Seguir comprando<Icon name="arrow left" />
+                    Seguir comprando
+                    <Icon name="arrow left" />
                   </NavLink>
                 </FadeIn>
               </>
@@ -138,18 +149,16 @@ const ItemDetail = ({ producto }) => {
       </div>
       <Divider />
       <div className="descriptionContainer" id="descriptionContainer">
-        
         <div className="descriptionArticlesContainer">
-          
           <article>
-          <h1>Descripcion</h1>
-        <p>CÓDIGO: {producto.referencia}</p>
-          <h2>Información del producto:</h2>
-            
-          {producto.descripcion &&
-                  producto.descripcion.map((color, valueColor) => {
-                    return <p key={valueColor}>{color}</p>;
-                  })}
+            <h1>Descripcion</h1>
+            <p>CÓDIGO: {producto.referencia}</p>
+            <h2>Información del producto:</h2>
+
+            {producto.descripcion &&
+              producto.descripcion.map((color, valueColor) => {
+                return <p key={valueColor}>{color}</p>;
+              })}
           </article>
 
           <article>
@@ -163,7 +172,7 @@ const ItemDetail = ({ producto }) => {
               personalizados y la ropa interior no se pueden devolver.
             </p>
           </article>
-          
+
           <article>
             <h2>Envio estandar</h2>
             <p>

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
 import { Button, Icon } from "semantic-ui-react";
-import "../scss/ResumenTotal.scss";
+import "../../scss/ResumenTotal.scss";
 
 const ResumenTotal = () => {
   const { cantidad, cart } = useContext(CartContext);
@@ -21,23 +21,22 @@ const ResumenTotal = () => {
       <section className="purchaseData">
         <div className="priceTotalContainer">
           <div className="priceTotalItem">
-            <h3 >{cantidad} Productos</h3>
-            <h4>
-              $ {calculoTotal.toLocaleString("en-US")}
-            </h4>
+            <h3>{cantidad} Productos</h3>
+            <h4>$ {calculoTotal.toLocaleString("en-US")}</h4>
           </div>
           <div className="priceTotalItem">
-            <h3 >Total:</h3>
-            <h4 >
-              $ {calculoTotal.toLocaleString("en-US")}
-            </h4>
+            <h3>Total:</h3>
+            <h4>$ {calculoTotal.toLocaleString("en-US")}</h4>
           </div>
           <div className="priceTotalItem">
             <NavLink to="/cart">
               <Button animated="vertical">
-                <Button.Content visible>Carrito <Icon name="cart" /></Button.Content>
+                <Button.Content visible>
+                  Carrito <Icon name="cart" />
+                </Button.Content>
                 <Button.Content hidden>
-                  <Icon name="arrow left" /><Icon name="cart" /> Volver
+                  <Icon name="arrow left" />
+                  <Icon name="cart" /> Volver
                 </Button.Content>
               </Button>
             </NavLink>
