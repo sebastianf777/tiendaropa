@@ -36,8 +36,8 @@
 	// Open your browser in https://localhost:3000
 <br>
 
-## Principales librerias usadas
-## Main libraries used in the project
+## Principales librerias usadas:
+## Main libraries used in the project:
 
 | Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
@@ -53,8 +53,8 @@
 
 <br>
 
-## Aspectos a realizar en el futuro
-## Aspects to be developed in the future
+## Aspectos a realizar en el futuro:
+## Aspects to be developed in the future:
 - Login and password
 - Favorite section
 - Payment methods.
@@ -63,6 +63,6 @@
 
 <br>
 
-# Autor ✒️
+# Autor:
 
 Sebastian Fontana - 2021.
