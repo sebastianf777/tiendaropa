@@ -27,6 +27,7 @@ $violetaOscuro: #3a0130;
     padding: 10px 35px;
     transition: .3s;
 
+
     .logoDiv{
         width: fit-content;
         @media (max-width: 950px) {
@@ -99,13 +100,7 @@ $violetaOscuro: #3a0130;
 //         justify-content: center;
 //     }
 // }
-.mapIcon, .loginIcon{
-  
-        filter:contrast(0);
-  
-    cursor:default;
-  
-}
+
 .cartLi {
     width: 55px;
     height: 40px;
@@ -184,13 +179,17 @@ $violetaOscuro: #3a0130;
     li {
         margin: 0px 10px 0;
         list-style: none;
-
         @media (max-width: 950px) {
             width: 100%;
             margin: 20px 10px 0;
 
         }
-        
+
+        .noDisponible{
+            font-size: 20px;
+            cursor: default;
+            color: grey;
+        }
         // .divider.text,
         .categoria {
             font-weight: 300;
@@ -217,11 +216,12 @@ $violetaOscuro: #3a0130;
 
         .divider.text {
             padding: 0;
-            color: $violetaOscuro;
-            font-size: 20px;
+            color: $rosa;
+            font-size: 30px;
             width: 40px;
-            height: 40px;
-            margin-top: 18px;
+            margin-top: 20px;
+            font-family: "Beauty";
+            letter-spacing: 2px;
             
             
 
@@ -304,6 +304,21 @@ $violetaOscuro: #3a0130;
             font-weight: 600;
         }
     }
+  .liDivider{
+      margin-top: 0px;
+      height: 60px;
+      @media (max-width: 950px) {
+      height: 25px;
+
+    }
+      #bug{
+        @media (max-width: 950px) {
+            margin-top: 10px;
+
+        }
+    }
+  }
+
 }
 
 .cartLogin {
@@ -336,6 +351,9 @@ $violetaOscuro: #3a0130;
 
     .mapIcon,
     .loginIcon {
+        filter:contrast(0);
+  
+    cursor:default;
         @media (max-width: 950px) {
             display: none;
         }

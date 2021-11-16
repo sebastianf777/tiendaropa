@@ -61,7 +61,7 @@ $violetaOscuro: #3a0130;
 
             .imgContainer {
                 max-width: 100px;
-                margin: 0 10px;
+                margin:  10px;
 
                 img {
                     width: 100%;
@@ -107,14 +107,23 @@ $violetaOscuro: #3a0130;
                         margin: 3px 0;
                     }
 
+                    .precioUnitario {
+                        font-size: 13px;
+                        color: $rosa;
+
+                        .texto {
+                            color: $violetaOscuro;
+                        }
+                    }
+
                     .productPrice {
                         font-size: 17px;
                         color: $rosa;
                         font-weight: 700;
                         margin-left: 80px;
 
-                        @media (max-width: 768px) {
-                            margin-left: 50px;
+                        @media (max-width: 950px) {
+                            margin-left: 20px;
                         }
                     }
 
@@ -199,7 +208,8 @@ $violetaOscuro: #3a0130;
         width: 15em;
         margin: auto;
         display: block;
-        &:hover{
+
+        &:hover {
             background-color: $rosa;
         }
     }
@@ -256,6 +266,18 @@ $violetaOscuro: #3a0130;
 
 .cartView {
     margin: 100px 20px;
+    a .ui.animated.button{
+        background-color: $violetaOscuro;
+    color: white;
+        &:hover{
+            background-color: transparent;
+            color: red;
+            border: red solid 1px;
+        }
+        }
+        h4{
+            margin: 0 10px;
+        }
 }
 
 .cartView h1,
@@ -329,6 +351,8 @@ $violetaOscuro: #3a0130;
 
 .orderContainer h3,
 .userName {
+    color: $violetaOscuro;
+    font-size: 20px;
     margin: 20px auto;
 }
 
@@ -337,7 +361,7 @@ $violetaOscuro: #3a0130;
     justify-content: center;
     flex-direction: column;
     max-width: max-content;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .userForm input {

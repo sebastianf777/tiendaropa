@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Icon, Divider } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import FadeIn from "react-fade-in";
 import imgCart from "../svg/cartSvg.svg";
 
@@ -50,7 +50,9 @@ const ItemDetail = ({ producto }) => {
           <h2 className="productName"> {producto.nombre}</h2>
 
           <div className="discountColectionContainer">
-            <p className="productVariants">{producto.descuento}% descuento</p>
+            <p className="productVariants">{producto.descuento !== "--"
+                ? producto.descuento + "%descuento"
+                : "NEW"}</p>
             <p className="productVariants" style={{ background: "gray" }}>
               Colección {producto.coleccion}
             </p>
@@ -83,7 +85,7 @@ const ItemDetail = ({ producto }) => {
           <div className="precioDescriptionContainer">
             <article className="preciosContainer">
               <p className="productPrice"> $ {producto.precio}</p>
-              <p className="productLastPrice"> $ {producto.ultimoPrecio}</p>
+              <p className={producto.ultimoPrecio = "--" ? "displayNone" : "productLastPrice"}> $ {producto.ultimoPrecio}</p>
             </article>
             <article className="description">
               <Link

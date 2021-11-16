@@ -1,6 +1,5 @@
 import "../scss/Item.scss";
 import React from "react";
-import { Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function Item({ product }) {
@@ -16,7 +15,7 @@ function Item({ product }) {
         <div className="itemDescription">
           <div className="discountContainer">
             <p className="productVariants">
-              {product.descuento != "--"
+              {product.descuento !== "--"
                 ? product.descuento + "%descuento"
                 : "NEW"}
             </p>

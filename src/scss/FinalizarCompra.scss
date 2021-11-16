@@ -4,6 +4,9 @@ $violetaOscuro: #3a0130;
 .desaparece {
     display: none;
 }
+.displayNone {
+    display: none!important;
+}
 
 .pagoContainer {
     display: flex;
@@ -31,12 +34,53 @@ $violetaOscuro: #3a0130;
         flex-direction: column;
 
         h2 {
-            margin: 0 auto 20px;
+            margin: 0 auto;
         }
 
-
+      
         button {
             margin: 10px auto;
+        }
+        .loaderCart{
+            display: flex;
+            justify-content: center;
+            .lds-roller{
+                position: static;
+                margin: 0 auto 10px;
+            }
+        }
+        .ordenCreada{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                margin: 0 auto;
+                width: 50px;
+            }
+            h3{
+                text-align: center;
+                margin: 5px 0 10px;
+
+            }
+            h4{
+                text-align: center;
+                margin: 5px 0;
+                color: $violetaOscuro;
+            }
+        }
+        .completarDatos{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 10px;
+            h4{
+                margin: 0 auto;
+                color: $violetaOscuro;
+                text-align: center;
+                @media (max-width: 950px) {
+                    font-size: 13px;
+                }
+            }
         }
     }
 

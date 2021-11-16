@@ -1,6 +1,10 @@
 $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
 
+
+.btnIrItemDetail{
+    margin-bottom: 20px;
+}
 .itemCard {
     background-color: white;
     display: flex;
@@ -19,10 +23,10 @@ $violetaOscuro: #3a0130;
     &:hover {
         box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.50);
     }
-
     @media (max-width: 768px) {
         margin: 0;
     }
+    
 
     .imgProducto {
         width: 20em;

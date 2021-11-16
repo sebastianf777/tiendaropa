@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "./loader/Loader";
+import Loader from "./Loader/Loader";
 import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
 import logo from "../assets/img/logoHome.png";

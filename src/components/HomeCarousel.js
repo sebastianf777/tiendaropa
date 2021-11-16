@@ -13,7 +13,7 @@ import imgC1 from "../assets/img/homeGif1.gif";
 import imgC2 from "../assets/img/homeC2.webp";
 import imgC3 from "../assets/img/homeC3.jpg";
 
-const CarouselCategories = () => {
+const HomeCarousel = () => {
   return (
     <div className="carouselContainer">
       <CarouselProvider
@@ -26,7 +26,7 @@ const CarouselCategories = () => {
         infinite={true}
         isIntrinsicHeight={true}
       >
-        <Link to={`/shop`}>
+        <Link to={`/category/shop`}>
           <Slider className="sliderPure">
             <Slide index={0} className="slide">
               <div className="slidePure">
@@ -65,4 +65,4 @@ const CarouselCategories = () => {
   );
 };
 
-export default CarouselCategories;
+export default HomeCarousel;

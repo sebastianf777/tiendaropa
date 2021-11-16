@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CarouselCategories from "./CarouselCategories";
+import HomeCarousel from "./HomeCarousel";
 import { Icon } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
@@ -26,7 +26,7 @@ const CategoriesHome = () => {
     <>
       <section className="categoriesLayoutHome" id="categoriesHome">
         <div className="categoryHome">
-          <CarouselCategories />
+          <HomeCarousel />
           <div className="iconContainer">
             <Link smooth={true} duration={600} offset={-75} to="imgH4">
               <Icon name="chevron down" className="downIcon" />

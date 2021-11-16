@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import { NavLink } from "react-router-dom";
 import { Button, Icon } from "semantic-ui-react";
 import "../scss/ResumenTotal.scss";

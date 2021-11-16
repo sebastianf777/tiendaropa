@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import { Button, Icon } from 'semantic-ui-react';
 import {Link} from "react-router-dom";
 

@@ -4,7 +4,7 @@ import ItemDetail from "./ItemDetail";
 import { getFirestore } from "../firebase/";
 import Footer from "./Footer";
 
-import Loader from "./loader/Loader";
+import Loader from "./Loader/Loader";
 function ItemDetailContainer() {
   const [producto, setProducto] = useState({});
   const { id } = useParams();

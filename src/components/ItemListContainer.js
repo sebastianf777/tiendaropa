@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
-import Loader from "./loader/Loader";
+import Loader from "./Loader/Loader";
 import { useParams } from "react-router-dom";
 import Footer from "./Footer";
 

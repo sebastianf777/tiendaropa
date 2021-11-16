@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Icon, Dropdown } from "semantic-ui-react";
 import Cart from "./CartWidget";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "../scss/Nav.scss";
 import logo from "../assets/img/logoHome.png";
 import favorito from "../assets/img/favorito.png";
@@ -10,11 +10,17 @@ import logIn from "../assets/img/logIn.png";
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
   const [Menu, setMenu] = useState(false);
+  const history = useHistory() 
+
 // const [Fix, setFix] = useState(false)
 
   useEffect(() => {
+
     changeMenu();
-  }, []);
+    return history.listen(() => { 
+      changeMenu()
+   }) 
+  }, [history]);
 
 // const stopPropagation = (e) =>{
 //   if (e.defaultPrevented) return
@@ -54,7 +60,6 @@ const Nav = () => {
     }
   };
   window.addEventListener("resize", changeMenu);
-
   window.addEventListener("scroll", changeBackgroundNavbar);
 
   const openMenu = () => {
@@ -73,6 +78,7 @@ const Nav = () => {
     open.style.display = "flex";
     menuMobile.style.display = "none";
   };
+  window.addEventListener("load", closeMenu)
 
   return (
     <>
@@ -111,7 +117,7 @@ const Nav = () => {
         </button>
 
         <ul className="categorias" id="menuMobile">
-          <li>
+          <li className="liDivider">
             
               <div id="bug">
                 <Dropdown
@@ -204,28 +210,28 @@ const Nav = () => {
               activeClassName="categoriaActive"
               className="categoria"
             >
-              {" "}
-              LIQUI{" "}
+             
+              LIQUI
             </NavLink>
           </li>
 
           <li>
-            <NavLink
+            {/* <NavLink
               to={`/category/locales`}
               activeClassName="categoriaActive"
               className="categoria"
-            >
-              LOCALES
-            </NavLink>
+            > */}
+              <div className="noDisponible">LOCALES</div>
+            {/* </NavLink> */}
           </li>
           <li>
-            <NavLink
+            {/* <NavLink
               to={`/category/contacto`}
               activeClassName="categoriaActive"
               className="categoria"
-            >
-              CONTACTO
-            </NavLink>
+            > */}
+              <div className="noDisponible">CONTACTO</div>
+            {/* </NavLink> */}
           </li>
         </ul>
 

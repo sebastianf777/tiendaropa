@@ -7,7 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import FinalizarCompra from "./components/FinalizarCompra.js";
 import ItemListContainer from "./components/ItemListContainer";
 import Home from "./components/Home.js";
-import { CartProvider } from "./components/CartContext";
+import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart";
 import Categorias from "./components/Categorias";
 import 'pure-react-carousel/dist/react-carousel.es.css';

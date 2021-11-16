@@ -2,8 +2,8 @@ import ResumenTotal from "./ResumenTotal";
 import Footer from "./Footer";
 import React, { useContext, useState, useEffect } from "react";
 import { getFirestore } from "../firebase/";
-import Loader from "./loader/Loader";
-import { CartContext } from "./CartContext";
+import Loader from "./Loader/Loader";
+import { CartContext } from "../context/CartContext";
 import CartProducts from "./CartProducts";
 import UserForm from "./UserForm";
 import firebase from "firebase/app";
@@ -16,16 +16,16 @@ const FinalizarCompra = () => {
   const { cart } = useContext(CartContext);
   const reducer = (previousValue, currentValue) => previousValue + currentValue;
   const [calculoTotal, setCalculoTotal] = useState([]);
-  const [desaparece, setDesaparece] = useState([]);
+  const [desaparece, setDesaparece] = useState("displayNone");
+  const [displayNone, setDisplaNone] = useState("completarDatos");
+
   const [order, setOrder] = useState({});
-  const [pago, setPago] = useState({checked: null})
-  const [envio, setEnvio] = useState({checked: null})
+  const [pago, setPago] = useState({ checked: null });
+  const [envio, setEnvio] = useState({ checked: null });
   const [user, setUser] = useState({
-    
     name: null,
     email: null,
   });
-
 
   useEffect(() => {
     if (cart.length) {
@@ -33,23 +33,19 @@ const FinalizarCompra = () => {
       console.log(prices.reduce(reducer));
       setCalculoTotal(prices.reduce(reducer));
     }
-    setDesaparece("desaparece");
+
   }, [cart]);
 
-const handleChangeEnvio = e =>{
-  setEnvio(
-    {
-      checked: e.target.value
-    }
-  )
-}
-const handleChangePago = e =>{
-  setPago(
-    {
-      checked: e.target.value
-    }
-  )
-}
+  const handleChangeEnvio = (e) => {
+    setEnvio({
+      checked: e.target.value,
+    });
+  };
+  const handleChangePago = (e) => {
+    setPago({
+      checked: e.target.value,
+    });
+  };
 
   const crearOrden = () => {
     const db = getFirestore();
@@ -66,11 +62,13 @@ const handleChangePago = e =>{
       .then(({ id }) => {
         console.log(id);
         setOrder({ id: id, ...newOrder });
+      setDisplaNone("displayNone")
+
       })
       .catch((error) => {
         console.log("Error creating order", error);
       });
-    setDesaparece("");
+    setDesaparece("loaderCart");
   };
 
   return (
@@ -80,26 +78,41 @@ const handleChangePago = e =>{
           <div id="crearOrden">
             <UserForm user={user} setUser={setUser} />
             {order.id ? (
-              <div>Tu número de orden es: {order.id}</div>
+              <div className="ordenCreada">
+                <h3>Compra finalizada con éxito! </h3>
+                <img src="https://img.icons8.com/color/48/000000/checked--v4.png" alt="confirmado"/>
+                <h4>Tu número de orden es: {order.id}</h4>
+              </div>
             ) : (
-              <div className={`loaderCart ${desaparece}`}>
+              <div className={desaparece}>
                 <Loader />
               </div>
             )}
-
-            <Button
-              animated="fade"
-              className="botonFinalizarLaCompra"
-              disabled={!(user.name && user.email && cart.length && pago.checked != null && envio.checked != null)}
-              onClick={() => crearOrden()}
-            >
-              <Button.Content visible>
-                Finalizar compra <Icon name="arrow right" />
-              </Button.Content>
-              <Button.Content hidden>
-                Finalizar compra <Icon name="dolly" />
-              </Button.Content>
-            </Button>
+  
+            <div className={displayNone}>
+              <h4>Completa todos los datos para poder finalizar</h4>
+              <Button
+                animated="fade"
+                className="botonFinalizarLaCompra"
+                disabled={
+                  !(
+                    user.name &&
+                    user.email &&
+                    cart.length &&
+                    pago.checked != null &&
+                    envio.checked != null
+                  )
+                }
+                onClick={() => crearOrden()}
+              >
+                <Button.Content visible>
+                  Finalizar compra <Icon name="arrow right" />
+                </Button.Content>
+                <Button.Content hidden>
+                  Finalizar compra <Icon name="dolly" />
+                </Button.Content>
+              </Button>
+            </div>
           </div>
 
           <div className="formPagoContainer">
@@ -133,8 +146,14 @@ const handleChangePago = e =>{
                 </label>
               </div>
               <div className="medioPagoContainer">
-                <input type="radio" id="express" name="pagos" value="express" 
-                checked={envio.checked === "express"} onChange={handleChangeEnvio}/>
+                <input
+                  type="radio"
+                  id="express"
+                  name="pagos"
+                  value="express"
+                  checked={envio.checked === "express"}
+                  onChange={handleChangeEnvio}
+                />
                 <label>
                   <Icon name="shipping fast" />
                   Envío express
@@ -198,7 +217,6 @@ const handleChangePago = e =>{
                   <Icon name="cc paypal" />
                   Mercado pago - Paypal
                 </label>
-                
               </div>
             </form>
           </div>
@@ -213,8 +231,8 @@ const handleChangePago = e =>{
           </>
         </section>
         <>
-  <Footer/>
-  </>
+          <Footer />
+        </>
       </FadeIn>
     </>
   );

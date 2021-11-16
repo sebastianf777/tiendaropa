@@ -2,6 +2,8 @@ $rosa: #eb00b0;
 $violetaOscuro: #3a0130;
 
 .purchaseData {
+    margin: 0 20px;
+
     @media (max-width: 768px) {
             padding: 0 20px;
             margin-bottom: 2em;
@@ -28,6 +30,7 @@ $violetaOscuro: #3a0130;
     .priceTotalContainer {
         border: 1px solid #d0d0d0;
         padding: 20px 20px;
+        border-radius: 20px;
         
         margin-bottom: 15px;
         @media (max-width: 768px) {
@@ -48,6 +51,9 @@ $violetaOscuro: #3a0130;
                     color: red;
                     border: red solid 1px;
                 }
+                }
+                h4{
+                    margin: 0 10px;
                 }
         }
     }

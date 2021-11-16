@@ -3,17 +3,38 @@ $rosa: #eb00b0;
 .footer {
     background-color: #f4f4f4;
     width: 100%;
-    padding: 60px 40px 20px 40px;
+    padding: 30px 20px 20px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    h3{
-        font-size: 13px;
-        margin: 0 auto;
-
+    .redesFooter{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li{
+            display: flex;
+            align-items: flex-end;
+            margin-right: 10px;
+        }
     }
-    h4{
+    h3, h4{
         font-size: 11px;
         margin: 0 auto;
+        @media (max-width: 768px) {
+            font-size: 9px;
+           
+        }
+        @media (max-width: 400px) {
+            font-size: 8px;
+           
+        }
+    }
+   h5{
+        font-size: 9px;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            font-size: 7px;
+           
+        }
     }
 }

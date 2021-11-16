@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import { Button } from "semantic-ui-react";
 
 const CartProducts = () => {
@@ -18,8 +18,11 @@ const CartProducts = () => {
                     <img src={producto.image} alt={producto.image} />
                   </div>
                   <div className="cartProductInfo">
-                    <h2 className="productTittle">{producto.name}</h2>
+                    <h2 className="productTittle">{producto.name} {producto.marca}</h2>
+                    {/* <h3 className="productTittle"></h3> */}
+
                     <div className="priceQuantity">
+                      <h3 className="precioUnitario"><span className="texto">Precio unitario:</span> $ {producto.price.toLocaleString("en-US")}</h3>
                       <span className="productQuantity">
                         Selecciono: {producto.qty}
                       </span>
