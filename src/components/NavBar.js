@@ -12,7 +12,6 @@ const Nav = () => {
   const [Menu, setMenu] = useState(false);
   const history = useHistory() 
 
-// const [Fix, setFix] = useState(false)
 
   useEffect(() => {
 
@@ -21,19 +20,6 @@ const Nav = () => {
       changeMenu()
    }) 
   }, [history]);
-
-// const stopPropagation = (e) =>{
-//   if (e.defaultPrevented) return
-//   e.stopPropagation()
-// }
-
-
-// const bug = document.getElementById("menuClose")
-
-// // const applyFix = () => {
-// // bug.addEventListener 
-// // }
-// bug.addEventListener("onMouseEnter", stopPropagation)
 
 
   const changeBackgroundNavbar = () => {
@@ -78,7 +64,7 @@ const Nav = () => {
     open.style.display = "flex";
     menuMobile.style.display = "none";
   };
-  window.addEventListener("load", closeMenu)
+
 
   return (
     <>

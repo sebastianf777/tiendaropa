@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import { getFirestore } from "../firebase/";
 import Loader from "./Loader/Loader";
 import { useParams } from "react-router-dom";
-import Footer from "./Footer";
+
 
   const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);

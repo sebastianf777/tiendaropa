@@ -11,18 +11,21 @@ const CartProducts = () => {
         {cart.map((producto) => {
           return (
             <>
-           
               <div key={producto.id} className="cartProductsContainer">
                 <div className="cartProduct">
                   <div className="imgContainer">
                     <img src={producto.image} alt={producto.image} />
                   </div>
                   <div className="cartProductInfo">
-                    <h2 className="productTittle">{producto.name} {producto.marca}</h2>
-                    {/* <h3 className="productTittle"></h3> */}
+                    <h2 className="productTittle">
+                      {producto.name} {producto.marca}
+                    </h2>
 
                     <div className="priceQuantity">
-                      <h3 className="precioUnitario"><span className="texto">Precio unitario:</span> $ {producto.price.toLocaleString("en-US")}</h3>
+                      <h3 className="precioUnitario">
+                        <span className="texto">Precio unitario:</span> ${" "}
+                        {producto.price.toLocaleString("en-US")}
+                      </h3>
                       <span className="productQuantity">
                         Selecciono: {producto.qty}
                       </span>
