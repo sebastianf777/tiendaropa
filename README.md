@@ -7,7 +7,7 @@
  <br>
 - Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
 
-## _This was a project for 🛠️:_ 
+## _This was a project for 👩‍💻:_ 
 [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
 - This work is the final asignment for the React Js course!
@@ -16,7 +16,7 @@
 <img src="tiendaRopa.gif"/>
 <br><br>
 
-# This e-commerce is build with 👩‍💻:
+# This e-commerce is build with 🛠️:
 <br>
 
 -  Create-React-App (React Js)
