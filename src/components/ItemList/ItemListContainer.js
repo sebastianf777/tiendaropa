@@ -39,7 +39,7 @@ const ItemListContainer = () => {
       ) : getIsEmpty ? (
         <div className="errorServidor">
           <h2>
-            No se encontraron productos en la base de datos, ¡error en el
+            No se encontraron productos en la base de datos :( , ¡error en el
             servidor!
           </h2>
         </div>
