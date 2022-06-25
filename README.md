@@ -1,10 +1,6 @@
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=sebastianf777&label=Profile%20views&color=0e75b6&style=flat" alt="sebastianf777" /> </p>
 <h1 align="center">Hi 👋, I'm Sebastian Fontana</h1>
 <h3 align="center">A passionate frontend developer from Argentina</h3>
-<<<<<<< HEAD
-
-<img src="/src/assets/img/logo.png"/>
-=======
->>>>>>> 5c4959abef1cbb7e4743717359c116126d5b71f9
 
 ## _Here we go! :) 🚀_
 <br>
@@ -12,7 +8,7 @@
  <br>
 - Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
 
-## _This was a project for 🛠️:_ 
+## _This was a project for 👩‍💻:_ 
 [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
 - This work is the final asignment for the React Js course!
@@ -21,7 +17,7 @@
 <img src="tiendaRopa.gif"/>
 <br><br>
 
-# This e-commerce is build with 👩‍💻:
+# This e-commerce is build with 🛠️:
 <br>
 
 -  Create-React-App (React Js)
@@ -29,7 +25,7 @@
 -  CSS 
 -  Sass
 
-<br><br>
+<br>
 
 # How to install ⚙️:
 <br>
