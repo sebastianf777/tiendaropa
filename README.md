@@ -3,31 +3,31 @@
 Hi 👋, I'm Sebastian Fontana
 </h1>
 <h3 align="center">A passionate frontend developer from Argentina</h3>
-<p align="center">
+<h3 align="center">
 ## _Here we go! :) 🚀_
-</p>
+</h3>
 <br>
 <div align="center">
 <img src="/src/assets/img/logo.png"/>
 </div>
  <br>
 - Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
-<p align="center">
+<h3 align="center">
 ## _This was a project for 👩‍💻:_ 
-</p>
+</h3>
 <div align="center">
 <img src="/src/assets/img/logo_coderhouse.png"/>
 </div>
 
 - This work is the final asignment for the React Js course!
-<p align="center">
+<h3 align="center">
 ## Web demonstration 📄:
-</p>
+</h3>
 <img src="tiendaRopa.gif"/>
 <br><br>
-<p align="center">
+<h3 align="center">
 # This e-commerce is build with 🛠️:
-</p>
+</h3>
 <br>
 
 -  Create-React-App (React Js)
@@ -36,9 +36,9 @@ Hi 👋, I'm Sebastian Fontana
 -  Sass
 
 <br>
-<p align="center">
+<h3 align="center">
 # How to install ⚙️:
-</p>
+</h3>
 <br>
 
 - git clone https://github.com/sebastianf777/tiendaropa.git
@@ -47,9 +47,9 @@ Hi 👋, I'm Sebastian Fontana
 
 	// Open your browser in https://localhost:3000
 <br>
-<p align="center">
+<h3 align="center">
 ## Main libraries used in the project 📋:
-</p>
+</h3>
 
 | Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
@@ -65,9 +65,9 @@ Hi 👋, I'm Sebastian Fontana
 
 <br>
 
-<p align="center">
+<h3 align="center">
 ## Aspects to be developed in the future 🔧:
-</p>
+</h3>
 
 - Login and password
 - Favorite section
@@ -76,17 +76,17 @@ Hi 👋, I'm Sebastian Fontana
 
 <br>
 
-<p align="center">
+<h3 align="center">
 # Appreciation and final words 🎁:
-</p>
+</h3>
 - Thanks to my family and friends who are supporting me on this, I am really grateful for your support :)
 - Gracias a mi familia y amigos que me apoyan en esto, estoy muy agradecido por su apoyo :)
 
 <br>
 
-<p align="center">
+<h3 align="center">
 # Autor ✒️:
-</p>
+</h3>
 
 
 Sebastian Fontana - 2021.
