@@ -12,19 +12,22 @@ Hi 👋, I'm Sebastian Fontana
 </div>
  <br>
 - Beauty Queen is a women's clothing and footwear e-commerce build in React Js where the user  will  find multiple sections with every product available
-
+<p align="center">
 ## _This was a project for 👩‍💻:_ 
+</p>
 <div align="center">
 <img src="/src/assets/img/logo_coderhouse.png"/>
 </div>
 
 - This work is the final asignment for the React Js course!
-
+<p align="center">
 ## Web demonstration 📄:
+</p>
 <img src="tiendaRopa.gif"/>
 <br><br>
-
+<p align="center">
 # This e-commerce is build with 🛠️:
+</p>
 <br>
 
 -  Create-React-App (React Js)
@@ -33,8 +36,9 @@ Hi 👋, I'm Sebastian Fontana
 -  Sass
 
 <br>
-
+<p align="center">
 # How to install ⚙️:
+</p>
 <br>
 
 - git clone https://github.com/sebastianf777/tiendaropa.git
@@ -43,8 +47,9 @@ Hi 👋, I'm Sebastian Fontana
 
 	// Open your browser in https://localhost:3000
 <br>
-
+<p align="center">
 ## Main libraries used in the project 📋:
+</p>
 
 | Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
@@ -60,8 +65,10 @@ Hi 👋, I'm Sebastian Fontana
 
 <br>
 
-
+<p align="center">
 ## Aspects to be developed in the future 🔧:
+</p>
+
 - Login and password
 - Favorite section
 - Payment methods.
@@ -69,13 +76,17 @@ Hi 👋, I'm Sebastian Fontana
 
 <br>
 
+<p align="center">
 # Appreciation and final words 🎁:
-
+</p>
 - Thanks to my family and friends who are supporting me on this, I am really grateful for your support :)
 - Gracias a mi familia y amigos que me apoyan en esto, estoy muy agradecido por su apoyo :)
 
 <br>
 
+<p align="center">
 # Autor ✒️:
+</p>
+
 
 Sebastian Fontana - 2021.
