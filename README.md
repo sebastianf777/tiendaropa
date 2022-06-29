@@ -37,7 +37,7 @@ Hi 👋, I'm Sebastian Fontana
 
 <br>
 <h3 align="center">
-# How to install ⚙️:
+## How to install ⚙️:
 </h3>
 <br>
 
@@ -51,8 +51,7 @@ Hi 👋, I'm Sebastian Fontana
 ## Main libraries used in the project 📋:
 </h3>
 
-<div align="center">
-`| Library                                                          | Used                      |
+| Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
 | [ReactJs](https://es.reactjs.org/)                               | JavaScript framework      |
 | [Create React App](https://github.com/facebook/create-react-app) | Create React Project      |
@@ -61,9 +60,8 @@ Hi 👋, I'm Sebastian Fontana
 | [Firebase](https://firebase.google.com/?hl=es)                   | Authentication & DataBase |
 | [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor          |
 | [React Router](https://reactrouter.com/)                         | Router                    |
-| [React Scroll](https://www.npmjs.com/package/react-scroll)                               | Component for animating vertical scrolling |
-| [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|`
-</div>
+| [React Scroll](https://www.npmjs.com/package/react-scroll)       | Component for animating vertical scrolling |
+| [React Fade In](https://www.npmjs.com/package/react-fade-in)     | Component for fading animation|
 
 <br>
 
