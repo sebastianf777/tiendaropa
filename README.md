@@ -51,6 +51,7 @@ Hi 👋, I'm Sebastian Fontana
 ## Main libraries used in the project 📋:
 </h3>
 
+<div align="center">
 | Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
 | [ReactJs](https://es.reactjs.org/)                               | JavaScript framework      |
@@ -62,6 +63,7 @@ Hi 👋, I'm Sebastian Fontana
 | [React Router](https://reactrouter.com/)                         | Router                    |
 | [React Scroll](https://www.npmjs.com/package/react-scroll)                               | Component for animating vertical scrolling |
 | [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|
+</div>
 
 <br>
 
