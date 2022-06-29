@@ -20,6 +20,8 @@ Hi 👋, I'm Sebastian Fontana
 </div>
 
 - This work is the final asignment for the React Js course!
+
+<br>
 <h3 align="center">
 ## Web demonstration 📄:
 </h3>
@@ -75,8 +77,6 @@ Hi 👋, I'm Sebastian Fontana
 - Favorite section
 - Payment methods.
 - Size and color variables
-
-<br>
 
 <h3 align="center">
 # Appreciation and final words 🎁:
