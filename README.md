@@ -51,17 +51,17 @@ Hi 👋, I'm Sebastian Fontana
 ## Main libraries used in the project 📋:
 </h3>
 <center>
-| Library                                                          | Used                      |
-| ---------------------------------------------------------------- | ------------------------- |
-| [ReactJs](https://es.reactjs.org/)                               | JavaScript framework      |
-| [Create React App](https://github.com/facebook/create-react-app) | Create React Project      |
-| [Pure React Carousel](https://www.npmjs.com/package/pure-react-carousel)| Carousel Component |
-| [Semantic UI React](https://react.semantic-ui.com/)              | UI framework              |
-| [Firebase](https://firebase.google.com/?hl=es)                   | Authentication & DataBase |
-| [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor          |
-| [React Router](https://reactrouter.com/)                         | Router                    |
+| Library                                                          | Used                                       |
+| ---------------------------------------------------------------- | ------------------------------------------:|
+| [ReactJs](https://es.reactjs.org/)                               | JavaScript framework                       |
+| [Create React App](https://github.com/facebook/create-react-app) | Create React Project                       |
+| [Pure React Carousel](https://www.npmjs.com/package/pure-react-carousel)| Carousel Component                  |
+| [Semantic UI React](https://react.semantic-ui.com/)              | UI framework                               |
+| [Firebase](https://firebase.google.com/?hl=es)                   | Authentication & DataBase                  |
+| [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor                           |
+| [React Router](https://reactrouter.com/)                         | Router                                     |
 | [React Scroll](https://www.npmjs.com/package/react-scroll)       | Component for animating vertical scrolling |
-| [React Fade In](https://www.npmjs.com/package/react-fade-in)     | Component for fading animation|
+| [React Fade In](https://www.npmjs.com/package/react-fade-in)     | Component for fading animation             |
 </center>
 <br>
 
