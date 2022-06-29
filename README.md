@@ -52,7 +52,7 @@ Hi 👋, I'm Sebastian Fontana
 </h3>
 
 <div align="center">
-| Library                                                          | Used                      |
+`| Library                                                          | Used                      |
 | ---------------------------------------------------------------- | ------------------------- |
 | [ReactJs](https://es.reactjs.org/)                               | JavaScript framework      |
 | [Create React App](https://github.com/facebook/create-react-app) | Create React Project      |
@@ -62,7 +62,7 @@ Hi 👋, I'm Sebastian Fontana
 | [Node Sass](https://www.npmjs.com/package/node-sass)             | CSS preprocessor          |
 | [React Router](https://reactrouter.com/)                         | Router                    |
 | [React Scroll](https://www.npmjs.com/package/react-scroll)                               | Component for animating vertical scrolling |
-| [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|
+| [React Fade In](https://www.npmjs.com/package/react-fade-in)                               | Component for fading animation|`
 </div>
 
 <br>
